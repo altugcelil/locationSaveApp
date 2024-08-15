@@ -11,9 +11,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        pushMain()
     }
-
-
+    
+    func pushMain() {
+        let mainPageStoryBoard = UIStoryboard.init(name: "TabBarViewController", bundle: nil)
+        let mainPage = mainPageStoryBoard.instantiateViewController(withIdentifier: "mainPageTabBar") as! TabBarViewController
+        mainPage.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(mainPage, animated: true)
+    }
 }
-

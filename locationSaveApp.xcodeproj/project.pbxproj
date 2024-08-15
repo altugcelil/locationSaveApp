@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39294A302C6EC66300BFFE12 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39294A2E2C6EC66300BFFE12 /* TabBarViewController.swift */; };
+		39294A332C6EC6C000BFFE12 /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39294A322C6EC6C000BFFE12 /* TabBarViewController.storyboard */; };
+		39294A352C6EC7A200BFFE12 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39294A342C6EC7A200BFFE12 /* HomePageViewController.swift */; };
+		39294A372C6EC7AF00BFFE12 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39294A362C6EC7AF00BFFE12 /* HomePage.storyboard */; };
 		39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */; };
 		39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */; };
 		39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D72C6EC1D400F7D8A2 /* ViewController.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39294A2E2C6EC66300BFFE12 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		39294A322C6EC6C000BFFE12 /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
+		39294A342C6EC7A200BFFE12 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		39294A362C6EC7AF00BFFE12 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		39CD27D02C6EC1D400F7D8A2 /* locationSaveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locationSaveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +47,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39294A282C6EC46D00BFFE12 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				39294A342C6EC7A200BFFE12 /* HomePageViewController.swift */,
+				39294A362C6EC7AF00BFFE12 /* HomePage.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		39294A2D2C6EC60800BFFE12 /* TabbarPage */ = {
+			isa = PBXGroup;
+			children = (
+				39294A2E2C6EC66300BFFE12 /* TabBarViewController.swift */,
+				39294A322C6EC6C000BFFE12 /* TabBarViewController.storyboard */,
+			);
+			path = TabbarPage;
+			sourceTree = "<group>";
+		};
 		39CD27C72C6EC1D400F7D8A2 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +84,8 @@
 		39CD27D22C6EC1D400F7D8A2 /* locationSaveApp */ = {
 			isa = PBXGroup;
 			children = (
+				39294A2D2C6EC60800BFFE12 /* TabbarPage */,
+				39294A282C6EC46D00BFFE12 /* Home */,
 				39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */,
 				39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */,
 				39CD27D72C6EC1D400F7D8A2 /* ViewController.swift */,
@@ -128,8 +156,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39294A372C6EC7AF00BFFE12 /* HomePage.storyboard in Resources */,
 				39CD27E32C6EC1D700F7D8A2 /* LaunchScreen.storyboard in Resources */,
 				39CD27E02C6EC1D700F7D8A2 /* Assets.xcassets in Resources */,
+				39294A332C6EC6C000BFFE12 /* TabBarViewController.storyboard in Resources */,
 				39CD27DB2C6EC1D400F7D8A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +173,9 @@
 			files = (
 				39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */,
 				39CD27DE2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld in Sources */,
+				39294A352C6EC7A200BFFE12 /* HomePageViewController.swift in Sources */,
 				39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */,
+				39294A302C6EC66300BFFE12 /* TabBarViewController.swift in Sources */,
 				39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,14 @@
 		39294A332C6EC6C000BFFE12 /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39294A322C6EC6C000BFFE12 /* TabBarViewController.storyboard */; };
 		39294A352C6EC7A200BFFE12 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39294A342C6EC7A200BFFE12 /* HomePageViewController.swift */; };
 		39294A372C6EC7AF00BFFE12 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39294A362C6EC7AF00BFFE12 /* HomePage.storyboard */; };
+		39335A632C7097AC0091C3B4 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 39335A622C7097AC0091C3B4 /* GoogleMaps */; };
+		39335A662C709A6A0091C3B4 /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = 39335A652C709A6A0091C3B4 /* GooglePlaces */; };
+		39335A692C715A9D0091C3B4 /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39335A682C715A9D0091C3B4 /* AddPlaceViewController.swift */; };
+		39335A6B2C715AB50091C3B4 /* AddPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39335A6A2C715AB50091C3B4 /* AddPlace.storyboard */; };
+		39703F662C7169900000E038 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39703F652C7169900000E038 /* MapViewController.swift */; };
+		39703F682C716A130000E038 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39703F672C716A130000E038 /* Map.storyboard */; };
+		39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39703F6A2C716BBC0000E038 /* StepTopView.swift */; };
+		3979FFE32C716CAA008D0D3E /* StepTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3979FFE22C716CAA008D0D3E /* StepTopView.xib */; };
 		39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */; };
 		39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */; };
 		39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D72C6EC1D400F7D8A2 /* ViewController.swift */; };
@@ -25,6 +33,12 @@
 		39294A322C6EC6C000BFFE12 /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
 		39294A342C6EC7A200BFFE12 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		39294A362C6EC7AF00BFFE12 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		39335A682C715A9D0091C3B4 /* AddPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
+		39335A6A2C715AB50091C3B4 /* AddPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPlace.storyboard; sourceTree = "<group>"; };
+		39703F652C7169900000E038 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		39703F672C716A130000E038 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		39703F6A2C716BBC0000E038 /* StepTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTopView.swift; sourceTree = "<group>"; };
+		3979FFE22C716CAA008D0D3E /* StepTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepTopView.xib; sourceTree = "<group>"; };
 		39CD27D02C6EC1D400F7D8A2 /* locationSaveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locationSaveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39335A632C7097AC0091C3B4 /* GoogleMaps in Frameworks */,
+				39335A662C709A6A0091C3B4 /* GooglePlaces in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +81,34 @@
 			path = TabbarPage;
 			sourceTree = "<group>";
 		};
+		39335A672C715A7C0091C3B4 /* AddPlace */ = {
+			isa = PBXGroup;
+			children = (
+				39703F642C7169730000E038 /* MapTab */,
+				39335A682C715A9D0091C3B4 /* AddPlaceViewController.swift */,
+				39335A6A2C715AB50091C3B4 /* AddPlace.storyboard */,
+			);
+			path = AddPlace;
+			sourceTree = "<group>";
+		};
+		39703F642C7169730000E038 /* MapTab */ = {
+			isa = PBXGroup;
+			children = (
+				39703F652C7169900000E038 /* MapViewController.swift */,
+				39703F672C716A130000E038 /* Map.storyboard */,
+			);
+			path = MapTab;
+			sourceTree = "<group>";
+		};
+		39703F692C716B720000E038 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				39703F6A2C716BBC0000E038 /* StepTopView.swift */,
+				3979FFE22C716CAA008D0D3E /* StepTopView.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		39CD27C72C6EC1D400F7D8A2 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +128,8 @@
 		39CD27D22C6EC1D400F7D8A2 /* locationSaveApp */ = {
 			isa = PBXGroup;
 			children = (
+				39703F692C716B720000E038 /* CustomViews */,
+				39335A672C715A7C0091C3B4 /* AddPlace */,
 				39294A2D2C6EC60800BFFE12 /* TabbarPage */,
 				39294A282C6EC46D00BFFE12 /* Home */,
 				39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */,
@@ -114,6 +160,10 @@
 			dependencies = (
 			);
 			name = locationSaveApp;
+			packageProductDependencies = (
+				39335A622C7097AC0091C3B4 /* GoogleMaps */,
+				39335A652C709A6A0091C3B4 /* GooglePlaces */,
+			);
 			productName = locationSaveApp;
 			productReference = 39CD27D02C6EC1D400F7D8A2 /* locationSaveApp.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +192,10 @@
 				Base,
 			);
 			mainGroup = 39CD27C72C6EC1D400F7D8A2;
+			packageReferences = (
+				39335A612C7097AC0091C3B4 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				39335A642C709A6A0091C3B4 /* XCRemoteSwiftPackageReference "ios-places-sdk" */,
+			);
 			productRefGroup = 39CD27D12C6EC1D400F7D8A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -157,7 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				39294A372C6EC7AF00BFFE12 /* HomePage.storyboard in Resources */,
+				39703F682C716A130000E038 /* Map.storyboard in Resources */,
+				3979FFE32C716CAA008D0D3E /* StepTopView.xib in Resources */,
 				39CD27E32C6EC1D700F7D8A2 /* LaunchScreen.storyboard in Resources */,
+				39335A6B2C715AB50091C3B4 /* AddPlace.storyboard in Resources */,
 				39CD27E02C6EC1D700F7D8A2 /* Assets.xcassets in Resources */,
 				39294A332C6EC6C000BFFE12 /* TabBarViewController.storyboard in Resources */,
 				39CD27DB2C6EC1D400F7D8A2 /* Main.storyboard in Resources */,
@@ -173,10 +230,13 @@
 			files = (
 				39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */,
 				39CD27DE2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld in Sources */,
+				39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */,
+				39335A692C715A9D0091C3B4 /* AddPlaceViewController.swift in Sources */,
 				39294A352C6EC7A200BFFE12 /* HomePageViewController.swift in Sources */,
 				39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */,
 				39294A302C6EC66300BFFE12 /* TabBarViewController.swift in Sources */,
 				39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */,
+				39703F662C7169900000E038 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,9 +386,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Q2YHU3449;
+				DEVELOPMENT_TEAM = 3U26739GWN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = locationSaveApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -336,6 +397,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -343,6 +405,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = altugcelil.locationSaveApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,9 +417,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Q2YHU3449;
+				DEVELOPMENT_TEAM = 3U26739GWN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = locationSaveApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -364,6 +428,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,6 +436,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = altugcelil.locationSaveApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -399,6 +465,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		39335A612C7097AC0091C3B4 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+		39335A642C709A6A0091C3B4 /* XCRemoteSwiftPackageReference "ios-places-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-places-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		39335A622C7097AC0091C3B4 /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39335A612C7097AC0091C3B4 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+		39335A652C709A6A0091C3B4 /* GooglePlaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39335A642C709A6A0091C3B4 /* XCRemoteSwiftPackageReference "ios-places-sdk" */;
+			productName = GooglePlaces;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		39CD27DC2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld */ = {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, InformationViewControllerDelegate {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var stepTopView: StepTopView!
@@ -15,11 +15,21 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
     var currentPageIndex: Int = 0
     var pageContent: [UIViewController] = []
     var pageViewController: UIPageViewController!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         updateButtonColors()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.view.layoutIfNeeded()
+    }
+    
+    func nextButtonState(isEnabled: Bool) {
+        stepTopView.rightIcon.isUserInteractionEnabled = isEnabled
+        stepTopView.rightIcon.tintColor = isEnabled ? .blue : .gray
     }
     
     private func setupUI() {
@@ -32,7 +42,8 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
         pageViewController.delegate = self
         
         let homePageStoryBoard = UIStoryboard(name: "InformationView", bundle: nil)
-        let homePage = homePageStoryBoard.instantiateViewController(withIdentifier: "informationTab")
+        let homePage = homePageStoryBoard.instantiateViewController(withIdentifier: "informationTab") as! InformationViewController
+        homePage.delegate = self
         
         let mapStoryBoard = UIStoryboard(name: "MapView", bundle: nil)
         let mapViewController = mapStoryBoard.instantiateViewController(withIdentifier: "mapTab")
@@ -53,7 +64,7 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
         stepTopView.leftIcon.tintColor = isFirstPage ? .gray : .blue
         stepTopView.rightIcon.tintColor = isLastPage ? .gray : .blue
     }
-
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let currentIndex = pageContent.firstIndex(of: viewController) else { return nil }
         let previousIndex = currentIndex - 1
@@ -65,9 +76,13 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
         let nextIndex = currentIndex + 1
         return nextIndex < pageContent.count ? pageContent[nextIndex] : nil
     }
+    
+    func validationStateDidChange(isValid: Bool) {
+        nextButtonState(isEnabled: isValid)
+    }
 }
 
-extension AddPlaceViewController : StepTopViewLeftButtonDelegate, StepTopViewRightButtonDelegate {
+extension AddPlaceViewController: StepTopViewLeftButtonDelegate, StepTopViewRightButtonDelegate {
     func leftButtonAction() {
         let previousIndex = currentPageIndex - 1
         
@@ -76,7 +91,6 @@ extension AddPlaceViewController : StepTopViewLeftButtonDelegate, StepTopViewRig
             let previousViewController = pageContent[currentPageIndex]
             pageViewController.setViewControllers([previousViewController], direction: .reverse, animated: true, completion: nil)
             updateButtonColors()
-
         }
     }
     

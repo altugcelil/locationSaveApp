@@ -4,52 +4,52 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Place View Controller-->
+        <!--asdasdas-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="AddPlaceViewController" customModule="locationSaveApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIW-ZZ-dqa" customClass="StepTopView" customModule="locationSaveApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="80" width="393" height="95"/>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIW-ZZ-dqa" customClass="StepTopView" customModule="locationSaveApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="32" width="393" height="95"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="4UA-YL-bQ3"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen eklemek istediğiniz yerin konumunu seçiniz.Lütfen eklemek istediğiniz yerin konumunu seçiniz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYI-nD-u4o">
-                                <rect key="frame" x="0.0" y="183" width="393" height="61"/>
+                                <rect key="frame" x="0.0" y="135" width="393" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHR-TC-ghk">
-                                <rect key="frame" x="0.0" y="260" width="393" height="558"/>
+                                <rect key="frame" x="0.0" y="212" width="393" height="640"/>
                             </containerView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jYI-nD-u4o" firstAttribute="top" secondItem="MIW-ZZ-dqa" secondAttribute="bottom" constant="8" symbolic="YES" id="FNu-Wh-8XD"/>
                             <constraint firstItem="MIW-ZZ-dqa" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="KtR-g1-ggw"/>
-                            <constraint firstItem="jYI-nD-u4o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Sfm-vW-lWN"/>
+                            <constraint firstItem="jYI-nD-u4o" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Sfm-vW-lWN"/>
                             <constraint firstAttribute="trailing" secondItem="MIW-ZZ-dqa" secondAttribute="trailing" id="Wt6-C6-SO5"/>
-                            <constraint firstItem="HHR-TC-ghk" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="XgD-uZ-yAo"/>
-                            <constraint firstItem="MIW-ZZ-dqa" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="80" id="drc-W5-4SQ"/>
-                            <constraint firstItem="jYI-nD-u4o" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ef8-Po-REr"/>
-                            <constraint firstItem="HHR-TC-ghk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="tT6-8G-VCT"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HHR-TC-ghk" secondAttribute="trailing" id="uEk-ez-Fqd"/>
+                            <constraint firstItem="HHR-TC-ghk" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="XgD-uZ-yAo"/>
+                            <constraint firstItem="MIW-ZZ-dqa" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="32" id="drc-W5-4SQ"/>
+                            <constraint firstItem="jYI-nD-u4o" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="ef8-Po-REr"/>
+                            <constraint firstItem="HHR-TC-ghk" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="tT6-8G-VCT"/>
+                            <constraint firstAttribute="trailing" secondItem="HHR-TC-ghk" secondAttribute="trailing" id="uEk-ez-Fqd"/>
                             <constraint firstItem="HHR-TC-ghk" firstAttribute="top" secondItem="jYI-nD-u4o" secondAttribute="bottom" constant="16" id="xg8-Mw-WAU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="w3T-OB-WCR"/>
+                    <navigationItem key="navigationItem" title="asdasdas" prompt="dasdasd" id="w3T-OB-WCR">
+                        <barButtonItem key="backBarButtonItem" title="adasd" id="XHB-fO-t5u"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="HHR-TC-ghk" id="0gF-wZ-CkU"/>
                         <outlet property="infoLabel" destination="jYI-nD-u4o" id="y7B-gg-0mQ"/>
@@ -63,10 +63,10 @@
         <!--Navigation Controller-->
         <scene sceneID="dGI-9q-fjK">
             <objects>
-                <navigationController storyboardIdentifier="addPlaceTab" automaticallyAdjustsScrollViewInsets="NO" id="MiW-oH-GwW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="addPlaceTab" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="MiW-oH-GwW" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uVb-gv-Stl">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uVb-gv-Stl">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

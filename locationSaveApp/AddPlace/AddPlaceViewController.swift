@@ -31,10 +31,10 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
         pageViewController.dataSource = self
         pageViewController.delegate = self
         
-        let homePageStoryBoard = UIStoryboard(name: "HomePage", bundle: nil)
-        let homePage = homePageStoryBoard.instantiateViewController(withIdentifier: "homePageTab")
+        let homePageStoryBoard = UIStoryboard(name: "InformationView", bundle: nil)
+        let homePage = homePageStoryBoard.instantiateViewController(withIdentifier: "informationTab")
         
-        let mapStoryBoard = UIStoryboard(name: "Map", bundle: nil)
+        let mapStoryBoard = UIStoryboard(name: "MapView", bundle: nil)
         let mapViewController = mapStoryBoard.instantiateViewController(withIdentifier: "mapTab")
         
         pageContent = [mapViewController, homePage] // Farklı ViewController'lar ekleyin

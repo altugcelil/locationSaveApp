@@ -21,7 +21,7 @@ class TabBarViewController: UITabBarController {
         homePage.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house"))
         homePage.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
         
-        let addPlaceStoryBoard = UIStoryboard.init(name: "AddPlace", bundle: nil)
+        let addPlaceStoryBoard = UIStoryboard.init(name: "AddPlaceView", bundle: nil)
         let secondVc = addPlaceStoryBoard.instantiateViewController(withIdentifier: "addPlaceTab")
         secondVc.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "plus"), selectedImage: UIImage(systemName: "plus"))
         secondVc.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)

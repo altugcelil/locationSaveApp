@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		392528D62C7207F30000DA4B /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392528D52C7207F30000DA4B /* InformationViewController.swift */; };
+		392528D82C72083D0000DA4B /* InformationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392528D72C72083D0000DA4B /* InformationView.storyboard */; };
+		392528DB2C720A0C0000DA4B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392528DA2C720A0C0000DA4B /* CustomTextField.swift */; };
 		39294A302C6EC66300BFFE12 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39294A2E2C6EC66300BFFE12 /* TabBarViewController.swift */; };
 		39294A332C6EC6C000BFFE12 /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39294A322C6EC6C000BFFE12 /* TabBarViewController.storyboard */; };
 		39294A352C6EC7A200BFFE12 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39294A342C6EC7A200BFFE12 /* HomePageViewController.swift */; };
@@ -14,11 +17,13 @@
 		39335A632C7097AC0091C3B4 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 39335A622C7097AC0091C3B4 /* GoogleMaps */; };
 		39335A662C709A6A0091C3B4 /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = 39335A652C709A6A0091C3B4 /* GooglePlaces */; };
 		39335A692C715A9D0091C3B4 /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39335A682C715A9D0091C3B4 /* AddPlaceViewController.swift */; };
-		39335A6B2C715AB50091C3B4 /* AddPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39335A6A2C715AB50091C3B4 /* AddPlace.storyboard */; };
+		39335A6B2C715AB50091C3B4 /* AddPlaceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39335A6A2C715AB50091C3B4 /* AddPlaceView.storyboard */; };
+		3962566A2C7222A300153672 /* ExpandingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396256692C7222A300153672 /* ExpandingTextView.swift */; };
 		39703F662C7169900000E038 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39703F652C7169900000E038 /* MapViewController.swift */; };
-		39703F682C716A130000E038 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39703F672C716A130000E038 /* Map.storyboard */; };
+		39703F682C716A130000E038 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39703F672C716A130000E038 /* MapView.storyboard */; };
 		39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39703F6A2C716BBC0000E038 /* StepTopView.swift */; };
 		3979FFE32C716CAA008D0D3E /* StepTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3979FFE22C716CAA008D0D3E /* StepTopView.xib */; };
+		39B4B1CC2C720EDD0059227B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */; };
 		39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */; };
 		39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */; };
 		39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D72C6EC1D400F7D8A2 /* ViewController.swift */; };
@@ -29,16 +34,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		392528D52C7207F30000DA4B /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		392528D72C72083D0000DA4B /* InformationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InformationView.storyboard; sourceTree = "<group>"; };
+		392528DA2C720A0C0000DA4B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		39294A2E2C6EC66300BFFE12 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		39294A322C6EC6C000BFFE12 /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
 		39294A342C6EC7A200BFFE12 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		39294A362C6EC7AF00BFFE12 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		39335A682C715A9D0091C3B4 /* AddPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
-		39335A6A2C715AB50091C3B4 /* AddPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPlace.storyboard; sourceTree = "<group>"; };
+		39335A6A2C715AB50091C3B4 /* AddPlaceView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPlaceView.storyboard; sourceTree = "<group>"; };
+		396256692C7222A300153672 /* ExpandingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingTextView.swift; sourceTree = "<group>"; };
 		39703F652C7169900000E038 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		39703F672C716A130000E038 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		39703F672C716A130000E038 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		39703F6A2C716BBC0000E038 /* StepTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTopView.swift; sourceTree = "<group>"; };
 		3979FFE22C716CAA008D0D3E /* StepTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepTopView.xib; sourceTree = "<group>"; };
+		39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		39CD27D02C6EC1D400F7D8A2 /* locationSaveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locationSaveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +73,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		392528D42C7207D80000DA4B /* InformationTab */ = {
+			isa = PBXGroup;
+			children = (
+				392528D52C7207F30000DA4B /* InformationViewController.swift */,
+				392528D72C72083D0000DA4B /* InformationView.storyboard */,
+			);
+			path = InformationTab;
+			sourceTree = "<group>";
+		};
+		392528D92C7209FB0000DA4B /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				392528DA2C720A0C0000DA4B /* CustomTextField.swift */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
 		39294A282C6EC46D00BFFE12 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,18 +111,27 @@
 		39335A672C715A7C0091C3B4 /* AddPlace */ = {
 			isa = PBXGroup;
 			children = (
+				392528D42C7207D80000DA4B /* InformationTab */,
 				39703F642C7169730000E038 /* MapTab */,
 				39335A682C715A9D0091C3B4 /* AddPlaceViewController.swift */,
-				39335A6A2C715AB50091C3B4 /* AddPlace.storyboard */,
+				39335A6A2C715AB50091C3B4 /* AddPlaceView.storyboard */,
 			);
 			path = AddPlace;
+			sourceTree = "<group>";
+		};
+		396256682C72229100153672 /* CustomTextView */ = {
+			isa = PBXGroup;
+			children = (
+				396256692C7222A300153672 /* ExpandingTextView.swift */,
+			);
+			path = CustomTextView;
 			sourceTree = "<group>";
 		};
 		39703F642C7169730000E038 /* MapTab */ = {
 			isa = PBXGroup;
 			children = (
 				39703F652C7169900000E038 /* MapViewController.swift */,
-				39703F672C716A130000E038 /* Map.storyboard */,
+				39703F672C716A130000E038 /* MapView.storyboard */,
 			);
 			path = MapTab;
 			sourceTree = "<group>";
@@ -103,10 +139,20 @@
 		39703F692C716B720000E038 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				396256682C72229100153672 /* CustomTextView */,
+				392528D92C7209FB0000DA4B /* CustomTextField */,
 				39703F6A2C716BBC0000E038 /* StepTopView.swift */,
 				3979FFE22C716CAA008D0D3E /* StepTopView.xib */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		39B4B1CA2C720ECD0059227B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		39CD27C72C6EC1D400F7D8A2 = {
@@ -128,6 +174,7 @@
 		39CD27D22C6EC1D400F7D8A2 /* locationSaveApp */ = {
 			isa = PBXGroup;
 			children = (
+				39B4B1CA2C720ECD0059227B /* Extensions */,
 				39703F692C716B720000E038 /* CustomViews */,
 				39335A672C715A7C0091C3B4 /* AddPlace */,
 				39294A2D2C6EC60800BFFE12 /* TabbarPage */,
@@ -211,11 +258,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				39294A372C6EC7AF00BFFE12 /* HomePage.storyboard in Resources */,
-				39703F682C716A130000E038 /* Map.storyboard in Resources */,
+				39703F682C716A130000E038 /* MapView.storyboard in Resources */,
 				3979FFE32C716CAA008D0D3E /* StepTopView.xib in Resources */,
 				39CD27E32C6EC1D700F7D8A2 /* LaunchScreen.storyboard in Resources */,
-				39335A6B2C715AB50091C3B4 /* AddPlace.storyboard in Resources */,
+				39335A6B2C715AB50091C3B4 /* AddPlaceView.storyboard in Resources */,
 				39CD27E02C6EC1D700F7D8A2 /* Assets.xcassets in Resources */,
+				392528D82C72083D0000DA4B /* InformationView.storyboard in Resources */,
 				39294A332C6EC6C000BFFE12 /* TabBarViewController.storyboard in Resources */,
 				39CD27DB2C6EC1D400F7D8A2 /* Main.storyboard in Resources */,
 			);
@@ -229,14 +277,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */,
+				392528DB2C720A0C0000DA4B /* CustomTextField.swift in Sources */,
 				39CD27DE2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld in Sources */,
 				39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */,
 				39335A692C715A9D0091C3B4 /* AddPlaceViewController.swift in Sources */,
 				39294A352C6EC7A200BFFE12 /* HomePageViewController.swift in Sources */,
 				39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */,
 				39294A302C6EC66300BFFE12 /* TabBarViewController.swift in Sources */,
+				3962566A2C7222A300153672 /* ExpandingTextView.swift in Sources */,
+				39B4B1CC2C720EDD0059227B /* UIViewControllerExtension.swift in Sources */,
 				39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */,
 				39703F662C7169900000E038 /* MapViewController.swift in Sources */,
+				392528D62C7207F30000DA4B /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

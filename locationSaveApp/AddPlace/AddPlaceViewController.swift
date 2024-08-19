@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, InformationViewControllerDelegate {
+class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, InformationViewControllerDelegate, MapViewControllerDelegate {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var stepTopView: StepTopView!
@@ -15,6 +15,7 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
     var currentPageIndex: Int = 0
     var pageContent: [UIViewController] = []
     var pageViewController: UIPageViewController!
+    var pageModel: [PageModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,20 +37,38 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
         stepTopView.setLeftButtonDelegate(delegate: self)
         stepTopView.setRightButtonDelegate(delegate: self)
         stepTopView.leftIcon.tintColor = .gray
+        stepTopView.rightIcon.tintColor = .gray
+        stepTopView.rightIcon.isUserInteractionEnabled = false
         
         pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        pageViewController.dataSource = self
+        pageViewController.dataSource = nil
         pageViewController.delegate = self
         
-        let homePageStoryBoard = UIStoryboard(name: "InformationView", bundle: nil)
-        let homePage = homePageStoryBoard.instantiateViewController(withIdentifier: "informationTab") as! InformationViewController
-        homePage.delegate = self
+        for gesture in pageViewController.gestureRecognizers {
+            gesture.isEnabled = false
+        }
+        
+        let informationView = UIStoryboard(name: "InformationView", bundle: nil)
+        let informationViewController = informationView.instantiateViewController(withIdentifier: "informationTab") as! InformationViewController
+        informationViewController.delegate = self
         
         let mapStoryBoard = UIStoryboard(name: "MapView", bundle: nil)
-        let mapViewController = mapStoryBoard.instantiateViewController(withIdentifier: "mapTab")
+        let mapViewController = mapStoryBoard.instantiateViewController(withIdentifier: "mapTab") as! MapViewController
+        mapViewController.delegate = self
         
-        pageContent = [mapViewController, homePage] // Farklı ViewController'lar ekleyin
+        let addPhotoStoryBoard = UIStoryboard(name: "AddPhotoView", bundle: nil)
+        let addPhotoViewController = addPhotoStoryBoard.instantiateViewController(withIdentifier: "addPhotoTab")
+        
+        pageModel = [
+            PageModel(title: "1/3", info: "Haritadan kaydetmek istediğin lokasyonu seçmelisin :)", viewController: mapViewController),
+            PageModel(title: "2/3", info: "Kaydetmek istediğin yer için birkaç detaya ihtiyacımız var :)", viewController: informationViewController),
+            PageModel(title: "3/3", info: "Dilersen ileride bu yeri daha iyi hatırlamak için fotoğraf ekleyebilirsin :) (Opsyionel)", viewController: addPhotoViewController)
+        ]
+        
+        pageContent = [mapViewController, informationViewController, addPhotoViewController]
         pageViewController.setViewControllers([mapViewController], direction: .forward, animated: true, completion: nil)
+        
+        updatePageInfo(for: currentPageIndex)
         
         self.addChild(pageViewController)
         pageViewController.view.frame = self.containerView.bounds
@@ -57,12 +76,15 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
         pageViewController.didMove(toParent: self)
     }
     
+    private func updatePageInfo(for index: Int) {
+        let page = pageModel[index]
+        infoLabel.text = page.info
+        stepTopView.titleLabel.text = page.title
+    }
+    
     private func updateButtonColors() {
         let isFirstPage = currentPageIndex == 0
-        let isLastPage = currentPageIndex == pageContent.count - 1
-        
         stepTopView.leftIcon.tintColor = isFirstPage ? .gray : .blue
-        stepTopView.rightIcon.tintColor = isLastPage ? .gray : .blue
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -91,6 +113,7 @@ extension AddPlaceViewController: StepTopViewLeftButtonDelegate, StepTopViewRigh
             let previousViewController = pageContent[currentPageIndex]
             pageViewController.setViewControllers([previousViewController], direction: .reverse, animated: true, completion: nil)
             updateButtonColors()
+            updatePageInfo(for: currentPageIndex)
         }
     }
     
@@ -102,6 +125,7 @@ extension AddPlaceViewController: StepTopViewLeftButtonDelegate, StepTopViewRigh
             let nextViewController = pageContent[currentPageIndex]
             pageViewController.setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
             updateButtonColors()
+            updatePageInfo(for: currentPageIndex)
         }
     }
 }

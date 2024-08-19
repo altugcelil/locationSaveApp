@@ -17,7 +17,8 @@ class InformationViewController: UIViewController {
     @IBOutlet weak var noteTextView: UITextView!
     @IBOutlet weak var titleTextField: CustomTextField!
     let placeHolderText = "Örn: Güzel kahveleri var, hızlı internet ve sakin bir ortam."
-    
+    var placeInfo: PlaceInfoModel?
+
     weak var delegate: InformationViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class InformationViewController: UIViewController {
     
     private func setupUI() {
         self.hideKeyboardWhenTappedAround()
+        placeInfo = PlaceInfoModel()
         setupTextFields()
     }
     
@@ -90,6 +92,7 @@ extension InformationViewController: UITextFieldDelegate {
             titleTextField.staticPlaceholderText = isValid ? "Bu yer için isim giriniz: " : "Lütfen geçerli bir isim giriniz."
             titleTextField.staticPlaceholderColor = isValid ? .blue : .red
             notifyValidationState(isValid: isValid)
+            placeInfo?.title = titleTextField.text
         }
         return true
     }

@@ -19,7 +19,8 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
     let placesClient = GMSPlacesClient.shared()
     let locationManager = CLLocationManager()
     var currentMarker: GMSMarker?
-    
+    var placeInfo: PlaceInfoModel?
+
     weak var delegate: MapViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -34,6 +35,8 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
     }
 
     private func setupUI() {
+        placeInfo = PlaceInfoModel()
+        
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
@@ -82,6 +85,29 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
 
             let position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
             self.addMarkerAndZoomToPosition(position: position, title: place.name)
+
+            let geocoder = GMSGeocoder()
+            let coordinate = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
+
+            geocoder.reverseGeocodeCoordinate(coordinate) { (response, error) in
+                if let error = error {
+                    print("Geocode hatası: \(error.localizedDescription)")
+                } else if let address = response?.firstResult() {
+                    let city = address.locality // Şehir ismi
+                    let country = address.country // Ülke ismi
+
+                    if let city = city {
+                        print("Şehir: \(city)")
+                    } else {
+                        print("Şehir bulunamadı.")
+                    }
+                    
+                    if let country = country {
+                        print("Ülke: \(country)")
+                    }
+                }
+            }
+
         }
     }
     
@@ -89,7 +115,6 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
         guard let location = locations.last else { return }
         let position = location.coordinate
         self.addMarkerAndZoomToPosition(position: position, title: "My Location")
-        
         locationManager.stopUpdatingLocation()
     }
 
@@ -104,10 +129,33 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
         currentMarker = GMSMarker(position: position)
         currentMarker?.title = title
         currentMarker?.map = self.mapView
-
+        
         self.mapView.animate(toLocation: position)
         self.mapView.animate(toZoom: 15.0)
         
+        placeInfo?.latitude = position.latitude
+        placeInfo?.longitude = position.longitude
+        let geocoder = GMSGeocoder()
+        let coordinate = CLLocationCoordinate2D(latitude: position.latitude, longitude: position.longitude)
+
+        geocoder.reverseGeocodeCoordinate(coordinate) { (response, error) in
+            if let error = error {
+                print("Geocode hatası: \(error.localizedDescription)")
+            } else if let address = response?.firstResult() {
+                let city = address.locality // Şehir ismi
+                let country = address.country // Ülke ismi
+
+                if let city = city {
+                    print("Şehir: \(city)")
+                } else {
+                    print("Şehir bulunamadı.")
+                }
+                
+                if let country = country {
+                    print("Ülke: \(country)")
+                }
+            }
+        }
         notifyValidationState(isValid: true)
     }
     

@@ -85,29 +85,6 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
 
             let position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
             self.addMarkerAndZoomToPosition(position: position, title: place.name)
-
-            let geocoder = GMSGeocoder()
-            let coordinate = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
-
-            geocoder.reverseGeocodeCoordinate(coordinate) { (response, error) in
-                if let error = error {
-                    print("Geocode hatası: \(error.localizedDescription)")
-                } else if let address = response?.firstResult() {
-                    let city = address.locality // Şehir ismi
-                    let country = address.country // Ülke ismi
-
-                    if let city = city {
-                        print("Şehir: \(city)")
-                    } else {
-                        print("Şehir bulunamadı.")
-                    }
-                    
-                    if let country = country {
-                        print("Ülke: \(country)")
-                    }
-                }
-            }
-
         }
     }
     
@@ -135,27 +112,6 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
         
         placeInfo?.latitude = position.latitude
         placeInfo?.longitude = position.longitude
-        let geocoder = GMSGeocoder()
-        let coordinate = CLLocationCoordinate2D(latitude: position.latitude, longitude: position.longitude)
-
-        geocoder.reverseGeocodeCoordinate(coordinate) { (response, error) in
-            if let error = error {
-                print("Geocode hatası: \(error.localizedDescription)")
-            } else if let address = response?.firstResult() {
-                let city = address.locality // Şehir ismi
-                let country = address.country // Ülke ismi
-
-                if let city = city {
-                    print("Şehir: \(city)")
-                } else {
-                    print("Şehir bulunamadı.")
-                }
-                
-                if let country = country {
-                    print("Ülke: \(country)")
-                }
-            }
-        }
         notifyValidationState(isValid: true)
     }
     

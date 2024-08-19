@@ -15,7 +15,10 @@
     <!-- Uygulamanın arka planda çalışmasını ve kullanıcı bilgilerini göstermek için gerekli izinler -->
     <key>NSLocationAlwaysUsageDescription</key>
     <string>We need access to your location even when the app is in the background.</string>
-    
+
+    <key>NSCameraUsageDescription</key>
+    <string>This app requires access to the camera to take photos of your favorite locations.</string>
+
     <!-- Scene Manifest -->
     <key>UIApplicationSceneManifest</key>
     <dict>

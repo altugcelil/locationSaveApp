@@ -24,6 +24,7 @@
 		39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39703F6A2C716BBC0000E038 /* StepTopView.swift */; };
 		3979FFE32C716CAA008D0D3E /* StepTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3979FFE22C716CAA008D0D3E /* StepTopView.xib */; };
 		39B4B1CC2C720EDD0059227B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */; };
+		39B5A6322C72CA6E00103065 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B5A6312C72CA6D00103065 /* PageModel.swift */; };
 		39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */; };
 		39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */; };
 		39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D72C6EC1D400F7D8A2 /* ViewController.swift */; };
@@ -31,6 +32,10 @@
 		39CD27DE2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27DC2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld */; };
 		39CD27E02C6EC1D700F7D8A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39CD27DF2C6EC1D700F7D8A2 /* Assets.xcassets */; };
 		39CD27E32C6EC1D700F7D8A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39CD27E12C6EC1D700F7D8A2 /* LaunchScreen.storyboard */; };
+		39E408E42C72C1E30073B4C6 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E408E32C72C1E30073B4C6 /* AddPhotoViewController.swift */; };
+		39E408E62C72C1F10073B4C6 /* AddPhotoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E408E52C72C1F10073B4C6 /* AddPhotoView.storyboard */; };
+		39FC6D342C72D4B2003CEB5B /* PlaceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39FC6D322C72D4B2003CEB5B /* PlaceModel.xcdatamodeld */; };
+		39FC6D362C72D5E1003CEB5B /* PlaceInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC6D352C72D5E1003CEB5B /* PlaceInfoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +54,7 @@
 		39703F6A2C716BBC0000E038 /* StepTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTopView.swift; sourceTree = "<group>"; };
 		3979FFE22C716CAA008D0D3E /* StepTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepTopView.xib; sourceTree = "<group>"; };
 		39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		39B5A6312C72CA6D00103065 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
 		39CD27D02C6EC1D400F7D8A2 /* locationSaveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locationSaveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +64,10 @@
 		39CD27DF2C6EC1D700F7D8A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39CD27E22C6EC1D700F7D8A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39CD27E42C6EC1D700F7D8A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39E408E32C72C1E30073B4C6 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		39E408E52C72C1F10073B4C6 /* AddPhotoView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPhotoView.storyboard; sourceTree = "<group>"; };
+		39FC6D332C72D4B2003CEB5B /* PlaceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlaceModel.xcdatamodel; sourceTree = "<group>"; };
+		39FC6D352C72D5E1003CEB5B /* PlaceInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +121,14 @@
 		39335A672C715A7C0091C3B4 /* AddPlace */ = {
 			isa = PBXGroup;
 			children = (
+				39E408E22C72C1C70073B4C6 /* AddPhotoTab */,
 				392528D42C7207D80000DA4B /* InformationTab */,
 				39703F642C7169730000E038 /* MapTab */,
 				39335A682C715A9D0091C3B4 /* AddPlaceViewController.swift */,
+				39FC6D322C72D4B2003CEB5B /* PlaceModel.xcdatamodeld */,
 				39335A6A2C715AB50091C3B4 /* AddPlaceView.storyboard */,
+				39B5A6312C72CA6D00103065 /* PageModel.swift */,
+				39FC6D352C72D5E1003CEB5B /* PlaceInfoModel.swift */,
 			);
 			path = AddPlace;
 			sourceTree = "<group>";
@@ -191,6 +205,15 @@
 			path = locationSaveApp;
 			sourceTree = "<group>";
 		};
+		39E408E22C72C1C70073B4C6 /* AddPhotoTab */ = {
+			isa = PBXGroup;
+			children = (
+				39E408E32C72C1E30073B4C6 /* AddPhotoViewController.swift */,
+				39E408E52C72C1F10073B4C6 /* AddPhotoView.storyboard */,
+			);
+			path = AddPhotoTab;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,6 +288,7 @@
 				39CD27E02C6EC1D700F7D8A2 /* Assets.xcassets in Resources */,
 				392528D82C72083D0000DA4B /* InformationView.storyboard in Resources */,
 				39294A332C6EC6C000BFFE12 /* TabBarViewController.storyboard in Resources */,
+				39E408E62C72C1F10073B4C6 /* AddPhotoView.storyboard in Resources */,
 				39CD27DB2C6EC1D400F7D8A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,13 +301,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */,
+				39B5A6322C72CA6E00103065 /* PageModel.swift in Sources */,
 				392528DB2C720A0C0000DA4B /* CustomTextField.swift in Sources */,
 				39CD27DE2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld in Sources */,
 				39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */,
+				39FC6D342C72D4B2003CEB5B /* PlaceModel.xcdatamodeld in Sources */,
 				39335A692C715A9D0091C3B4 /* AddPlaceViewController.swift in Sources */,
+				39E408E42C72C1E30073B4C6 /* AddPhotoViewController.swift in Sources */,
 				39294A352C6EC7A200BFFE12 /* HomePageViewController.swift in Sources */,
 				39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */,
 				39294A302C6EC66300BFFE12 /* TabBarViewController.swift in Sources */,
+				39FC6D362C72D5E1003CEB5B /* PlaceInfoModel.swift in Sources */,
 				3962566A2C7222A300153672 /* ExpandingTextView.swift in Sources */,
 				39B4B1CC2C720EDD0059227B /* UIViewControllerExtension.swift in Sources */,
 				39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */,
@@ -558,6 +586,16 @@
 			);
 			currentVersion = 39CD27DD2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodel */;
 			path = locationSaveApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		39FC6D322C72D4B2003CEB5B /* PlaceModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				39FC6D332C72D4B2003CEB5B /* PlaceModel.xcdatamodel */,
+			);
+			currentVersion = 39FC6D332C72D4B2003CEB5B /* PlaceModel.xcdatamodel */;
+			path = PlaceModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

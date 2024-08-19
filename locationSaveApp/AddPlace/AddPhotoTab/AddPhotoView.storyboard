@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Photo View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="addPhotoTab" id="Y6W-OH-hqX" customClass="AddPhotoViewController" customModule="locationSaveApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uUN-go-SKw">
+                                <rect key="frame" x="26.5" y="304" width="363.5" height="305"/>
+                                <color key="tintColor" red="0.043592981990000002" green="0.1134760752" blue="0.25099414590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="c3j-yc-aM0"/>
+                                    <constraint firstAttribute="width" constant="361" id="dwe-3a-gzp"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="L0e-ni-AHp" appends="YES" id="Oub-Bv-hRb"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="uUN-go-SKw" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="DDE-Hu-APx"/>
+                            <constraint firstItem="uUN-go-SKw" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="wg8-7M-YrP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addPhotoImageView" destination="uUN-go-SKw" id="LFc-aK-OAP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="L0e-ni-AHp">
+                    <connections>
+                        <action selector="addPhotoClicked:" destination="Y6W-OH-hqX" id="936-cY-2yT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-89.312977099236633" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.badge.plus" catalog="system" width="128" height="97"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

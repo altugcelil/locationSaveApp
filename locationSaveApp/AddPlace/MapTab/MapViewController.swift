@@ -19,7 +19,6 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
     let placesClient = GMSPlacesClient.shared()
     let locationManager = CLLocationManager()
     var currentMarker: GMSMarker?
-    var placeInfo: PlaceInfoModel?
 
     weak var delegate: MapViewControllerDelegate?
     
@@ -35,8 +34,6 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
     }
 
     private func setupUI() {
-        placeInfo = PlaceInfoModel()
-        
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
@@ -110,8 +107,8 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
         self.mapView.animate(toLocation: position)
         self.mapView.animate(toZoom: 15.0)
         
-        placeInfo?.latitude = position.latitude
-        placeInfo?.longitude = position.longitude
+        PlaceInfoModel.instance.latitude = position.latitude
+        PlaceInfoModel.instance.longitude = position.longitude
         notifyValidationState(isValid: true)
     }
     

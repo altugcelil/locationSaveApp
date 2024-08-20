@@ -10,22 +10,19 @@ import CoreData
 
 class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var addPhotoImageView: UIImageView!
-    var placeInfo: PlaceInfoModel?
     var place: Place?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        placeInfo = PlaceInfoModel()
     }
     
     func saveLocation(name: String, latitude: Double, longitude: Double) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let place = Place(context: context)
-        place.title = "name"
-        place.latitude = 40.0
-        place.longitude = 41.2
-        place.imageData = placeInfo?.photoData
-        
+        place.title =  PlaceInfoModel.instance.title
+        place.latitude = PlaceInfoModel.instance.latitude ?? 0
+        place.longitude =  PlaceInfoModel.instance.longitude ?? 0
+        place.imageData =  PlaceInfoModel.instance.photoData
         do {
             try context.save()
         } catch {
@@ -57,7 +54,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         // UIImage'yi Data türüne dönüştür
         if let imageData = image.jpegData(compressionQuality: 1.0) {
             // Data'yı placeInfo nesnesine ata
-            placeInfo?.photoData = imageData
+            PlaceInfoModel.instance.photoData = imageData
         }
     }
     

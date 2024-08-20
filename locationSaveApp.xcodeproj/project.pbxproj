@@ -25,6 +25,7 @@
 		3979FFE32C716CAA008D0D3E /* StepTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3979FFE22C716CAA008D0D3E /* StepTopView.xib */; };
 		39B4B1CC2C720EDD0059227B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */; };
 		39B5A6322C72CA6E00103065 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B5A6312C72CA6D00103065 /* PageModel.swift */; };
+		39CB085E2C73FE9B0028C523 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CB085D2C73FE9B0028C523 /* RatingView.swift */; };
 		39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */; };
 		39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */; };
 		39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D72C6EC1D400F7D8A2 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		3979FFE22C716CAA008D0D3E /* StepTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepTopView.xib; sourceTree = "<group>"; };
 		39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		39B5A6312C72CA6D00103065 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		39CB085D2C73FE9B0028C523 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		39CD27D02C6EC1D400F7D8A2 /* locationSaveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locationSaveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				392528D92C7209FB0000DA4B /* CustomTextField */,
 				39703F6A2C716BBC0000E038 /* StepTopView.swift */,
 				3979FFE22C716CAA008D0D3E /* StepTopView.xib */,
+				39CB085D2C73FE9B0028C523 /* RatingView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */,
 				39B5A6322C72CA6E00103065 /* PageModel.swift in Sources */,
 				392528DB2C720A0C0000DA4B /* CustomTextField.swift in Sources */,
+				39CB085E2C73FE9B0028C523 /* RatingView.swift in Sources */,
 				39CD27DE2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld in Sources */,
 				39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */,
 				39FC6D342C72D4B2003CEB5B /* PlaceModel.xcdatamodeld in Sources */,

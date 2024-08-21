@@ -13,6 +13,7 @@ protocol InformationViewControllerDelegate: AnyObject {
 
 class InformationViewController: UIViewController, RatingViewDelegate {
     
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var cityOrCountryField: CustomTextField!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var ratingView: RatingView!
@@ -59,6 +60,19 @@ class InformationViewController: UIViewController, RatingViewDelegate {
         cityOrCountryField.staticPlaceholderText = "Şehir veya ülke girin: "
         cityOrCountryField.placeholder = "Örn: İstanbul "
         cityOrCountryField.delegate = self
+    }
+    
+    @IBAction func categoryViewClicked(_ sender: UITapGestureRecognizer) {
+        presentDropdownSelection()
+    }
+    
+    func presentDropdownSelection() {
+        let categoryView = DropdownSelectionViewController(nibName: "DropdownSelection", bundle: nil)
+        categoryView.searchViewModel = DropdownModel.Category
+        categoryView.dropdownSelectionViewControllerDelegate = self
+        categoryView.modalPresentationStyle = .pageSheet
+        categoryView.modalTransitionStyle = .coverVertical
+        present(categoryView, animated: true, completion: nil)
     }
     
     func ratingView(_ ratingView: RatingView, didUpdateRating rating: Float) {
@@ -157,5 +171,15 @@ extension InformationViewController: UITextViewDelegate {
         textViewHeight.constant = size.height
         PlaceInfoModel.instance.note = textView.text
         view.layoutIfNeeded()
+    }
+}
+
+extension InformationViewController: DropdownSelectionViewControllerDelegate {
+    func setSelected(item: DropdownControllerModel, searchViewModel: DropdownModel) {
+        switch searchViewModel {
+        case DropdownModel.Category:
+            PlaceInfoModel.instance.categoryName = item.name
+            categoryLabel.text = item.name
+        }
     }
 }

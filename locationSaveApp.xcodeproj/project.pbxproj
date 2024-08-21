@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3915CA182C75744D009CFB85 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915CA162C75744D009CFB85 /* DetailPageViewController.swift */; };
+		3915CA192C75744D009CFB85 /* DetailPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3915CA172C75744D009CFB85 /* DetailPageView.xib */; };
+		3915CA1B2C75812C009CFB85 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915CA1A2C75812C009CFB85 /* BaseViewController.swift */; };
 		392528D62C7207F30000DA4B /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392528D52C7207F30000DA4B /* InformationViewController.swift */; };
 		392528D82C72083D0000DA4B /* InformationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392528D72C72083D0000DA4B /* InformationView.storyboard */; };
 		392528DB2C720A0C0000DA4B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392528DA2C720A0C0000DA4B /* CustomTextField.swift */; };
@@ -18,6 +21,11 @@
 		39335A662C709A6A0091C3B4 /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = 39335A652C709A6A0091C3B4 /* GooglePlaces */; };
 		39335A692C715A9D0091C3B4 /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39335A682C715A9D0091C3B4 /* AddPlaceViewController.swift */; };
 		39335A6B2C715AB50091C3B4 /* AddPlaceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39335A6A2C715AB50091C3B4 /* AddPlaceView.storyboard */; };
+		39346D942C762BCB002282E4 /* DropdownSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39346D932C762BCB002282E4 /* DropdownSelectionViewController.swift */; };
+		39346D962C762CAD002282E4 /* DropdownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39346D952C762CAD002282E4 /* DropdownModel.swift */; };
+		39346D982C762F13002282E4 /* DropdownSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39346D972C762F13002282E4 /* DropdownSelection.xib */; };
+		39346D9C2C762FDC002282E4 /* DropdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39346D9A2C762FDC002282E4 /* DropdownTableViewCell.swift */; };
+		39346D9D2C762FDC002282E4 /* DropdownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39346D9B2C762FDC002282E4 /* DropdownTableViewCell.xib */; };
 		3962566A2C7222A300153672 /* ExpandingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396256692C7222A300153672 /* ExpandingTextView.swift */; };
 		39703F662C7169900000E038 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39703F652C7169900000E038 /* MapViewController.swift */; };
 		39703F682C716A130000E038 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39703F672C716A130000E038 /* MapView.storyboard */; };
@@ -44,6 +52,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3915CA162C75744D009CFB85 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		3915CA172C75744D009CFB85 /* DetailPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPageView.xib; sourceTree = "<group>"; };
+		3915CA1A2C75812C009CFB85 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		392528D52C7207F30000DA4B /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		392528D72C72083D0000DA4B /* InformationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InformationView.storyboard; sourceTree = "<group>"; };
 		392528DA2C720A0C0000DA4B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -53,6 +64,11 @@
 		39294A362C6EC7AF00BFFE12 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		39335A682C715A9D0091C3B4 /* AddPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
 		39335A6A2C715AB50091C3B4 /* AddPlaceView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPlaceView.storyboard; sourceTree = "<group>"; };
+		39346D932C762BCB002282E4 /* DropdownSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownSelectionViewController.swift; sourceTree = "<group>"; };
+		39346D952C762CAD002282E4 /* DropdownModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownModel.swift; sourceTree = "<group>"; };
+		39346D972C762F13002282E4 /* DropdownSelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownSelection.xib; sourceTree = "<group>"; };
+		39346D9A2C762FDC002282E4 /* DropdownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTableViewCell.swift; sourceTree = "<group>"; };
+		39346D9B2C762FDC002282E4 /* DropdownTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownTableViewCell.xib; sourceTree = "<group>"; };
 		396256692C7222A300153672 /* ExpandingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingTextView.swift; sourceTree = "<group>"; };
 		39703F652C7169900000E038 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		39703F672C716A130000E038 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
@@ -93,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3915CA152C757435009CFB85 /* DetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				3915CA162C75744D009CFB85 /* DetailPageViewController.swift */,
+				3915CA172C75744D009CFB85 /* DetailPageView.xib */,
+			);
+			path = DetailPage;
+			sourceTree = "<group>";
+		};
 		392528D42C7207D80000DA4B /* InformationTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,16 +157,44 @@
 		39335A672C715A7C0091C3B4 /* AddPlace */ = {
 			isa = PBXGroup;
 			children = (
+				39346D902C762B83002282E4 /* Models */,
 				39E408E22C72C1C70073B4C6 /* AddPhotoTab */,
 				392528D42C7207D80000DA4B /* InformationTab */,
 				39703F642C7169730000E038 /* MapTab */,
 				39335A682C715A9D0091C3B4 /* AddPlaceViewController.swift */,
-				39FC6D322C72D4B2003CEB5B /* PlaceModel.xcdatamodeld */,
 				39335A6A2C715AB50091C3B4 /* AddPlaceView.storyboard */,
+			);
+			path = AddPlace;
+			sourceTree = "<group>";
+		};
+		39346D902C762B83002282E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39FC6D322C72D4B2003CEB5B /* PlaceModel.xcdatamodeld */,
 				39B5A6312C72CA6D00103065 /* PageModel.swift */,
 				39FC6D352C72D5E1003CEB5B /* PlaceInfoModel.swift */,
 			);
-			path = AddPlace;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		39346D922C762BB6002282E4 /* DropdownSelection */ = {
+			isa = PBXGroup;
+			children = (
+				39346D992C762FC1002282E4 /* DropdownTableViewCell */,
+				39346D932C762BCB002282E4 /* DropdownSelectionViewController.swift */,
+				39346D952C762CAD002282E4 /* DropdownModel.swift */,
+				39346D972C762F13002282E4 /* DropdownSelection.xib */,
+			);
+			path = DropdownSelection;
+			sourceTree = "<group>";
+		};
+		39346D992C762FC1002282E4 /* DropdownTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				39346D9A2C762FDC002282E4 /* DropdownTableViewCell.swift */,
+				39346D9B2C762FDC002282E4 /* DropdownTableViewCell.xib */,
+			);
+			path = DropdownTableViewCell;
 			sourceTree = "<group>";
 		};
 		396256682C72229100153672 /* CustomTextView */ = {
@@ -164,6 +217,7 @@
 		39703F692C716B720000E038 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				39346D922C762BB6002282E4 /* DropdownSelection */,
 				396256682C72229100153672 /* CustomTextView */,
 				392528D92C7209FB0000DA4B /* CustomTextField */,
 				39703F6A2C716BBC0000E038 /* StepTopView.swift */,
@@ -209,6 +263,7 @@
 		39CD27D22C6EC1D400F7D8A2 /* locationSaveApp */ = {
 			isa = PBXGroup;
 			children = (
+				3915CA152C757435009CFB85 /* DetailPage */,
 				39B4B1CA2C720ECD0059227B /* Extensions */,
 				39703F692C716B720000E038 /* CustomViews */,
 				39335A672C715A7C0091C3B4 /* AddPlace */,
@@ -222,6 +277,7 @@
 				39CD27E12C6EC1D700F7D8A2 /* LaunchScreen.storyboard */,
 				39CD27E42C6EC1D700F7D8A2 /* Info.plist */,
 				39CD27DC2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld */,
+				3915CA1A2C75812C009CFB85 /* BaseViewController.swift */,
 			);
 			path = locationSaveApp;
 			sourceTree = "<group>";
@@ -304,6 +360,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39346D9D2C762FDC002282E4 /* DropdownTableViewCell.xib in Resources */,
+				39346D982C762F13002282E4 /* DropdownSelection.xib in Resources */,
 				39294A372C6EC7AF00BFFE12 /* HomePage.storyboard in Resources */,
 				39703F682C716A130000E038 /* MapView.storyboard in Resources */,
 				3979FFE32C716CAA008D0D3E /* StepTopView.xib in Resources */,
@@ -312,6 +370,7 @@
 				39CD27E02C6EC1D700F7D8A2 /* Assets.xcassets in Resources */,
 				392528D82C72083D0000DA4B /* InformationView.storyboard in Resources */,
 				39B74C422C75506500CDF62D /* PlacesTableViewCell.xib in Resources */,
+				3915CA192C75744D009CFB85 /* DetailPageView.xib in Resources */,
 				39294A332C6EC6C000BFFE12 /* TabBarViewController.storyboard in Resources */,
 				39E408E62C72C1F10073B4C6 /* AddPhotoView.storyboard in Resources */,
 				39CD27DB2C6EC1D400F7D8A2 /* Main.storyboard in Resources */,
@@ -325,10 +384,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3915CA182C75744D009CFB85 /* DetailPageViewController.swift in Sources */,
 				39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */,
 				39B5A6322C72CA6E00103065 /* PageModel.swift in Sources */,
 				392528DB2C720A0C0000DA4B /* CustomTextField.swift in Sources */,
+				39346D962C762CAD002282E4 /* DropdownModel.swift in Sources */,
 				39CB085E2C73FE9B0028C523 /* RatingView.swift in Sources */,
+				39346D9C2C762FDC002282E4 /* DropdownTableViewCell.swift in Sources */,
+				3915CA1B2C75812C009CFB85 /* BaseViewController.swift in Sources */,
 				39CD27DE2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld in Sources */,
 				39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */,
 				39FC6D342C72D4B2003CEB5B /* PlaceModel.xcdatamodeld in Sources */,
@@ -344,6 +407,7 @@
 				39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */,
 				39703F662C7169900000E038 /* MapViewController.swift in Sources */,
 				392528D62C7207F30000DA4B /* InformationViewController.swift in Sources */,
+				39346D942C762BCB002282E4 /* DropdownSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -64,6 +64,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Y2J-y5-Cet"/>
                     <connections>
+                        <outlet property="headerLabel" destination="Vbp-Le-3OO" id="Ezm-91-Lt7"/>
                         <outlet property="placesTableView" destination="rW2-ks-tOa" id="9je-eW-mIS"/>
                     </connections>
                 </viewController>

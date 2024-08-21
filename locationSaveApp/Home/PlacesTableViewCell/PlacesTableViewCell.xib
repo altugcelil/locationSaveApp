@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="placesTableViewCell" rowHeight="185" id="KGk-i7-Jjw" customClass="PlacesTableViewCell" customModule="locationSaveApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="185"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="370" height="185"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="psH-nu-VIG">
+                        <rect key="frame" x="8" y="9" width="150" height="147.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="Gy1-IN-lLp"/>
+                            <constraint firstAttribute="width" secondItem="psH-nu-VIG" secondAttribute="height" multiplier="1:1" id="pkC-Jz-rBz"/>
+                            <constraint firstAttribute="height" constant="150" id="qJZ-rh-zuy"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Güneş Kafe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klm-Gi-XFf">
+                        <rect key="frame" x="166" y="8" width="196" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="pIT-Nv-6qy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bi4-O7-KnE">
+                        <rect key="frame" x="166" y="41" width="196" height="101"/>
+                        <string key="text">Loş bir ortam, sakin ve kaliteli internet hizmeti.Loş bir ortam, sakin ve kaliteli internet hizmeti.Loş bir ortam, sakin ve kaliteli internet hizmeti.Loş bir ortam, sakin ve kaliteli internet hizmeti.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hG-B0-XcO">
+                        <rect key="frame" x="338" y="146" width="16" height="23"/>
+                        <color key="tintColor" red="0.043592981990000002" green="0.1134760752" blue="0.25099414590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal">
+                            <imageReference key="image" image="chevron.right" catalog="system" symbolScale="large"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="9hG-B0-XcO" secondAttribute="trailing" constant="16" id="9m6-El-0dO"/>
+                    <constraint firstItem="Klm-Gi-XFf" firstAttribute="leading" secondItem="psH-nu-VIG" secondAttribute="trailing" constant="8" id="IJb-hL-J6k"/>
+                    <constraint firstItem="Bi4-O7-KnE" firstAttribute="top" secondItem="Klm-Gi-XFf" secondAttribute="bottom" constant="8" id="KF5-Et-V98"/>
+                    <constraint firstAttribute="bottom" secondItem="psH-nu-VIG" secondAttribute="bottom" priority="800" constant="27" id="Pju-Cl-KSN"/>
+                    <constraint firstItem="psH-nu-VIG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="S8n-h9-lmm"/>
+                    <constraint firstItem="Bi4-O7-KnE" firstAttribute="leading" secondItem="psH-nu-VIG" secondAttribute="trailing" constant="8" id="b4u-4N-Xyj"/>
+                    <constraint firstAttribute="trailing" secondItem="Bi4-O7-KnE" secondAttribute="trailing" constant="8" id="ceQ-jU-z7E"/>
+                    <constraint firstAttribute="bottom" secondItem="Bi4-O7-KnE" secondAttribute="bottom" priority="750" constant="43" id="h6N-7A-SBy"/>
+                    <constraint firstItem="9hG-B0-XcO" firstAttribute="top" secondItem="Bi4-O7-KnE" secondAttribute="bottom" constant="4" id="hW7-bN-mx3"/>
+                    <constraint firstItem="Klm-Gi-XFf" firstAttribute="top" secondItem="psH-nu-VIG" secondAttribute="top" id="oGi-jq-3HD"/>
+                    <constraint firstItem="psH-nu-VIG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="t3m-FG-5Pe"/>
+                    <constraint firstAttribute="trailing" secondItem="Klm-Gi-XFf" secondAttribute="trailing" constant="8" id="yUw-qG-8hN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="noteLabel" destination="Bi4-O7-KnE" id="CWh-LH-D9N"/>
+                <outlet property="placeImage" destination="psH-nu-VIG" id="RfH-oG-qjb"/>
+                <outlet property="titleLabel" destination="Klm-Gi-XFf" id="ZhK-eH-n98"/>
+            </connections>
+            <point key="canvasLocation" x="46.376811594202906" y="36.495535714285715"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+    </resources>
+</document>

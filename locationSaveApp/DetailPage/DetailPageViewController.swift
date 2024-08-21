@@ -40,6 +40,10 @@ class DetailPageViewController: UIViewController {
         pinAndZoomOnLocation(latitude: place?.latitude ?? 0.0, longitude: place?.longitude ?? 0.0)
     }
     
+    @IBAction func backButtonClicked(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
     func pinAndZoomOnLocation(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
             let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             

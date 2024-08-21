@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -132,6 +133,20 @@
                                         <constraint firstAttribute="height" constant="240" id="woY-qV-XZu"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLO-Um-Fpm">
+                                    <rect key="frame" x="16" y="32" width="23" height="23"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="23" id="G20-XZ-5Ro"/>
+                                        <constraint firstAttribute="width" constant="23" id="HPV-Nz-2Wm"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="0zR-iF-xyV"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -155,12 +170,14 @@
                                 <constraint firstItem="eln-05-SCy" firstAttribute="leading" secondItem="zQ8-K7-hSw" secondAttribute="leading" id="RB2-tX-PQT"/>
                                 <constraint firstItem="N8P-d6-JyZ" firstAttribute="top" secondItem="CQm-EP-AkH" secondAttribute="bottom" constant="16" id="RFQ-CC-dJl"/>
                                 <constraint firstItem="CQm-EP-AkH" firstAttribute="top" secondItem="2Rz-ui-NiY" secondAttribute="bottom" constant="8" id="SN7-Ye-J05"/>
+                                <constraint firstItem="jLO-Um-Fpm" firstAttribute="leading" secondItem="aaj-yc-OaQ" secondAttribute="leading" id="Vlo-Pq-5Mc"/>
                                 <constraint firstItem="tdd-b4-7c0" firstAttribute="leading" secondItem="eln-05-SCy" secondAttribute="leading" id="XUH-U3-Y70"/>
                                 <constraint firstItem="2Rz-ui-NiY" firstAttribute="leading" secondItem="eln-05-SCy" secondAttribute="leading" id="Xia-Hd-Nn1"/>
                                 <constraint firstAttribute="bottom" secondItem="NEg-es-irj" secondAttribute="bottom" constant="16" id="acb-Xe-Dn3"/>
                                 <constraint firstItem="CQm-EP-AkH" firstAttribute="trailing" secondItem="eln-05-SCy" secondAttribute="trailing" id="bAb-k3-XEm"/>
                                 <constraint firstAttribute="trailing" secondItem="aaj-yc-OaQ" secondAttribute="trailing" constant="16" id="cQj-vZ-Sl3"/>
                                 <constraint firstItem="QuZ-3o-SrH" firstAttribute="leading" secondItem="buc-lb-CTf" secondAttribute="leading" id="cwe-Bx-ZKt"/>
+                                <constraint firstItem="jLO-Um-Fpm" firstAttribute="top" secondItem="3Hx-x6-l72" secondAttribute="top" constant="32" id="dMD-VR-fyU"/>
                                 <constraint firstItem="N8P-d6-JyZ" firstAttribute="leading" secondItem="3Hx-x6-l72" secondAttribute="leading" constant="16" id="izy-n9-Tvc"/>
                                 <constraint firstAttribute="trailing" secondItem="N8P-d6-JyZ" secondAttribute="trailing" constant="16" id="lMD-Gc-diq"/>
                                 <constraint firstItem="aaj-yc-OaQ" firstAttribute="top" secondItem="3Hx-x6-l72" secondAttribute="top" constant="64" id="p2N-uH-Xwf"/>
@@ -196,6 +213,7 @@
         </view>
     </objects>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

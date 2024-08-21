@@ -23,8 +23,13 @@
 		39703F682C716A130000E038 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39703F672C716A130000E038 /* MapView.storyboard */; };
 		39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39703F6A2C716BBC0000E038 /* StepTopView.swift */; };
 		3979FFE32C716CAA008D0D3E /* StepTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3979FFE22C716CAA008D0D3E /* StepTopView.xib */; };
+		397EC99B2C7564B800B2F64E /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 397EC99A2C7564B800B2F64E /* CropViewController */; };
+		397EC99D2C7564B800B2F64E /* TOCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 397EC99C2C7564B800B2F64E /* TOCropViewController */; };
 		39B4B1CC2C720EDD0059227B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */; };
 		39B5A6322C72CA6E00103065 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B5A6312C72CA6D00103065 /* PageModel.swift */; };
+		39B74C412C75506500CDF62D /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B74C3F2C75506500CDF62D /* PlacesTableViewCell.swift */; };
+		39B74C422C75506500CDF62D /* PlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39B74C402C75506500CDF62D /* PlacesTableViewCell.xib */; };
+		39CB085E2C73FE9B0028C523 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CB085D2C73FE9B0028C523 /* RatingView.swift */; };
 		39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */; };
 		39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */; };
 		39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D72C6EC1D400F7D8A2 /* ViewController.swift */; };
@@ -55,6 +60,9 @@
 		3979FFE22C716CAA008D0D3E /* StepTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepTopView.xib; sourceTree = "<group>"; };
 		39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		39B5A6312C72CA6D00103065 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		39B74C3F2C75506500CDF62D /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		39B74C402C75506500CDF62D /* PlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesTableViewCell.xib; sourceTree = "<group>"; };
+		39CB085D2C73FE9B0028C523 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		39CD27D02C6EC1D400F7D8A2 /* locationSaveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locationSaveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +85,8 @@
 			files = (
 				39335A632C7097AC0091C3B4 /* GoogleMaps in Frameworks */,
 				39335A662C709A6A0091C3B4 /* GooglePlaces in Frameworks */,
+				397EC99D2C7564B800B2F64E /* TOCropViewController in Frameworks */,
+				397EC99B2C7564B800B2F64E /* CropViewController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +113,7 @@
 		39294A282C6EC46D00BFFE12 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				39B74C3E2C75504C00CDF62D /* PlacesTableViewCell */,
 				39294A342C6EC7A200BFFE12 /* HomePageViewController.swift */,
 				39294A362C6EC7AF00BFFE12 /* HomePage.storyboard */,
 			);
@@ -157,6 +168,7 @@
 				392528D92C7209FB0000DA4B /* CustomTextField */,
 				39703F6A2C716BBC0000E038 /* StepTopView.swift */,
 				3979FFE22C716CAA008D0D3E /* StepTopView.xib */,
+				39CB085D2C73FE9B0028C523 /* RatingView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -167,6 +179,15 @@
 				39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		39B74C3E2C75504C00CDF62D /* PlacesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				39B74C3F2C75506500CDF62D /* PlacesTableViewCell.swift */,
+				39B74C402C75506500CDF62D /* PlacesTableViewCell.xib */,
+			);
+			path = PlacesTableViewCell;
 			sourceTree = "<group>";
 		};
 		39CD27C72C6EC1D400F7D8A2 = {
@@ -233,6 +254,8 @@
 			packageProductDependencies = (
 				39335A622C7097AC0091C3B4 /* GoogleMaps */,
 				39335A652C709A6A0091C3B4 /* GooglePlaces */,
+				397EC99A2C7564B800B2F64E /* CropViewController */,
+				397EC99C2C7564B800B2F64E /* TOCropViewController */,
 			);
 			productName = locationSaveApp;
 			productReference = 39CD27D02C6EC1D400F7D8A2 /* locationSaveApp.app */;
@@ -265,6 +288,7 @@
 			packageReferences = (
 				39335A612C7097AC0091C3B4 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
 				39335A642C709A6A0091C3B4 /* XCRemoteSwiftPackageReference "ios-places-sdk" */,
+				397EC9992C7564B800B2F64E /* XCRemoteSwiftPackageReference "TOCropViewController" */,
 			);
 			productRefGroup = 39CD27D12C6EC1D400F7D8A2 /* Products */;
 			projectDirPath = "";
@@ -287,6 +311,7 @@
 				39335A6B2C715AB50091C3B4 /* AddPlaceView.storyboard in Resources */,
 				39CD27E02C6EC1D700F7D8A2 /* Assets.xcassets in Resources */,
 				392528D82C72083D0000DA4B /* InformationView.storyboard in Resources */,
+				39B74C422C75506500CDF62D /* PlacesTableViewCell.xib in Resources */,
 				39294A332C6EC6C000BFFE12 /* TabBarViewController.storyboard in Resources */,
 				39E408E62C72C1F10073B4C6 /* AddPhotoView.storyboard in Resources */,
 				39CD27DB2C6EC1D400F7D8A2 /* Main.storyboard in Resources */,
@@ -303,6 +328,7 @@
 				39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */,
 				39B5A6322C72CA6E00103065 /* PageModel.swift in Sources */,
 				392528DB2C720A0C0000DA4B /* CustomTextField.swift in Sources */,
+				39CB085E2C73FE9B0028C523 /* RatingView.swift in Sources */,
 				39CD27DE2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld in Sources */,
 				39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */,
 				39FC6D342C72D4B2003CEB5B /* PlaceModel.xcdatamodeld in Sources */,
@@ -312,6 +338,7 @@
 				39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */,
 				39294A302C6EC66300BFFE12 /* TabBarViewController.swift in Sources */,
 				39FC6D362C72D5E1003CEB5B /* PlaceInfoModel.swift in Sources */,
+				39B74C412C75506500CDF62D /* PlacesTableViewCell.swift in Sources */,
 				3962566A2C7222A300153672 /* ExpandingTextView.swift in Sources */,
 				39B4B1CC2C720EDD0059227B /* UIViewControllerExtension.swift in Sources */,
 				39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */,
@@ -563,6 +590,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		397EC9992C7564B800B2F64E /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/TOCropViewController.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -575,6 +610,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 39335A642C709A6A0091C3B4 /* XCRemoteSwiftPackageReference "ios-places-sdk" */;
 			productName = GooglePlaces;
+		};
+		397EC99A2C7564B800B2F64E /* CropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 397EC9992C7564B800B2F64E /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = CropViewController;
+		};
+		397EC99C2C7564B800B2F64E /* TOCropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 397EC9992C7564B800B2F64E /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = TOCropViewController;
 		};
 /* End XCSwiftPackageProductDependency section */
 

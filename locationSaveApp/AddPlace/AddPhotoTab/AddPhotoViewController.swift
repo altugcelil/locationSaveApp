@@ -25,7 +25,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         place.longitude =  PlaceInfoModel.instance.longitude ?? 0
         place.note = PlaceInfoModel.instance.note
         place.rating = PlaceInfoModel.instance.rating ?? 0
-        
+        place.categoryName = PlaceInfoModel.instance.categoryName
         place.imageData =  PlaceInfoModel.instance.photoData
         do {
             try context.save()
@@ -39,17 +39,17 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func addPhotoClicked(_ sender: UITapGestureRecognizer) {
-        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Fotoğraf Seç", message: nil, preferredStyle: .actionSheet)
         
-        alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Fotoğraf Çek", style: .default, handler: { _ in
             self.openCamera()
         }))
         
-        alert.addAction(UIAlertAction(title: "Choose from Gallery", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Galeriden Seç", style: .default, handler: { _ in
             self.openGallery()
         }))
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Vazgeç", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -66,7 +66,6 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.showsCameraControls = false
             imagePicker.sourceType = .camera
             self.present(imagePicker, animated: true, completion: nil)
         } else {

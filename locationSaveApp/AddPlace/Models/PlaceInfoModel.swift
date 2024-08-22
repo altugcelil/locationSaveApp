@@ -15,6 +15,7 @@ class PlaceInfoModel {
     var longitude: Double?
     var cityOrCountry: String?
     var title: String?
+    var categoryName: String?
     var note: String?
     var rating: Float?
     var photoData: Data?

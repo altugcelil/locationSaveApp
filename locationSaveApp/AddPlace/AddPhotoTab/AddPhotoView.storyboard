@@ -17,34 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotoğraf eklemek için tıklayın" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyu-wJ-8qi">
+                                <rect key="frame" x="73.5" y="144" width="267" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="L0e-ni-AHp" appends="YES" id="GRS-AB-Vyd"/>
+                                </connections>
+                            </label>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uUN-go-SKw">
-                                <rect key="frame" x="26.5" y="304" width="363.5" height="305"/>
+                                <rect key="frame" x="57" y="177.5" width="302.5" height="300"/>
                                 <color key="tintColor" red="0.043592981990000002" green="0.1134760752" blue="0.25099414590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="305" id="c3j-yc-aM0"/>
-                                    <constraint firstAttribute="width" constant="361" id="dwe-3a-gzp"/>
+                                    <constraint firstAttribute="width" constant="300" id="vAg-vX-hb9"/>
+                                    <constraint firstAttribute="height" constant="300" id="ynY-SM-aEl"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="L0e-ni-AHp" appends="YES" id="Oub-Bv-hRb"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma2-ud-Nqb">
-                                <rect key="frame" x="211" y="189" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="testButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KYM-fA-UGe"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="uUN-go-SKw" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="DDE-Hu-APx"/>
-                            <constraint firstItem="uUN-go-SKw" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="wg8-7M-YrP"/>
+                            <constraint firstItem="oyu-wJ-8qi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="96" id="6tm-4q-dgE"/>
+                            <constraint firstItem="uUN-go-SKw" firstAttribute="centerX" secondItem="oyu-wJ-8qi" secondAttribute="centerX" id="MjY-8d-n3w"/>
+                            <constraint firstItem="oyu-wJ-8qi" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="iSk-Vb-uOx"/>
+                            <constraint firstItem="uUN-go-SKw" firstAttribute="top" secondItem="oyu-wJ-8qi" secondAttribute="bottom" constant="8" symbolic="YES" id="v8t-t6-e4I"/>
                         </constraints>
                     </view>
                     <connections>
@@ -52,19 +54,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="L0e-ni-AHp">
-                    <connections>
-                        <action selector="addPhotoClicked:" destination="Y6W-OH-hqX" id="936-cY-2yT"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="L0e-ni-AHp"/>
             </objects>
-            <point key="canvasLocation" x="-89.312977099236633" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="-89.855072463768124" y="-28.794642857142854"/>
         </scene>
     </scenes>
     <resources>
         <image name="photo.badge.plus" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

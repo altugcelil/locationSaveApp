@@ -9,15 +9,21 @@ import UIKit
 import CoreData
 import TOCropViewController
 
+protocol AddPhotoViewControllerTopViewDelegate: AnyObject {
+    func didTapNextButton()
+}
+
 class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate {
     @IBOutlet weak var addPhotoImageView: UIImageView!
     var place: Place?
-    
+   
+    weak var topViewDelegate: AddPhotoViewControllerTopViewDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    func saveLocation(name: String, latitude: Double, longitude: Double) {
+    func saveLocation() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let place = Place(context: context)
         place.title =  PlaceInfoModel.instance.title?.localizedCapitalized
@@ -33,10 +39,6 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         } catch {
             print("Failed to save location: \(error)")
         }
-    }
-    
-    @IBAction func testButton(_ sender: UIButton) {
-        saveLocation(name: "", latitude: 41.2, longitude: 40.2)
     }
     
     @IBAction func addPhotoClicked(_ sender: UITapGestureRecognizer) {

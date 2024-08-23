@@ -19,16 +19,16 @@ class StepTopView: UIView {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var rightIcon: UIImageView!
-    @IBOutlet weak var leftIcon: UIImageView!
+    @IBOutlet weak var rightIcon: UIButton!
+    @IBOutlet weak var leftIcon: UIButton!
     weak var leftImageViewDelegate: StepTopViewLeftButtonDelegate?
     weak var rightImageViewDelegate: StepTopViewRightButtonDelegate?
     
-    @objc func rightImageClicked () {
+    @IBAction func rightButtonClicked(_ sender: UIButton) {
         rightImageViewDelegate?.rightButtonAction()
     }
     
-    @objc func leftImageClicked () {
+    @IBAction func leftButtonClicked(_ sender: UIButton) {
         leftImageViewDelegate?.leftButtonAction()
     }
     
@@ -56,14 +56,6 @@ class StepTopView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [ .flexibleHeight, .flexibleWidth]
-        
-        let rightImageGesture = UITapGestureRecognizer(target: self, action: #selector(rightImageClicked))
-        rightIcon.addGestureRecognizer(rightImageGesture)
-        rightIcon.isUserInteractionEnabled = true
-        
-        let leftImageGesture = UITapGestureRecognizer(target: self, action: #selector(leftImageClicked))
-        leftIcon.addGestureRecognizer(leftImageGesture)
-        leftIcon.isUserInteractionEnabled = true
     }
     
     private func setupFonts() {

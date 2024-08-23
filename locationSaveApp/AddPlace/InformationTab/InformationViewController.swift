@@ -136,8 +136,9 @@ extension InformationViewController: UITextFieldDelegate {
     private func validateForm() {
         let isTitleValid = titleTextField.text?.count ?? 0 > 1
         let isCityOrCountryValid = cityOrCountryField.text?.count ?? 0 > 1
-        
-        let isFormValid = isTitleValid && isCityOrCountryValid
+        let isCategoryValid = categoryLabel.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "Kategori"
+
+        let isFormValid = isTitleValid && isCityOrCountryValid && isCategoryValid
         notifyValidationState(isValid: isFormValid)
     }
     
@@ -180,6 +181,7 @@ extension InformationViewController: DropdownSelectionViewControllerDelegate {
         case DropdownModel.Category:
             PlaceInfoModel.instance.categoryName = item.name
             categoryLabel.text = item.name
+            validateForm()
         }
     }
 }

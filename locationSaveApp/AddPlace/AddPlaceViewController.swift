@@ -57,16 +57,18 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
         mapViewController.delegate = self
         
         let addPhotoStoryBoard = UIStoryboard(name: "AddPhotoView", bundle: nil)
-        let addPhotoViewController = addPhotoStoryBoard.instantiateViewController(withIdentifier: "addPhotoTab")
-        
-        pageModel = [
-            PageModel(title: "1/3", info: "Haritadan kaydetmek istediğin lokasyonu seçmelisin :)", viewController: mapViewController),
-            PageModel(title: "2/3", info: "Kaydetmek istediğin yer için birkaç detaya ihtiyacımız var :)", viewController: informationViewController),
-            PageModel(title: "3/3", info: "Dilersen ileride bu yeri daha iyi hatırlamak için fotoğraf ekleyebilirsin :) (Opsyionel)", viewController: addPhotoViewController)
-        ]
-        
-        pageContent = [mapViewController, informationViewController, addPhotoViewController]
-        pageViewController.setViewControllers([mapViewController], direction: .forward, animated: true, completion: nil)
+        if let addPhotoViewController = addPhotoStoryBoard.instantiateViewController(withIdentifier: "addPhotoTab") as? AddPhotoViewController {
+            addPhotoViewController.topViewDelegate = self
+            
+            pageModel = [
+                PageModel(title: "1/3", info: "Haritadan kaydetmek istediğin lokasyonu seçmelisin :)", viewController: mapViewController),
+                PageModel(title: "2/3", info: "Kaydetmek istediğin yer için birkaç detaya ihtiyacımız var :)", viewController: informationViewController),
+                PageModel(title: "3/3", info: "Dilersen ileride bu yeri daha iyi hatırlamak için fotoğraf ekleyebilirsin :) (Opsyionel)", viewController: addPhotoViewController)
+            ]
+            
+            pageContent = [mapViewController, informationViewController, addPhotoViewController]
+            pageViewController.setViewControllers([mapViewController], direction: .forward, animated: true, completion: nil)
+        }
         
         updatePageInfo(for: currentPageIndex)
         
@@ -80,7 +82,16 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
         let page = pageModel[index]
         infoLabel.text = page.info
         stepTopView.titleLabel.text = page.title
+        
+        if index == pageContent.count - 1 {
+            stepTopView.rightIcon.setImage(UIImage(), for: .normal) //
+            stepTopView.rightIcon.setTitle("Kaydet", for: .normal) //
+        } else {
+            stepTopView.rightIcon.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+            stepTopView.rightIcon.setTitle("", for: .normal) //
+        }
     }
+
     
     private func updateButtonColors() {
         let isFirstPage = currentPageIndex == 0
@@ -118,14 +129,33 @@ extension AddPlaceViewController: StepTopViewLeftButtonDelegate, StepTopViewRigh
     }
     
     func rightButtonAction() {
-        let nextIndex = currentPageIndex + 1
-        
-        if nextIndex < pageContent.count {
-            currentPageIndex = nextIndex
-            let nextViewController = pageContent[currentPageIndex]
-            pageViewController.setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
-            updateButtonColors()
-            updatePageInfo(for: currentPageIndex)
+        if currentPageIndex == pageContent.count - 1 { // AddPhotoViewController index
+            let currentViewController = pageContent[currentPageIndex] as? AddPhotoViewController
+            currentViewController?.saveLocation()
+            currentViewController?.topViewDelegate?.didTapNextButton()
+        } else {
+            // Normal geçiş işlemi
+            let nextIndex = currentPageIndex + 1
+            if nextIndex < pageContent.count {
+                currentPageIndex = nextIndex
+                let nextViewController = pageContent[currentPageIndex]
+                pageViewController.setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
+                updateButtonColors()
+                updatePageInfo(for: currentPageIndex)
+            }
         }
+    }
+}
+extension AddPlaceViewController: AddPhotoViewControllerTopViewDelegate {
+    func didTapNextButton() {
+           if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let window = scene.windows.first {
+               let storyboard = UIStoryboard(name: "TabBarViewController", bundle: nil)
+               let initialViewController = storyboard.instantiateViewController(withIdentifier: "mainPageTabBar")
+               window.rootViewController = initialViewController
+               window.makeKeyAndVisible()
+               
+               UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil, completion: nil)
+           }
     }
 }

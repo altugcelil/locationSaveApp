@@ -34,6 +34,8 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
     }
     
     private func setupUI() {
+        setupFontSize()
+        
         stepTopView.setLeftButtonDelegate(delegate: self)
         stepTopView.setRightButtonDelegate(delegate: self)
         stepTopView.leftIcon.tintColor = .gray
@@ -76,6 +78,10 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
         pageViewController.view.frame = self.containerView.bounds
         self.containerView.addSubview(pageViewController.view)
         pageViewController.didMove(toParent: self)
+    }
+    
+    private func setupFontSize() {
+        infoLabel.font = BaseFont.adjustFontSize(of: infoLabel.font, to: 16)
     }
     
     private func updatePageInfo(for index: Int) {

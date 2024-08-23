@@ -11,23 +11,30 @@ class PlacesTableViewCell: UITableViewCell {
     @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
-
-
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
-
+    
     override func layoutSubviews() {
-       super.layoutSubviews()
+        super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by:  UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0))
     }
     
     private func setupUI() {
-            selectionStyle = .none
-            contentView.layer.cornerRadius = 8
-            contentView.layer.borderWidth = 0.65
-            contentView.layer.borderColor = UIColor.black.cgColor
+        setupFontSize()
+        
+        selectionStyle = .none
+        contentView.layer.cornerRadius = 8
+        contentView.layer.borderWidth = 0.65
+        contentView.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    private func setupFontSize() {
+        titleLabel.font = BaseFont.adjustFontSize(of: titleLabel.font, to: 16)
+        noteLabel.font = BaseFont.adjustFontSize(of: noteLabel.font, to: 12)
     }
     
     func configure(imageData: Data?, title: String?, note: String?, rating: Float?) {

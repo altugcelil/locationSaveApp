@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="32" width="393" height="95"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="4UA-YL-bQ3"/>
+                                    <constraint firstAttribute="height" constant="95" id="4UA-YL-bQ3" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen eklemek istediğiniz yerin konumunu seçiniz.Lütfen eklemek istediğiniz yerin konumunu seçiniz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYI-nD-u4o">

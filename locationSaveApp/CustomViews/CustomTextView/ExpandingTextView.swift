@@ -81,7 +81,7 @@ import UIKit
     private lazy var textView: UITextView = {
         let textView = UITextView()
         textView.delegate = self
-        textView.font = UIFont.systemFont(ofSize: 14)
+        textView.font = BaseFont.adjustFontSize(of: staticPlaceholderFont, to: 14)
         textView.backgroundColor = .clear
         textView.textContainerInset = UIEdgeInsets(top: 8, left: textLeftOffset, bottom: 8, right: 8)
         textView.isScrollEnabled = false
@@ -156,10 +156,9 @@ extension ExpandingTextView: UITextViewDelegate {
             textView.text = String(textView.text.prefix(maxCharacterLimit))
         }
         
-        // Adjust the height of the text view
         let fixedWidth = textView.frame.size.width
         let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
-        textView.isScrollEnabled = newSize.height >= 150 // Adjust based on your max desired height
+        textView.isScrollEnabled = newSize.height >= 150
         textView.frame.size = CGSize(width: max(fixedWidth, newSize.width), height: newSize.height)
     }
 }

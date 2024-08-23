@@ -13,7 +13,7 @@ class DropdownTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        itemLabel.font = BaseFont.adjustFontSize(of: itemLabel.font, to: 16)
     }
     
     func configure(item: DropdownControllerModel) {

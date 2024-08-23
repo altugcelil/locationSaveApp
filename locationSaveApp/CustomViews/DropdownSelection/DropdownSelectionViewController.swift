@@ -40,6 +40,7 @@ class DropdownSelectionViewController: UIViewController {
     
     private func setupUI() {
         definesPresentationContext = true
+        titleLabel.font = BaseFont.adjustFontSize(of: titleLabel.font, to: 18)
 //        closeIcon.isUserInteractionEnabled = true
 //        categoryTableView.showsVerticalScrollIndicator = false
         

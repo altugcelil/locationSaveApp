@@ -13,6 +13,9 @@ protocol FilterSelectionDelegate: AnyObject {
 }
 
 class FilterSelectionViewController: UIViewController {
+    @IBOutlet weak var cityCountryLabel: UILabel!
+    @IBOutlet weak var categoryHeaderLabel: UILabel!
+
     @IBOutlet weak var cityCollectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var categoryCollectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var layout: UICollectionViewFlowLayout!
@@ -33,6 +36,7 @@ class FilterSelectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupFontSize()
         fetchLocations()
         setupCollectionViews()
     }
@@ -47,6 +51,11 @@ class FilterSelectionViewController: UIViewController {
         self.view.layoutIfNeeded()
     }
     
+    private func setupFontSize() {
+        cityCountryLabel.font = BaseFont.adjustFontSize(of: cityCountryLabel.font, to: 24)
+        categoryHeaderLabel.font = BaseFont.adjustFontSize(of: categoryHeaderLabel.font, to: 24)
+    }
+
     func fetchLocations() {
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             let fetchRequest: NSFetchRequest<Place> = Place.fetchRequest()

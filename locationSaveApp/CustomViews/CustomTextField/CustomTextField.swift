@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @IBDesignable class CustomTextField: UITextField {
-    
+
     // MARK: - Public Properties
     
     @IBInspectable public var staticPlaceholderText: String = "" {

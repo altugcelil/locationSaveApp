@@ -51,6 +51,13 @@
 		39CD27E32C6EC1D700F7D8A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39CD27E12C6EC1D700F7D8A2 /* LaunchScreen.storyboard */; };
 		39E408E42C72C1E30073B4C6 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E408E32C72C1E30073B4C6 /* AddPhotoViewController.swift */; };
 		39E408E62C72C1F10073B4C6 /* AddPhotoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E408E52C72C1F10073B4C6 /* AddPhotoView.storyboard */; };
+		39FB4BED2C78D6AB006BBCD8 /* Dimesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB4BEA2C78D6AA006BBCD8 /* Dimesion.swift */; };
+		39FB4BEE2C78D6AB006BBCD8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB4BEB2C78D6AB006BBCD8 /* Device.swift */; };
+		39FB4BEF2C78D6AB006BBCD8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB4BEC2C78D6AB006BBCD8 /* Font.swift */; };
+		39FB4BF92C78D6DB006BBCD8 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB4BF72C78D6DB006BBCD8 /* CGFloatExtension.swift */; };
+		39FB4BFA2C78D6DB006BBCD8 /* UIViewAdaptedConstrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB4BF82C78D6DB006BBCD8 /* UIViewAdaptedConstrait.swift */; };
+		39FB4BFD2C78D6EC006BBCD8 /* AdaptiveLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB4BFC2C78D6EC006BBCD8 /* AdaptiveLayoutHelper.swift */; };
+		39FB4C002C78D6F9006BBCD8 /* AdaptedConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB4BFF2C78D6F9006BBCD8 /* AdaptedConstraint.swift */; };
 		39FC6D342C72D4B2003CEB5B /* PlaceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39FC6D322C72D4B2003CEB5B /* PlaceModel.xcdatamodeld */; };
 		39FC6D362C72D5E1003CEB5B /* PlaceInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC6D352C72D5E1003CEB5B /* PlaceInfoModel.swift */; };
 /* End PBXBuildFile section */
@@ -98,6 +105,13 @@
 		39CD27E42C6EC1D700F7D8A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E408E32C72C1E30073B4C6 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		39E408E52C72C1F10073B4C6 /* AddPhotoView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPhotoView.storyboard; sourceTree = "<group>"; };
+		39FB4BEA2C78D6AA006BBCD8 /* Dimesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimesion.swift; sourceTree = "<group>"; };
+		39FB4BEB2C78D6AB006BBCD8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		39FB4BEC2C78D6AB006BBCD8 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		39FB4BF72C78D6DB006BBCD8 /* CGFloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
+		39FB4BF82C78D6DB006BBCD8 /* UIViewAdaptedConstrait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAdaptedConstrait.swift; sourceTree = "<group>"; };
+		39FB4BFC2C78D6EC006BBCD8 /* AdaptiveLayoutHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveLayoutHelper.swift; sourceTree = "<group>"; };
+		39FB4BFF2C78D6F9006BBCD8 /* AdaptedConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptedConstraint.swift; sourceTree = "<group>"; };
 		39FC6D332C72D4B2003CEB5B /* PlaceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlaceModel.xcdatamodel; sourceTree = "<group>"; };
 		39FC6D352C72D5E1003CEB5B /* PlaceInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -283,6 +297,7 @@
 		39CD27D22C6EC1D400F7D8A2 /* locationSaveApp */ = {
 			isa = PBXGroup;
 			children = (
+				39FB4BE82C78D665006BBCD8 /* Constraint */,
 				3915CA152C757435009CFB85 /* DetailPage */,
 				39B4B1CA2C720ECD0059227B /* Extensions */,
 				39703F692C716B720000E038 /* CustomViews */,
@@ -309,6 +324,52 @@
 				39E408E52C72C1F10073B4C6 /* AddPhotoView.storyboard */,
 			);
 			path = AddPhotoTab;
+			sourceTree = "<group>";
+		};
+		39FB4BE82C78D665006BBCD8 /* Constraint */ = {
+			isa = PBXGroup;
+			children = (
+				39FB4BFE2C78D6EF006BBCD8 /* Subclasses */,
+				39FB4BFB2C78D6E0006BBCD8 /* Helpers */,
+				39FB4BF62C78D6CC006BBCD8 /* Extensions */,
+				39FB4BE92C78D68E006BBCD8 /* Enums */,
+			);
+			path = Constraint;
+			sourceTree = "<group>";
+		};
+		39FB4BE92C78D68E006BBCD8 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				39FB4BEB2C78D6AB006BBCD8 /* Device.swift */,
+				39FB4BEA2C78D6AA006BBCD8 /* Dimesion.swift */,
+				39FB4BEC2C78D6AB006BBCD8 /* Font.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		39FB4BF62C78D6CC006BBCD8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				39FB4BF72C78D6DB006BBCD8 /* CGFloatExtension.swift */,
+				39FB4BF82C78D6DB006BBCD8 /* UIViewAdaptedConstrait.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		39FB4BFB2C78D6E0006BBCD8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				39FB4BFC2C78D6EC006BBCD8 /* AdaptiveLayoutHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		39FB4BFE2C78D6EF006BBCD8 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				39FB4BFF2C78D6F9006BBCD8 /* AdaptedConstraint.swift */,
+			);
+			path = Subclasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,13 +468,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3915CA182C75744D009CFB85 /* DetailPageViewController.swift in Sources */,
+				39FB4BFD2C78D6EC006BBCD8 /* AdaptiveLayoutHelper.swift in Sources */,
 				39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */,
 				39CA191B2C780532000F3069 /* FilterSelectionViewController.swift in Sources */,
 				39B5A6322C72CA6E00103065 /* PageModel.swift in Sources */,
 				392528DB2C720A0C0000DA4B /* CustomTextField.swift in Sources */,
 				39346D962C762CAD002282E4 /* DropdownModel.swift in Sources */,
 				39CB085E2C73FE9B0028C523 /* RatingView.swift in Sources */,
+				39FB4BFA2C78D6DB006BBCD8 /* UIViewAdaptedConstrait.swift in Sources */,
 				39346D9C2C762FDC002282E4 /* DropdownTableViewCell.swift in Sources */,
+				39FB4BEF2C78D6AB006BBCD8 /* Font.swift in Sources */,
 				3915CA1B2C75812C009CFB85 /* BaseViewController.swift in Sources */,
 				39CD27DE2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld in Sources */,
 				39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */,
@@ -421,13 +485,17 @@
 				39335A692C715A9D0091C3B4 /* AddPlaceViewController.swift in Sources */,
 				39E408E42C72C1E30073B4C6 /* AddPhotoViewController.swift in Sources */,
 				39294A352C6EC7A200BFFE12 /* HomePageViewController.swift in Sources */,
+				39FB4BF92C78D6DB006BBCD8 /* CGFloatExtension.swift in Sources */,
 				39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */,
 				39294A302C6EC66300BFFE12 /* TabBarViewController.swift in Sources */,
+				39FB4C002C78D6F9006BBCD8 /* AdaptedConstraint.swift in Sources */,
 				39FC6D362C72D5E1003CEB5B /* PlaceInfoModel.swift in Sources */,
 				39B74C412C75506500CDF62D /* PlacesTableViewCell.swift in Sources */,
+				39FB4BEE2C78D6AB006BBCD8 /* Device.swift in Sources */,
 				3962566A2C7222A300153672 /* ExpandingTextView.swift in Sources */,
 				39B4B1CC2C720EDD0059227B /* UIViewControllerExtension.swift in Sources */,
 				39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */,
+				39FB4BED2C78D6AB006BBCD8 /* Dimesion.swift in Sources */,
 				39703F662C7169900000E038 /* MapViewController.swift in Sources */,
 				392528D62C7207F30000DA4B /* InformationViewController.swift in Sources */,
 				39CA191F2C780869000F3069 /* FilterCollectionViewCell.swift in Sources */,

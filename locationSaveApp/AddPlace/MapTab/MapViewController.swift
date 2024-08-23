@@ -43,7 +43,7 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
         mapView.delegate = self
         self.view.addSubview(mapView)
         
-        searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 48))
+        searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: adapted(dimensionSize: 50, to: .height)))
         searchBar.delegate = self
         self.view.addSubview(searchBar)
     }

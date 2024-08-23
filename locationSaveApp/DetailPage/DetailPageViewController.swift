@@ -28,6 +28,7 @@ class DetailPageViewController: UIViewController {
     private func setupUI() {
         nameLabel.text = place?.title
         noteLabel.text = place?.note
+        cityOrCountryLabel.text = place?.cityOrCountry
         ratingView.rating = place?.rating ?? 0.0
         ratingView.isUserInteractionEnabled = false
         

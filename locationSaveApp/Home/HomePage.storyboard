@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rW2-ks-tOa">
-                                <rect key="frame" x="16" y="104.66666666666669" width="361" height="731.33333333333326"/>
+                                <rect key="frame" x="16" y="176.66666666666669" width="361" height="659.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -49,6 +50,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LBs-5Y-BsD">
+                                <rect key="frame" x="16" y="104.66666666666669" width="321" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="0bE-6i-X7Q"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Uy0-g2-1QR"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OC6-LD-59r" userLabel="Filter Button">
+                                <rect key="frame" x="337" y="105.33333333333331" width="40" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="bdl-lb-n0v"/>
+                                    <constraint firstAttribute="width" constant="40" id="yf5-rj-ueq"/>
+                                </constraints>
+                                <color key="tintColor" red="0.015686274510000001" green="0.1176470588" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="line.3.horizontal.decrease" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="filterButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gee-kz-2XY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -57,15 +83,21 @@
                             <constraint firstItem="Vbp-Le-3OO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JI2-Uk-Neq"/>
                             <constraint firstItem="Vbp-Le-3OO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="M66-2I-1od"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vbp-Le-3OO" secondAttribute="trailing" id="Pkm-R5-3n7"/>
+                            <constraint firstItem="OC6-LD-59r" firstAttribute="centerY" secondItem="LBs-5Y-BsD" secondAttribute="centerY" id="W1o-eH-vQo"/>
                             <constraint firstItem="rW2-ks-tOa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="YzD-kh-yTU"/>
                             <constraint firstAttribute="bottom" secondItem="rW2-ks-tOa" secondAttribute="bottom" constant="16" id="Zcc-kz-dfQ"/>
-                            <constraint firstItem="rW2-ks-tOa" firstAttribute="top" secondItem="Vbp-Le-3OO" secondAttribute="bottom" constant="16" id="r3A-TU-pRW"/>
+                            <constraint firstItem="rW2-ks-tOa" firstAttribute="top" secondItem="LBs-5Y-BsD" secondAttribute="bottom" constant="16" id="hwd-2b-Swl"/>
+                            <constraint firstItem="OC6-LD-59r" firstAttribute="trailing" secondItem="rW2-ks-tOa" secondAttribute="trailing" id="mHx-eg-3to"/>
+                            <constraint firstItem="LBs-5Y-BsD" firstAttribute="leading" secondItem="rW2-ks-tOa" secondAttribute="leading" id="qIG-sp-7Uf"/>
+                            <constraint firstItem="LBs-5Y-BsD" firstAttribute="top" secondItem="Vbp-Le-3OO" secondAttribute="bottom" constant="16" id="wPM-pm-diI"/>
+                            <constraint firstItem="OC6-LD-59r" firstAttribute="leading" secondItem="LBs-5Y-BsD" secondAttribute="trailing" id="yIy-oJ-hvr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Y2J-y5-Cet"/>
                     <connections>
                         <outlet property="headerLabel" destination="Vbp-Le-3OO" id="Ezm-91-Lt7"/>
                         <outlet property="placesTableView" destination="rW2-ks-tOa" id="9je-eW-mIS"/>
+                        <outlet property="searchBar" destination="LBs-5Y-BsD" id="PFC-OY-z2L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -74,6 +106,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="line.3.horizontal.decrease" catalog="system" width="128" height="73"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

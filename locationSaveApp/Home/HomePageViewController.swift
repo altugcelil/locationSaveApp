@@ -19,6 +19,7 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupFontSize()
         setupSearchBarUI()
     }
     
@@ -35,6 +36,10 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
         
         placesTableView.estimatedRowHeight = 100
         placesTableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    private func setupFontSize() {
+        headerLabel.font = BaseFont.adjustFontSize(of: headerLabel.font, to: 18)
     }
     
     private func setupSearchBarUI() {

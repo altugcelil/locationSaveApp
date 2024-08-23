@@ -16,7 +16,9 @@
                 <outlet property="backButton" destination="Ep1-WA-Blz" id="Wy4-wg-KDy"/>
                 <outlet property="categoryCollectionView" destination="It9-ME-pOf" id="t26-i5-fiO"/>
                 <outlet property="categoryCollectionViewHeight" destination="U9C-ek-ZqG" id="oQQ-iA-Rqf"/>
+                <outlet property="categoryHeaderLabel" destination="n5Z-4N-gcI" id="21U-5J-fjR"/>
                 <outlet property="cityCollectionViewHeight" destination="7zo-th-8Bf" id="zXK-d7-JIl"/>
+                <outlet property="cityCountryLabel" destination="Kk9-PS-xeo" id="SGV-xm-sk5"/>
                 <outlet property="cityOrCountryCollectionView" destination="acz-Bv-UtD" id="zB9-RV-a4Y"/>
                 <outlet property="layout" destination="tJi-1b-ZPW" id="KTm-aJ-RDG"/>
                 <outlet property="scrollView" destination="eED-qr-VQG" id="cA6-7h-GTJ"/>
@@ -44,7 +46,7 @@
                                     <rect key="frame" x="16" y="124.66666666666669" width="361" height="267"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="267" id="7zo-th-8Bf"/>
+                                        <constraint firstAttribute="height" constant="267" id="7zo-th-8Bf" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                     </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KZn-XY-Pz4">
                                         <size key="itemSize" width="128" height="128"/>
@@ -63,7 +65,7 @@
                                     <rect key="frame" x="16" y="468.33333333333326" width="361" height="267"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="267" id="U9C-ek-ZqG"/>
+                                        <constraint firstAttribute="height" constant="267" id="U9C-ek-ZqG" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                     </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tJi-1b-ZPW">
                                         <size key="itemSize" width="128" height="128"/>

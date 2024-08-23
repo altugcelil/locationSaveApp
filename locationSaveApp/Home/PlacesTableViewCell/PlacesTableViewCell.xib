@@ -21,9 +21,9 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="psH-nu-VIG">
                         <rect key="frame" x="8" y="9" width="150" height="147.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="150" id="Gy1-IN-lLp"/>
+                            <constraint firstAttribute="width" constant="150" id="Gy1-IN-lLp" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                             <constraint firstAttribute="width" secondItem="psH-nu-VIG" secondAttribute="height" multiplier="1:1" id="pkC-Jz-rBz"/>
-                            <constraint firstAttribute="height" constant="150" id="qJZ-rh-zuy"/>
+                            <constraint firstAttribute="height" constant="150" id="qJZ-rh-zuy" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Güneş Kafe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klm-Gi-XFf">
@@ -55,11 +55,11 @@
                     <constraint firstAttribute="trailing" secondItem="9hG-B0-XcO" secondAttribute="trailing" constant="16" id="9m6-El-0dO"/>
                     <constraint firstItem="Klm-Gi-XFf" firstAttribute="leading" secondItem="psH-nu-VIG" secondAttribute="trailing" constant="8" id="IJb-hL-J6k"/>
                     <constraint firstItem="Bi4-O7-KnE" firstAttribute="top" secondItem="Klm-Gi-XFf" secondAttribute="bottom" constant="8" id="KF5-Et-V98"/>
-                    <constraint firstAttribute="bottom" secondItem="psH-nu-VIG" secondAttribute="bottom" priority="800" constant="27" id="Pju-Cl-KSN"/>
+                    <constraint firstAttribute="bottom" secondItem="psH-nu-VIG" secondAttribute="bottom" priority="800" constant="27" id="Pju-Cl-KSN" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                     <constraint firstItem="psH-nu-VIG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="S8n-h9-lmm"/>
                     <constraint firstItem="Bi4-O7-KnE" firstAttribute="leading" secondItem="psH-nu-VIG" secondAttribute="trailing" constant="8" id="b4u-4N-Xyj"/>
                     <constraint firstAttribute="trailing" secondItem="Bi4-O7-KnE" secondAttribute="trailing" constant="8" id="ceQ-jU-z7E"/>
-                    <constraint firstAttribute="bottom" secondItem="Bi4-O7-KnE" secondAttribute="bottom" priority="750" constant="43" id="h6N-7A-SBy"/>
+                    <constraint firstAttribute="bottom" secondItem="Bi4-O7-KnE" secondAttribute="bottom" priority="750" constant="43" id="h6N-7A-SBy" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                     <constraint firstItem="9hG-B0-XcO" firstAttribute="top" secondItem="Bi4-O7-KnE" secondAttribute="bottom" constant="4" id="hW7-bN-mx3"/>
                     <constraint firstItem="Klm-Gi-XFf" firstAttribute="top" secondItem="psH-nu-VIG" secondAttribute="top" id="oGi-jq-3HD"/>
                     <constraint firstItem="psH-nu-VIG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="t3m-FG-5Pe"/>

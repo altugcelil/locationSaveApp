@@ -12,7 +12,10 @@ protocol InformationViewControllerDelegate: AnyObject {
 }
 
 class InformationViewController: UIViewController, RatingViewDelegate {
-    
+    @IBOutlet weak var ratingHeader: UILabel!
+    @IBOutlet weak var categoryHeader: UILabel!
+    @IBOutlet weak var noteHeader: UILabel!
+
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var cityOrCountryField: CustomTextField!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -42,24 +45,36 @@ class InformationViewController: UIViewController, RatingViewDelegate {
     }
     
     private func setupUI() {
+        setupFontSize()
         self.hideKeyboardWhenTappedAround()
         ratingView.delegate = self
         setupTextFields()
+    }
+    
+    private func setupFontSize() {
+        ratingHeader.font = BaseFont.adjustFontSize(of: ratingHeader.font, to: 12)
+        noteHeader.font = BaseFont.adjustFontSize(of: noteHeader.font, to: 12)
+        categoryHeader.font = BaseFont.adjustFontSize(of: categoryHeader.font, to: 12)
+
+        categoryLabel.font = BaseFont.adjustFontSize(of: categoryLabel.font, to: 12)
+        ratingLabel.font = BaseFont.adjustFontSize(of: categoryLabel.font, to: 12)
     }
     
     private func setupTextFields() {
         noteTextView.text = placeHolderText
         noteTextView.textColor = UIColor.lightGray
         noteTextView.delegate = self
-        
+        noteTextView.font = BaseFont.adjustFontSize(of: categoryHeader.font, to: 14)
         titleTextField.staticPlaceholderText = "Bu yer için isim girin: "
         titleTextField.placeholder = "Örn: Butik Kafe (Acıbadem) "
         titleTextField.textColor = .black
         titleTextField.delegate = self
+        titleTextField.staticPlaceholderFont = BaseFont.adjustFontSize(of: categoryHeader.font, to: 12)
         
         cityOrCountryField.staticPlaceholderText = "Şehir veya ülke girin: "
         cityOrCountryField.placeholder = "Örn: İstanbul "
         cityOrCountryField.delegate = self
+        cityOrCountryField.staticPlaceholderFont = BaseFont.adjustFontSize(of: categoryHeader.font, to: 12)
     }
     
     @IBAction func categoryViewClicked(_ sender: UITapGestureRecognizer) {
@@ -137,7 +152,6 @@ extension InformationViewController: UITextFieldDelegate {
         let isTitleValid = titleTextField.text?.count ?? 0 > 1
         let isCityOrCountryValid = cityOrCountryField.text?.count ?? 0 > 1
         let isCategoryValid = categoryLabel.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "Kategori"
-
         let isFormValid = isTitleValid && isCityOrCountryValid && isCategoryValid
         notifyValidationState(isValid: isFormValid)
     }

@@ -26,7 +26,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="35N-MG-sCi" customClass="CustomTextField" customModule="locationSaveApp" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="120" width="377" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="CvC-jV-MN7"/>
+                                                    <constraint firstAttribute="height" constant="40" id="CvC-jV-MN7" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -41,7 +41,7 @@
                                                 <rect key="frame" x="8" y="303" width="377" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="On6-1A-Wep"/>
+                                                    <constraint firstAttribute="height" constant="40" id="On6-1A-Wep" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                                 </constraints>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -59,7 +59,7 @@
                                                 <rect key="frame" x="8" y="412.33333333333331" width="377" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="Bhk-lY-pog"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Bhk-lY-pog" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeri puanlayın: (Opsyionel)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLu-LH-Jgo">
@@ -77,7 +77,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVy-rH-Oe8" userLabel="City or Country Field" customClass="CustomTextField" customModule="locationSaveApp" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="32" width="377" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="Efe-OY-qzv"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Efe-OY-qzv" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -95,8 +95,8 @@
                                                         <rect key="frame" x="349" y="11.999999999999998" width="20" height="16.333333333333329"/>
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="20" id="V7n-dw-ScA"/>
-                                                            <constraint firstAttribute="width" constant="20" id="VEk-Sh-F8Z"/>
+                                                            <constraint firstAttribute="height" constant="20" id="V7n-dw-ScA" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
+                                                            <constraint firstAttribute="width" constant="20" id="VEk-Sh-F8Z" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
@@ -106,7 +106,7 @@
                                                     <constraint firstItem="eUL-sk-Xd2" firstAttribute="centerY" secondItem="UoX-IG-cy3" secondAttribute="centerY" id="6VA-6H-rxo"/>
                                                     <constraint firstItem="NBb-rf-PRz" firstAttribute="centerY" secondItem="UoX-IG-cy3" secondAttribute="centerY" id="STe-bu-vKV"/>
                                                     <constraint firstAttribute="trailing" secondItem="eUL-sk-Xd2" secondAttribute="trailing" constant="8" id="Z6K-MY-BCT"/>
-                                                    <constraint firstAttribute="height" constant="40" id="n9T-5F-dqi"/>
+                                                    <constraint firstAttribute="height" constant="40" id="n9T-5F-dqi" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                                     <constraint firstItem="NBb-rf-PRz" firstAttribute="leading" secondItem="UoX-IG-cy3" secondAttribute="leading" id="uLk-VP-J3z"/>
                                                 </constraints>
                                                 <connections>
@@ -135,7 +135,7 @@
                                             <constraint firstItem="gaN-h7-gsg" firstAttribute="leading" secondItem="hUv-Xk-bQl" secondAttribute="leading" constant="8" id="59F-59-r2l"/>
                                             <constraint firstItem="35N-MG-sCi" firstAttribute="leading" secondItem="hUv-Xk-bQl" secondAttribute="leading" constant="8" id="92r-Dd-jg9"/>
                                             <constraint firstItem="28d-m8-HUG" firstAttribute="leading" secondItem="hUv-Xk-bQl" secondAttribute="leading" constant="8" id="9fd-mv-1j1"/>
-                                            <constraint firstItem="HLu-LH-Jgo" firstAttribute="top" secondItem="qpe-qc-ukY" secondAttribute="bottom" constant="36" id="AVI-Rf-cn6"/>
+                                            <constraint firstItem="HLu-LH-Jgo" firstAttribute="top" secondItem="qpe-qc-ukY" secondAttribute="bottom" constant="36" id="AVI-Rf-cn6" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                             <constraint firstItem="HLu-LH-Jgo" firstAttribute="trailing" secondItem="YyL-Sj-vww" secondAttribute="trailing" id="DeK-s1-gGl"/>
                                             <constraint firstItem="28d-m8-HUG" firstAttribute="top" secondItem="UoX-IG-cy3" secondAttribute="bottom" constant="8" id="DhW-ci-5n6"/>
                                             <constraint firstAttribute="trailing" secondItem="qpe-qc-ukY" secondAttribute="trailing" constant="8" id="Dqg-r4-aIB"/>
@@ -152,12 +152,12 @@
                                             <constraint firstItem="LVy-rH-Oe8" firstAttribute="top" secondItem="hUv-Xk-bQl" secondAttribute="top" constant="32" id="bhV-ub-TFQ"/>
                                             <constraint firstAttribute="trailing" secondItem="28d-m8-HUG" secondAttribute="trailing" constant="8" id="eT2-6r-wNH"/>
                                             <constraint firstItem="CPM-Wx-XcR" firstAttribute="leading" secondItem="hUv-Xk-bQl" secondAttribute="leading" constant="8" id="gFU-Fo-Ccj"/>
-                                            <constraint firstItem="35N-MG-sCi" firstAttribute="top" secondItem="LVy-rH-Oe8" secondAttribute="bottom" constant="48" id="gJz-9y-TWJ"/>
+                                            <constraint firstItem="35N-MG-sCi" firstAttribute="top" secondItem="LVy-rH-Oe8" secondAttribute="bottom" constant="48" id="gJz-9y-TWJ" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                             <constraint firstAttribute="trailing" secondItem="35N-MG-sCi" secondAttribute="trailing" constant="8" id="gk5-Wm-w4C"/>
                                             <constraint firstItem="UoX-IG-cy3" firstAttribute="leading" secondItem="hUv-Xk-bQl" secondAttribute="leading" constant="8" id="j3J-fa-2FV"/>
                                             <constraint firstAttribute="trailing" secondItem="CPM-Wx-XcR" secondAttribute="trailing" constant="8" id="jOb-Ys-mCX"/>
                                             <constraint firstItem="cmD-m5-DDo" firstAttribute="leading" secondItem="hUv-Xk-bQl" secondAttribute="leading" constant="8" id="k5p-Ds-5Za"/>
-                                            <constraint firstItem="cmD-m5-DDo" firstAttribute="top" secondItem="35N-MG-sCi" secondAttribute="bottom" constant="32" id="mlE-vK-xdk"/>
+                                            <constraint firstItem="cmD-m5-DDo" firstAttribute="top" secondItem="35N-MG-sCi" secondAttribute="bottom" constant="32" id="mlE-vK-xdk" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                             <constraint firstItem="YyL-Sj-vww" firstAttribute="top" secondItem="28d-m8-HUG" secondAttribute="bottom" constant="16" id="nWU-z1-xPi"/>
                                             <constraint firstAttribute="trailing" secondItem="UoX-IG-cy3" secondAttribute="trailing" constant="8" id="oPh-jA-gNg"/>
                                             <constraint firstItem="HLu-LH-Jgo" firstAttribute="leading" secondItem="YyL-Sj-vww" secondAttribute="leading" id="pKk-vK-nRp"/>
@@ -188,9 +188,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryHeader" destination="cmD-m5-DDo" id="BGF-3B-2X2"/>
                         <outlet property="categoryLabel" destination="NBb-rf-PRz" id="A3f-un-lrw"/>
                         <outlet property="cityOrCountryField" destination="LVy-rH-Oe8" id="3RZ-JH-ikO"/>
+                        <outlet property="noteHeader" destination="YyL-Sj-vww" id="Iqg-Qm-m1F"/>
                         <outlet property="noteTextView" destination="8In-5W-iUD" id="bhj-aW-fbi"/>
+                        <outlet property="ratingHeader" destination="HLu-LH-Jgo" id="6Kk-EN-qLw"/>
                         <outlet property="ratingLabel" destination="CPM-Wx-XcR" id="0Sl-vN-pFi"/>
                         <outlet property="ratingView" destination="gaN-h7-gsg" id="W9N-S6-2LA"/>
                         <outlet property="scrollView" destination="HDG-qe-cXE" id="kGR-FS-1cV"/>

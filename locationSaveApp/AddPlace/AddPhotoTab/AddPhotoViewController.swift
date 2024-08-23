@@ -20,12 +20,13 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     func saveLocation(name: String, latitude: Double, longitude: Double) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let place = Place(context: context)
-        place.title =  PlaceInfoModel.instance.title
+        place.title =  PlaceInfoModel.instance.title?.localizedCapitalized
         place.latitude = PlaceInfoModel.instance.latitude ?? 0
         place.longitude =  PlaceInfoModel.instance.longitude ?? 0
         place.note = PlaceInfoModel.instance.note
         place.rating = PlaceInfoModel.instance.rating ?? 0
-        place.categoryName = PlaceInfoModel.instance.categoryName
+        place.categoryName = PlaceInfoModel.instance.categoryName?.localizedCapitalized
+        place.cityOrCountry = PlaceInfoModel.instance.cityOrCountry?.localizedCapitalized
         place.imageData =  PlaceInfoModel.instance.photoData
         do {
             try context.save()

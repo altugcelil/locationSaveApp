@@ -37,6 +37,10 @@
 		39B5A6322C72CA6E00103065 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B5A6312C72CA6D00103065 /* PageModel.swift */; };
 		39B74C412C75506500CDF62D /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B74C3F2C75506500CDF62D /* PlacesTableViewCell.swift */; };
 		39B74C422C75506500CDF62D /* PlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39B74C402C75506500CDF62D /* PlacesTableViewCell.xib */; };
+		39CA191B2C780532000F3069 /* FilterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CA19192C780532000F3069 /* FilterSelectionViewController.swift */; };
+		39CA191C2C780532000F3069 /* FilterSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39CA191A2C780532000F3069 /* FilterSelectionView.xib */; };
+		39CA191F2C780869000F3069 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CA191D2C780869000F3069 /* FilterCollectionViewCell.swift */; };
+		39CA19202C780869000F3069 /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39CA191E2C780869000F3069 /* FilterCollectionViewCell.xib */; };
 		39CB085E2C73FE9B0028C523 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CB085D2C73FE9B0028C523 /* RatingView.swift */; };
 		39CD27D42C6EC1D400F7D8A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */; };
 		39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD27D52C6EC1D400F7D8A2 /* SceneDelegate.swift */; };
@@ -78,6 +82,10 @@
 		39B5A6312C72CA6D00103065 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
 		39B74C3F2C75506500CDF62D /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		39B74C402C75506500CDF62D /* PlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesTableViewCell.xib; sourceTree = "<group>"; };
+		39CA19192C780532000F3069 /* FilterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionViewController.swift; sourceTree = "<group>"; };
+		39CA191A2C780532000F3069 /* FilterSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterSelectionView.xib; sourceTree = "<group>"; };
+		39CA191D2C780869000F3069 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		39CA191E2C780869000F3069 /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		39CB085D2C73FE9B0028C523 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		39CD27D02C6EC1D400F7D8A2 /* locationSaveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locationSaveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39CD27D32C6EC1D400F7D8A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +225,7 @@
 		39703F692C716B720000E038 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				39CA19182C780503000F3069 /* FilterPage */,
 				39346D922C762BB6002282E4 /* DropdownSelection */,
 				396256682C72229100153672 /* CustomTextView */,
 				392528D92C7209FB0000DA4B /* CustomTextField */,
@@ -242,6 +251,17 @@
 				39B74C402C75506500CDF62D /* PlacesTableViewCell.xib */,
 			);
 			path = PlacesTableViewCell;
+			sourceTree = "<group>";
+		};
+		39CA19182C780503000F3069 /* FilterPage */ = {
+			isa = PBXGroup;
+			children = (
+				39CA19192C780532000F3069 /* FilterSelectionViewController.swift */,
+				39CA191A2C780532000F3069 /* FilterSelectionView.xib */,
+				39CA191D2C780869000F3069 /* FilterCollectionViewCell.swift */,
+				39CA191E2C780869000F3069 /* FilterCollectionViewCell.xib */,
+			);
+			path = FilterPage;
 			sourceTree = "<group>";
 		};
 		39CD27C72C6EC1D400F7D8A2 = {
@@ -367,8 +387,10 @@
 				3979FFE32C716CAA008D0D3E /* StepTopView.xib in Resources */,
 				39CD27E32C6EC1D700F7D8A2 /* LaunchScreen.storyboard in Resources */,
 				39335A6B2C715AB50091C3B4 /* AddPlaceView.storyboard in Resources */,
+				39CA191C2C780532000F3069 /* FilterSelectionView.xib in Resources */,
 				39CD27E02C6EC1D700F7D8A2 /* Assets.xcassets in Resources */,
 				392528D82C72083D0000DA4B /* InformationView.storyboard in Resources */,
+				39CA19202C780869000F3069 /* FilterCollectionViewCell.xib in Resources */,
 				39B74C422C75506500CDF62D /* PlacesTableViewCell.xib in Resources */,
 				3915CA192C75744D009CFB85 /* DetailPageView.xib in Resources */,
 				39294A332C6EC6C000BFFE12 /* TabBarViewController.storyboard in Resources */,
@@ -386,6 +408,7 @@
 			files = (
 				3915CA182C75744D009CFB85 /* DetailPageViewController.swift in Sources */,
 				39CD27D82C6EC1D400F7D8A2 /* ViewController.swift in Sources */,
+				39CA191B2C780532000F3069 /* FilterSelectionViewController.swift in Sources */,
 				39B5A6322C72CA6E00103065 /* PageModel.swift in Sources */,
 				392528DB2C720A0C0000DA4B /* CustomTextField.swift in Sources */,
 				39346D962C762CAD002282E4 /* DropdownModel.swift in Sources */,
@@ -407,6 +430,7 @@
 				39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */,
 				39703F662C7169900000E038 /* MapViewController.swift in Sources */,
 				392528D62C7207F30000DA4B /* InformationViewController.swift in Sources */,
+				39CA191F2C780869000F3069 /* FilterCollectionViewCell.swift in Sources */,
 				39346D942C762BCB002282E4 /* DropdownSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

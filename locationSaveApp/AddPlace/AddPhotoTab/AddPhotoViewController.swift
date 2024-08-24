@@ -36,6 +36,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         place.imageData =  PlaceInfoModel.instance.photoData
         do {
             try context.save()
+            PlaceInfoModel.instance.clear()
         } catch {
             print("Failed to save location: \(error)")
         }

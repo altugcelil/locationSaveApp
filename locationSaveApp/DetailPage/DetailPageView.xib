@@ -32,88 +32,88 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Hx-x6-l72" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="994"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="1001"/>
                             <subviews>
                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaj-yc-OaQ">
-                                    <rect key="frame" x="16" y="64" width="361" height="276"/>
+                                    <rect key="frame" x="16" y="71" width="361" height="276"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="276" id="Kjd-Xo-Mb4"/>
                                     </constraints>
                                     <standardMapConfiguration key="preferredConfiguration"/>
                                 </mapView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şehir / Ülke: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buc-lb-CTf">
-                                    <rect key="frame" x="16" y="372" width="81.333333333333329" height="17"/>
+                                    <rect key="frame" x="16" y="379" width="81.333333333333329" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Başlık:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuZ-3o-SrH">
-                                    <rect key="frame" x="16" y="422" width="42" height="17"/>
+                                    <rect key="frame" x="16" y="429" width="42" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NK3-Va-CsW" userLabel="SeperatorView">
-                                    <rect key="frame" x="16" y="405" width="361" height="1"/>
+                                    <rect key="frame" x="16" y="412" width="361" height="1"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="Fnl-WO-SPA"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İstanbul" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hb-x8-dYf">
-                                    <rect key="frame" x="322.66666666666669" y="372" width="54.333333333333314" height="17"/>
+                                    <rect key="frame" x="322.66666666666669" y="379" width="54.333333333333314" height="17"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                     <color key="textColor" systemColor="tintColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Güneş Kafe (Tokat)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcP-SI-6DF">
-                                    <rect key="frame" x="248.33333333333337" y="422" width="128.66666666666663" height="17"/>
+                                    <rect key="frame" x="248.33333333333337" y="429" width="128.66666666666663" height="17"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                     <color key="textColor" systemColor="tintColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5O-kg-sI3" userLabel="SeperatorView">
-                                    <rect key="frame" x="16" y="455" width="361" height="1"/>
+                                    <rect key="frame" x="16" y="462" width="361" height="1"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="rEW-Hi-3wo"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQ8-K7-hSw">
-                                    <rect key="frame" x="16" y="472" width="28" height="17"/>
+                                    <rect key="frame" x="16" y="479" width="28" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eln-05-SCy">
-                                    <rect key="frame" x="16" y="497" width="361" height="67"/>
+                                    <rect key="frame" x="16" y="504" width="361" height="67"/>
                                     <string key="text">Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:Not:</string>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                     <color key="textColor" systemColor="tintColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdd-b4-7c0" userLabel="SeperatorView">
-                                    <rect key="frame" x="16" y="580" width="361" height="1"/>
+                                    <rect key="frame" x="16" y="587" width="361" height="1"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="euK-Dt-VVk"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQm-EP-AkH" customClass="RatingView" customModule="locationSaveApp" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="622" width="361" height="50"/>
+                                    <rect key="frame" x="16" y="629" width="361" height="50"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="cji-pL-UsW"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puan:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Rz-ui-NiY">
-                                    <rect key="frame" x="16" y="597" width="37" height="17"/>
+                                    <rect key="frame" x="16" y="604" width="37" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8P-d6-JyZ" userLabel="SeperatorView">
-                                    <rect key="frame" x="16" y="688" width="361" height="1"/>
+                                    <rect key="frame" x="16" y="695" width="361" height="1"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="i6e-wa-zgf"/>
@@ -121,13 +121,13 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotoğraf:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKl-ZU-IoR">
-                                    <rect key="frame" x="16" y="705" width="59" height="17"/>
+                                    <rect key="frame" x="16" y="712" width="59" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-es-irj">
-                                    <rect key="frame" x="76.666666666666686" y="738" width="240" height="240"/>
+                                    <rect key="frame" x="76.666666666666686" y="745" width="240" height="240"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="240" id="hKF-yo-69D"/>
                                         <constraint firstAttribute="height" constant="240" id="woY-qV-XZu"/>
@@ -145,6 +145,16 @@
                                     </state>
                                     <connections>
                                         <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="0zR-iF-xyV"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIt-b7-CFE">
+                                    <rect key="frame" x="281.66666666666669" y="28" width="95.333333333333314" height="31"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Yol Tarifi Al">
+                                        <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="openMapClicked:" destination="-1" eventType="touchUpInside" id="Ler-Ac-Nbg"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -170,7 +180,9 @@
                                 <constraint firstItem="eln-05-SCy" firstAttribute="leading" secondItem="zQ8-K7-hSw" secondAttribute="leading" id="RB2-tX-PQT"/>
                                 <constraint firstItem="N8P-d6-JyZ" firstAttribute="top" secondItem="CQm-EP-AkH" secondAttribute="bottom" constant="16" id="RFQ-CC-dJl"/>
                                 <constraint firstItem="CQm-EP-AkH" firstAttribute="top" secondItem="2Rz-ui-NiY" secondAttribute="bottom" constant="8" id="SN7-Ye-J05"/>
+                                <constraint firstItem="cIt-b7-CFE" firstAttribute="centerY" secondItem="jLO-Um-Fpm" secondAttribute="centerY" id="Tkr-XZ-v9G"/>
                                 <constraint firstItem="jLO-Um-Fpm" firstAttribute="leading" secondItem="aaj-yc-OaQ" secondAttribute="leading" id="Vlo-Pq-5Mc"/>
+                                <constraint firstAttribute="trailing" secondItem="cIt-b7-CFE" secondAttribute="trailing" constant="16" id="Wap-33-LBk"/>
                                 <constraint firstItem="tdd-b4-7c0" firstAttribute="leading" secondItem="eln-05-SCy" secondAttribute="leading" id="XUH-U3-Y70"/>
                                 <constraint firstItem="2Rz-ui-NiY" firstAttribute="leading" secondItem="eln-05-SCy" secondAttribute="leading" id="Xia-Hd-Nn1"/>
                                 <constraint firstAttribute="bottom" secondItem="NEg-es-irj" secondAttribute="bottom" constant="16" id="acb-Xe-Dn3"/>
@@ -179,8 +191,8 @@
                                 <constraint firstItem="QuZ-3o-SrH" firstAttribute="leading" secondItem="buc-lb-CTf" secondAttribute="leading" id="cwe-Bx-ZKt"/>
                                 <constraint firstItem="jLO-Um-Fpm" firstAttribute="top" secondItem="3Hx-x6-l72" secondAttribute="top" constant="32" id="dMD-VR-fyU"/>
                                 <constraint firstItem="N8P-d6-JyZ" firstAttribute="leading" secondItem="3Hx-x6-l72" secondAttribute="leading" constant="16" id="izy-n9-Tvc"/>
+                                <constraint firstItem="aaj-yc-OaQ" firstAttribute="top" secondItem="jLO-Um-Fpm" secondAttribute="bottom" constant="16" id="jwk-HW-n0Z"/>
                                 <constraint firstAttribute="trailing" secondItem="N8P-d6-JyZ" secondAttribute="trailing" constant="16" id="lMD-Gc-diq"/>
-                                <constraint firstItem="aaj-yc-OaQ" firstAttribute="top" secondItem="3Hx-x6-l72" secondAttribute="top" constant="64" id="p2N-uH-Xwf"/>
                                 <constraint firstAttribute="trailing" secondItem="9Hb-x8-dYf" secondAttribute="trailing" constant="16" id="qXw-ty-lVy"/>
                                 <constraint firstItem="NEg-es-irj" firstAttribute="centerX" secondItem="3Hx-x6-l72" secondAttribute="centerX" id="rT9-L7-UR6"/>
                                 <constraint firstItem="eln-05-SCy" firstAttribute="trailing" secondItem="qcP-SI-6DF" secondAttribute="trailing" id="s7m-Z3-Csx"/>
@@ -218,7 +230,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -38,22 +38,25 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 41.0082, longitude: 28.9784, zoom: 10.0)
         mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         mapView.delegate = self
+        mapView.settings.myLocationButton = true
+        mapView.isMyLocationEnabled = true
         self.view.addSubview(mapView)
         
         searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: adapted(dimensionSize: 50, to: .height)))
         searchBar.delegate = self
         self.view.addSubview(searchBar)
     }
-    
+
     private func notifyValidationState(isValid: Bool) {
         delegate?.validationStateDidChange(isValid: isValid)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let query = searchBar.text else { return }
+        dismissKeyboard()
         searchPlace(query: query)
     }
 

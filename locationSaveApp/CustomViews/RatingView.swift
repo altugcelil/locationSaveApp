@@ -43,6 +43,7 @@ class RatingView: UIView {
 
         for _ in 1...starCount {
             let button = UIButton()
+            button.tintColor = .systemYellow
             button.setImage(UIImage(systemName: "star"), for: .normal)
             button.setImage(UIImage(systemName: "star.fill"), for: .selected)
             button.setImage(UIImage(systemName: "star.lefthalf.fill"), for: .highlighted)
@@ -98,7 +99,7 @@ class RatingView: UIView {
                 button.tintColor = .systemYellow
             } else {
                 button.setImage(UIImage(systemName: "star"), for: .normal)
-                button.tintColor = .systemTeal
+                button.tintColor = .systemYellow
             }
         }
     }

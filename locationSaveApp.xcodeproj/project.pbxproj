@@ -26,6 +26,8 @@
 		39346D982C762F13002282E4 /* DropdownSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39346D972C762F13002282E4 /* DropdownSelection.xib */; };
 		39346D9C2C762FDC002282E4 /* DropdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39346D9A2C762FDC002282E4 /* DropdownTableViewCell.swift */; };
 		39346D9D2C762FDC002282E4 /* DropdownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39346D9B2C762FDC002282E4 /* DropdownTableViewCell.xib */; };
+		3960895F2C78E9E500CABE89 /* InfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3960895E2C78E9E500CABE89 /* InfoPageViewController.swift */; };
+		396089612C78E9F200CABE89 /* InfoPageView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 396089602C78E9F200CABE89 /* InfoPageView.storyboard */; };
 		3962566A2C7222A300153672 /* ExpandingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396256692C7222A300153672 /* ExpandingTextView.swift */; };
 		39703F662C7169900000E038 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39703F652C7169900000E038 /* MapViewController.swift */; };
 		39703F682C716A130000E038 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39703F672C716A130000E038 /* MapView.storyboard */; };
@@ -80,6 +82,8 @@
 		39346D972C762F13002282E4 /* DropdownSelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownSelection.xib; sourceTree = "<group>"; };
 		39346D9A2C762FDC002282E4 /* DropdownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTableViewCell.swift; sourceTree = "<group>"; };
 		39346D9B2C762FDC002282E4 /* DropdownTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownTableViewCell.xib; sourceTree = "<group>"; };
+		3960895E2C78E9E500CABE89 /* InfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageViewController.swift; sourceTree = "<group>"; };
+		396089602C78E9F200CABE89 /* InfoPageView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoPageView.storyboard; sourceTree = "<group>"; };
 		396256692C7222A300153672 /* ExpandingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingTextView.swift; sourceTree = "<group>"; };
 		39703F652C7169900000E038 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		39703F672C716A130000E038 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
@@ -219,6 +223,15 @@
 			path = DropdownTableViewCell;
 			sourceTree = "<group>";
 		};
+		3960895D2C78E9B600CABE89 /* InfoPage */ = {
+			isa = PBXGroup;
+			children = (
+				3960895E2C78E9E500CABE89 /* InfoPageViewController.swift */,
+				396089602C78E9F200CABE89 /* InfoPageView.storyboard */,
+			);
+			path = InfoPage;
+			sourceTree = "<group>";
+		};
 		396256682C72229100153672 /* CustomTextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +310,7 @@
 		39CD27D22C6EC1D400F7D8A2 /* locationSaveApp */ = {
 			isa = PBXGroup;
 			children = (
+				3960895D2C78E9B600CABE89 /* InfoPage */,
 				39FB4BE82C78D665006BBCD8 /* Constraint */,
 				3915CA152C757435009CFB85 /* DetailPage */,
 				39B4B1CA2C720ECD0059227B /* Extensions */,
@@ -444,6 +458,7 @@
 				39346D9D2C762FDC002282E4 /* DropdownTableViewCell.xib in Resources */,
 				39346D982C762F13002282E4 /* DropdownSelection.xib in Resources */,
 				39294A372C6EC7AF00BFFE12 /* HomePage.storyboard in Resources */,
+				396089612C78E9F200CABE89 /* InfoPageView.storyboard in Resources */,
 				39703F682C716A130000E038 /* MapView.storyboard in Resources */,
 				3979FFE32C716CAA008D0D3E /* StepTopView.xib in Resources */,
 				39CD27E32C6EC1D700F7D8A2 /* LaunchScreen.storyboard in Resources */,
@@ -480,6 +495,7 @@
 				39FB4BEF2C78D6AB006BBCD8 /* Font.swift in Sources */,
 				3915CA1B2C75812C009CFB85 /* BaseViewController.swift in Sources */,
 				39CD27DE2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld in Sources */,
+				3960895F2C78E9E500CABE89 /* InfoPageViewController.swift in Sources */,
 				39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */,
 				39FC6D342C72D4B2003CEB5B /* PlaceModel.xcdatamodeld in Sources */,
 				39335A692C715A9D0091C3B4 /* AddPlaceViewController.swift in Sources */,

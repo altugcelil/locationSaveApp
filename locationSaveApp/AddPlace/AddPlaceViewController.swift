@@ -19,6 +19,7 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         setupUI()
         updateButtonColors()
     }

@@ -145,7 +145,7 @@ extension InformationViewController: UITextFieldDelegate {
     
     private func updatePlaceholder(for textField: CustomTextField, isValid: Bool, validPlaceholder: String, invalidPlaceholder: String) {
         textField.staticPlaceholderText = isValid ? validPlaceholder : invalidPlaceholder
-        textField.staticPlaceholderColor = isValid ? .blue : .red
+        textField.staticPlaceholderColor = isValid ? .label : .red
     }
     
     private func validateForm() {

@@ -19,4 +19,15 @@ class PlaceInfoModel {
     var note: String?
     var rating: Float?
     var photoData: Data?
+    
+    func clear() {
+           latitude = nil
+           longitude = nil
+           cityOrCountry = nil
+           title = nil
+           note = nil
+           rating = nil
+           photoData = nil
+           categoryName = nil
+       }
 }

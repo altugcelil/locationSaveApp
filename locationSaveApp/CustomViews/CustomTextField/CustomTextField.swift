@@ -18,7 +18,7 @@ import UIKit
         }
     }
     
-    @IBInspectable public var staticPlaceholderColor: UIColor = .blue {
+    @IBInspectable public var staticPlaceholderColor: UIColor = .label {
         didSet {
             staticPlaceholderLabel.textColor = staticPlaceholderColor
         }
@@ -30,7 +30,7 @@ import UIKit
         }
     }
     
-    @IBInspectable public var separatorLineViewColor: UIColor = .blue {
+    @IBInspectable public var separatorLineViewColor: UIColor = .lightGray {
         didSet {
             separatorLineView.backgroundColor = separatorLineViewColor
         }

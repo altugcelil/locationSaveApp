@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info Page View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="InfoPageViewController" customModule="locationSaveApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LqY-pH-9vY">
+                                <rect key="frame" x="156.66666666666666" y="129" width="80" height="78.666666666666686"/>
+                                <color key="tintColor" red="0.80152517560000003" green="0.23992234470000001" blue="0.24311080569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="eyU-y5-SsU"/>
+                                    <constraint firstAttribute="width" constant="80" id="hx4-tn-Y0k"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfR-XX-cu1">
+                                <rect key="frame" x="32" y="223.99999999999997" width="329" height="76.666666666666657"/>
+                                <string key="text">Uygulama internet olmadığı zaman da kısmen çalışabildiği ve üyelik de gerekmediği için silip yeniden kurduğunda kayıtlı yerlerin gideceğini unutma :)</string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnZ-ON-UYX">
+                                <rect key="frame" x="32" y="332.66666666666669" width="329" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.open" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hTu-ja-pOb">
+                                        <rect key="frame" x="8" y="15.333333333333297" width="27" height="20.000000000000004"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="dZx-qS-T3W"/>
+                                            <constraint firstAttribute="width" constant="27" id="wgK-En-83N"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Öneri Bildir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEg-I7-kGe">
+                                        <rect key="frame" x="51.000000000000007" y="16.666666666666629" width="71.666666666666686" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AEk-pH-NGh">
+                                        <rect key="frame" x="301" y="17" width="20" height="16.333333333333329"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="W36-f7-g4d"/>
+                                            <constraint firstAttribute="height" constant="20" id="mZI-wZ-S6J"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="fEg-I7-kGe" firstAttribute="centerY" secondItem="jnZ-ON-UYX" secondAttribute="centerY" id="EVU-gU-R7r"/>
+                                    <constraint firstItem="fEg-I7-kGe" firstAttribute="leading" secondItem="hTu-ja-pOb" secondAttribute="trailing" constant="16" id="IXf-6O-hSQ"/>
+                                    <constraint firstItem="hTu-ja-pOb" firstAttribute="leading" secondItem="jnZ-ON-UYX" secondAttribute="leading" constant="8" id="K9K-G4-BJG"/>
+                                    <constraint firstAttribute="trailing" secondItem="AEk-pH-NGh" secondAttribute="trailing" constant="8" id="V2W-5y-3NU"/>
+                                    <constraint firstItem="AEk-pH-NGh" firstAttribute="centerY" secondItem="fEg-I7-kGe" secondAttribute="centerY" id="Wim-Gk-9b9"/>
+                                    <constraint firstAttribute="height" constant="50" id="Z1R-it-nfY"/>
+                                    <constraint firstItem="hTu-ja-pOb" firstAttribute="centerY" secondItem="jnZ-ON-UYX" secondAttribute="centerY" id="keD-gx-Mwq"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="o28-NI-4j9" appends="YES" id="0LD-5s-61f"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkM-7g-tWw">
+                                <rect key="frame" x="32" y="398.66666666666669" width="329" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="63X-x0-UBv">
+                                        <rect key="frame" x="7.9999999999999982" y="15.333333333333297" width="28.333333333333329" height="20.000000000000004"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="ZTG-6v-Mj6"/>
+                                            <constraint firstAttribute="width" constant="27" id="dLo-de-taG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geliştirici Hakkında" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80k-UW-XvV">
+                                        <rect key="frame" x="51.000000000000007" y="16.666666666666629" width="123.66666666666669" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZyV-gf-6wc">
+                                        <rect key="frame" x="301" y="17" width="20" height="16.333333333333329"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="1FJ-40-FRW"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="SyS-2h-ttN"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="XPT-O6-RXc"/>
+                                            <constraint firstAttribute="height" constant="20" id="dxA-pE-KfL"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="63X-x0-UBv" firstAttribute="centerY" secondItem="HkM-7g-tWw" secondAttribute="centerY" id="Mkc-YO-QWv"/>
+                                    <constraint firstItem="80k-UW-XvV" firstAttribute="centerY" secondItem="63X-x0-UBv" secondAttribute="centerY" id="dfm-0U-Dvx"/>
+                                    <constraint firstItem="ZyV-gf-6wc" firstAttribute="centerY" secondItem="80k-UW-XvV" secondAttribute="centerY" id="evW-wm-5cu"/>
+                                    <constraint firstAttribute="height" constant="50" id="hHj-Dl-7wo"/>
+                                    <constraint firstItem="63X-x0-UBv" firstAttribute="leading" secondItem="HkM-7g-tWw" secondAttribute="leading" constant="8" id="l5h-cZ-iI7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZyV-gf-6wc" secondAttribute="trailing" constant="8" id="tgD-YJ-RQH"/>
+                                    <constraint firstItem="80k-UW-XvV" firstAttribute="leading" secondItem="63X-x0-UBv" secondAttribute="trailing" constant="16" id="xuh-LQ-Jxt"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="TM8-aT-B9U" appends="YES" id="aao-Vq-Kff"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eMs-dd-4SP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mfR-XX-cu1" secondAttribute="trailing" constant="32" id="0am-UT-ISr"/>
+                            <constraint firstItem="mfR-XX-cu1" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="32" id="1cd-fu-5kE"/>
+                            <constraint firstItem="jnZ-ON-UYX" firstAttribute="top" secondItem="mfR-XX-cu1" secondAttribute="bottom" constant="32" id="5eC-fU-MOT"/>
+                            <constraint firstAttribute="trailing" secondItem="jnZ-ON-UYX" secondAttribute="trailing" constant="32" id="70o-A2-6k1"/>
+                            <constraint firstItem="HkM-7g-tWw" firstAttribute="leading" secondItem="eMs-dd-4SP" secondAttribute="leading" constant="32" id="AQ6-MJ-cm4"/>
+                            <constraint firstItem="jnZ-ON-UYX" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="32" id="F8W-4M-PxY"/>
+                            <constraint firstItem="LqY-pH-9vY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ZjK-uI-Xln"/>
+                            <constraint firstItem="HkM-7g-tWw" firstAttribute="top" secondItem="jnZ-ON-UYX" secondAttribute="bottom" constant="16" id="a9X-Ma-GSF"/>
+                            <constraint firstItem="eMs-dd-4SP" firstAttribute="trailing" secondItem="HkM-7g-tWw" secondAttribute="trailing" constant="32" id="bM0-MI-JrG"/>
+                            <constraint firstItem="mfR-XX-cu1" firstAttribute="top" secondItem="LqY-pH-9vY" secondAttribute="bottom" constant="16" id="sit-5M-hub"/>
+                            <constraint firstItem="LqY-pH-9vY" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="128" id="ut4-YL-fvw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zd5-rK-THv"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="mfR-XX-cu1" id="9oC-Is-gys"/>
+                        <outlet property="linkedinView" destination="HkM-7g-tWw" id="Q9S-vr-XSa"/>
+                        <outlet property="sendMailLabel" destination="fEg-I7-kGe" id="VRc-cB-F9y"/>
+                        <outlet property="sendMailView" destination="jnZ-ON-UYX" id="djn-Hd-uXL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="o28-NI-4j9">
+                    <connections>
+                        <action selector="sendMailClick:" destination="Y6W-OH-hqX" id="Dha-Qo-YcV"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TM8-aT-B9U">
+                    <connections>
+                        <action selector="goToLinkedin:" destination="Y6W-OH-hqX" id="cAv-Rh-rYz"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1016.030534351145" y="-34.507042253521128"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Ht-90-1LZ">
+            <objects>
+                <navigationController storyboardIdentifier="infoPageTab" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="JSo-Ri-J4n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K9J-8K-Ogs">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="VVV-yF-QU1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64L-lg-mMX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.312977099236633" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="envelope.open" catalog="system" width="128" height="112"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="link.badge.plus" catalog="system" width="128" height="120"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

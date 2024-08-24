@@ -8,13 +8,17 @@ import UIKit
 import CoreData
 
 class HomePageViewController: UIViewController, FilterSelectionDelegate {
+    @IBOutlet weak var warningText: UILabel!
+    @IBOutlet weak var warningView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var placesTableView: UITableView!
     
     private var places: [Place] = []
     private var filteredPlaces: [Place] = []
     private var isSearching = false
+    private var isFiltered = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +33,8 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
     }
     
     private func setupUI() {
+        setupTexts()
+        
         self.hideKeyboardWhenTappedAround()
         placesTableView.register(UINib.init(nibName: "PlacesTableViewCell", bundle: nil), forCellReuseIdentifier: "placesTableViewCell")
         placesTableView.showsHorizontalScrollIndicator = false
@@ -36,6 +42,10 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
         
         placesTableView.estimatedRowHeight = 100
         placesTableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    private func setupTexts() {
+        headerLabel.text = NSLocalizedString("search_on_save", comment: "")
     }
     
     private func setupFontSize() {
@@ -48,14 +58,33 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
     }
     
     func didApplyFilters(selectedCategories: Set<String>, selectedCities: Set<String>) {
-        fetchLocations(categories: selectedCategories, cities: selectedCities)
+        fetchLocationsForFilter(categories: selectedCategories, cities: selectedCities)
     }
-
+    
     @IBAction func filterButtonClicked(_ sender: UIButton) {
         presentFilterPage()
     }
     
-    func fetchLocations(categories: Set<String> = [], cities: Set<String> = []) {
+    func fetchLocations() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Place> = Place.fetchRequest()
+        do {
+            let locations = try context.fetch(fetchRequest)
+            places = locations
+            if places.isEmpty {
+                updateUIForPlaces(isFilter: false)
+            }else {
+                warningView.isHidden = true
+                filterButton.isHidden = false
+                searchBar.isHidden = false
+                placesTableView.isHidden = false
+                placesTableView.reloadData()
+            }            } catch {
+                print("Failed to fetch locations: \(error)")
+            }
+    }
+    
+    func fetchLocationsForFilter(categories: Set<String> = [], cities: Set<String> = []) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Place> = Place.fetchRequest()
         
@@ -82,12 +111,35 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
         do {
             let locations = try context.fetch(fetchRequest)
             places = locations
-            placesTableView.reloadData()
+            if places.isEmpty {
+                updateUIForPlaces(isFilter: true)
+            }else {
+                warningView.isHidden = true
+                filterButton.isHidden = false
+                searchBar.isHidden = false
+                placesTableView.isHidden = false
+                placesTableView.reloadData()
+            }
         } catch {
             print("Failed to fetch locations: \(error)")
         }
     }
-
+    
+    private func updateUIForPlaces(isFilter: Bool) {
+        if isFilter {
+            warningText.text = "Seçtiğin filtrelere uygun bir yer bulunamadı, başka bir filtre seçerek veya tüm filtreleri kaldırarak yeniden deneyebilirsin :)"
+            warningView.isHidden = false
+            filterButton.isHidden = false
+            searchBar.isHidden = false
+            placesTableView.isHidden = true
+        }else {
+            warningText.text = "Henüz bir yer eklemedin, yeni bir yer eklediğinde burada gözükecek :)"
+            warningView.isHidden = false
+            filterButton.isHidden = true
+            searchBar.isHidden = true
+            placesTableView.isHidden = true
+        }
+    }
     
     func presentPlaceDetailPage(place: Place) {
         let placeDetailViewController = DetailPageViewController(nibName: "DetailPageView", bundle: nil)
@@ -100,10 +152,19 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
     func presentFilterPage() {
         let filterPageViewController = FilterSelectionViewController(nibName: "FilterSelectionView", bundle: nil)
         filterPageViewController.delegate = self
-
+        
         filterPageViewController.modalPresentationStyle = .pageSheet
         filterPageViewController.modalTransitionStyle = .coverVertical
         present(filterPageViewController, animated: true, completion: nil)
+    }
+    
+    func changeLanguage(to language: String) {
+        UserDefaults.standard.set(language, forKey: "selectedLanguage")
+        UserDefaults.standard.synchronize()
+        
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            appDelegate.setLanguage()
+        }
     }
 }
 
@@ -121,8 +182,16 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let place = isSearching ? filteredPlaces[indexPath.row] : places[indexPath.row]
-        presentPlaceDetailPage(place: place)
+        //        let place = isSearching ? filteredPlaces[indexPath.row] : places[indexPath.row]
+        //        presentPlaceDetailPage(place: place)
+        let alertController = UIAlertController(title: "Select Language", message: nil, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "English", style: .default, handler: { _ in
+            self.changeLanguage(to: "en")
+        }))
+        alertController.addAction(UIAlertAction(title: "Türkçe", style: .default, handler: { _ in
+            self.changeLanguage(to: "tr")
+        }))
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -137,8 +206,8 @@ extension HomePageViewController: UISearchBarDelegate {
             filteredPlaces = places.filter { place in
                 let searchTextLowercased = searchText.lowercased()
                 return (place.title?.lowercased().contains(searchTextLowercased) ?? false) ||
-                       (place.note?.lowercased().contains(searchTextLowercased) ?? false) ||
-                       (place.cityOrCountry?.lowercased().contains(searchTextLowercased) ?? false)
+                (place.note?.lowercased().contains(searchTextLowercased) ?? false) ||
+                (place.cityOrCountry?.lowercased().contains(searchTextLowercased) ?? false)
             }
         }
         placesTableView.reloadData()

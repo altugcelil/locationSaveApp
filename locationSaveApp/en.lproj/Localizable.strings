@@ -1,0 +1,81 @@
+/* 
+  Localizable.strings
+  locationSaveApp
+
+  Created by Altug Celil Koc (Berkut Teknoloji) on 25.08.2024.
+  
+*/
+
+"saved_places" = "Saved Places";
+"search_on_save" = "Search in Saved Places";
+"no_place" = "You haven't added a place yet. When you add a new place, it will appear here :)";
+"no_place_filter" = "No places match your selected filters. Try selecting different filters or remove all filters to search again :)";
+"map_info_text" = "You should select the location you want to save from the map :)";
+"information_info_text" = "We need a few details about the place you want to save :)";
+"add_photo_info_text" = "If you want, you can add a photo to remember this place better in the future :) (Optional)";
+"save" = "Save";
+"location" = "Selected Location";
+"rating_header" = "Rating:";
+"category_header" = "Category:";
+"image_header" = "Image:";
+"note_header" = "Note:";
+"category_label" = "Category:";
+"title_placeholder" = "Enter a name for this place: ";
+"city_or_country_placeholder" = "Enter city or country: ";
+"note_placeholder" = "e.g. Nice coffee, fast internet, and a calm environment.";
+"title_invalid_placeholder" = "Please enter a valid name.";
+"city_or_country_invalid_placeholder" = "Please enter a valid city/country.";
+"select_photo" = "Select Photo";
+"take_photo" = "Take Photo";
+"choose_from_gallery" = "Choose from Gallery";
+"cancel" = "Cancel";
+"camera_not_available" = "Camera not available";
+"save_location_failed" = "Failed to save location";
+"city_country_label" = "City / Country:";
+"category_header_label" = "Category";
+"category_header_text" = "Select Category";
+"category_placeholder_text" = "Please select a category for the place you want to save.";
+"category_selection_text" = "Please select a category for the place you want to save.";
+"title_header_label" = "Title:";
+"note_header_label" = "Note:";
+"note_header_text" = "Enter Your Note: (Optional)";
+"rating_header_text" = "Rate the Place: (Optional)";
+"restaurant_category" = "Restaurant";
+"cafe_category" = "Cafe";
+"get_directions_button_title" = "Get Directions";
+"supermarket_category" = "Supermarket";
+"shopping_mall_category" = "Shopping Mall";
+"hotel_category" = "Hotel";
+"park_category" = "Park";
+"gym_category" = "Gym";
+"pharmacy_category" = "Pharmacy";
+"cinema_category" = "Cinema";
+"gas_station_category" = "Gas Station";
+"hospital_category" = "Hospital";
+"library_category" = "Library";
+"museum_category" = "Museum";
+"beach_category" = "Beach";
+"bar_category" = "Bar";
+"theater_category" = "Theater";
+"stadium_category" = "Stadium";
+"school_category" = "School";
+"university_category" = "University";
+"airport_category" = "Airport";
+"bus_stop_category" = "Bus Stop";
+"train_station_category" = "Train Station";
+"mosque_category" = "Mosque";
+"church_category" = "Church";
+"synagogue_category" = "Synagogue";
+"zoo_category" = "Zoo";
+"aquarium_category" = "Aquarium";
+"amusement_park_category" = "Amusement Park";
+"nightclub_category" = "Nightclub";
+"other_category" = "Other";
+"info_label_text" = "The app can work partially without internet and does not require membership, so remember that saved locations will be lost if you uninstall and reinstall the app :)";
+"send_mail_label_text" = "Send Suggestion";
+"linkedin_label_text" = "About the Developer";
+"reset_button_title" = "Reset";
+"apply_button_title" = "Apply";
+"saved_places_tab_title" = "Saved Places";
+"add_place_tab_title" = "Add Place";
+"info_tab_title" = "Info";

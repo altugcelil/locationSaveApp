@@ -38,30 +38,28 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
             try context.save()
             PlaceInfoModel.instance.clear()
         } catch {
-            print("Failed to save location: \(error)")
+            print(NSLocalizedString("save_location_failed", comment: ""))
         }
     }
     
     @IBAction func addPhotoClicked(_ sender: UITapGestureRecognizer) {
-        let alert = UIAlertController(title: "Fotoğraf Seç", message: nil, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: NSLocalizedString("select_photo", comment: ""), message: nil, preferredStyle: .actionSheet)
         
-        alert.addAction(UIAlertAction(title: "Fotoğraf Çek", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("take_photo", comment: ""), style: .default, handler: { _ in
             self.openCamera()
         }))
         
-        alert.addAction(UIAlertAction(title: "Galeriden Seç", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("choose_from_gallery", comment: ""), style: .default, handler: { _ in
             self.openGallery()
         }))
         
-        alert.addAction(UIAlertAction(title: "Vazgeç", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
     }
     
     func savePhoto(image: UIImage) {
-        // UIImage'yi Data türüne dönüştür
         if let imageData = image.jpegData(compressionQuality: 1.0) {
-            // Data'yı placeInfo nesnesine ata
             PlaceInfoModel.instance.photoData = imageData
         }
     }
@@ -73,7 +71,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
             imagePicker.sourceType = .camera
             self.present(imagePicker, animated: true, completion: nil)
         } else {
-            print("Camera not available")
+            print(NSLocalizedString("camera_not_available", comment: ""))
         }
     }
     
@@ -94,6 +92,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
             showCropViewController(image: selectedImage)
         }
     }
+    
     func showCropViewController(image: UIImage) {
         let cropViewController = TOCropViewController(image: image)
         cropViewController.delegate = self

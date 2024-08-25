@@ -12,14 +12,20 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailPageViewController" customModule="locationSaveApp" customModuleProvider="target">
             <connections>
+                <outlet property="cityCountryHeaderLabel" destination="buc-lb-CTf" id="bLb-tp-GOQ"/>
                 <outlet property="cityOrCountryLabel" destination="9Hb-x8-dYf" id="vgL-rq-44Q"/>
                 <outlet property="contentView" destination="3Hx-x6-l72" id="HFL-0p-iyb"/>
                 <outlet property="mapView" destination="aaj-yc-OaQ" id="FaS-c3-iIJ"/>
                 <outlet property="nameLabel" destination="qcP-SI-6DF" id="ZRs-1f-Cxx"/>
+                <outlet property="noteHeaderLabel" destination="zQ8-K7-hSw" id="GIo-ja-Hpg"/>
                 <outlet property="noteLabel" destination="eln-05-SCy" id="Rfe-UD-2Wf"/>
+                <outlet property="openMapButton" destination="cIt-b7-CFE" id="PHU-qJ-kSS"/>
+                <outlet property="photoImageLabel" destination="BKl-ZU-IoR" id="Pe0-mi-LJK"/>
                 <outlet property="placeImage" destination="NEg-es-irj" id="N6p-6a-h2V"/>
+                <outlet property="ratingHeaderLabel" destination="2Rz-ui-NiY" id="DJY-Lp-Nh6"/>
                 <outlet property="ratingView" destination="CQm-EP-AkH" id="2Rd-n8-anK"/>
                 <outlet property="scrollView" destination="Pz4-Oe-99B" id="T2t-ko-wPA"/>
+                <outlet property="titleHeaderLabel" destination="QuZ-3o-SrH" id="OyL-23-xXk"/>
                 <outlet property="view" destination="6IL-fj-EbJ" id="9qv-Yf-Kwh"/>
             </connections>
         </placeholder>

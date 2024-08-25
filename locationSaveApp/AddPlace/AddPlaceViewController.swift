@@ -64,10 +64,23 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
             addPhotoViewController.topViewDelegate = self
             
             pageModel = [
-                PageModel(title: "1/3", info: "Haritadan kaydetmek istediğin lokasyonu seçmelisin :)", viewController: mapViewController),
-                PageModel(title: "2/3", info: "Kaydetmek istediğin yer için birkaç detaya ihtiyacımız var :)", viewController: informationViewController),
-                PageModel(title: "3/3", info: "Dilersen ileride bu yeri daha iyi hatırlamak için fotoğraf ekleyebilirsin :) (Opsyionel)", viewController: addPhotoViewController)
+                PageModel(
+                    title: "1/3",
+                    info: NSLocalizedString("map_info_text", comment: ""),
+                    viewController: mapViewController
+                ),
+                PageModel(
+                    title: "2/3",
+                    info: NSLocalizedString("information_info_text", comment: ""),
+                    viewController: informationViewController
+                ),
+                PageModel(
+                    title: "3/3",
+                    info: NSLocalizedString("add_photo_info_text", comment: ""),
+                    viewController: addPhotoViewController
+                )
             ]
+            
             
             pageContent = [mapViewController, informationViewController, addPhotoViewController]
             pageViewController.setViewControllers([mapViewController], direction: .forward, animated: true, completion: nil)
@@ -92,13 +105,13 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
         
         if index == pageContent.count - 1 {
             stepTopView.rightIcon.setImage(UIImage(), for: .normal) //
-            stepTopView.rightIcon.setTitle("Kaydet", for: .normal) //
+            stepTopView.rightIcon.setTitle(NSLocalizedString("save", comment: ""), for: .normal) //
         } else {
             stepTopView.rightIcon.setImage(UIImage(systemName: "chevron.right"), for: .normal)
             stepTopView.rightIcon.setTitle("", for: .normal) //
         }
     }
-
+    
     
     private func updateButtonColors() {
         let isFirstPage = currentPageIndex == 0
@@ -155,14 +168,14 @@ extension AddPlaceViewController: StepTopViewLeftButtonDelegate, StepTopViewRigh
 }
 extension AddPlaceViewController: AddPhotoViewControllerTopViewDelegate {
     func didTapNextButton() {
-           if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-              let window = scene.windows.first {
-               let storyboard = UIStoryboard(name: "TabBarViewController", bundle: nil)
-               let initialViewController = storyboard.instantiateViewController(withIdentifier: "mainPageTabBar")
-               window.rootViewController = initialViewController
-               window.makeKeyAndVisible()
-               
-               UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil, completion: nil)
-           }
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let window = scene.windows.first {
+            let storyboard = UIStoryboard(name: "TabBarViewController", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "mainPageTabBar")
+            window.rootViewController = initialViewController
+            window.makeKeyAndVisible()
+            
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
     }
 }

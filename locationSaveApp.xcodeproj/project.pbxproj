@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390AA62A2C7AA37700A8130F /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 390AA6262C7AA37700A8130F /* LaunchScreen.strings */; };
+		390AA62B2C7AA37700A8130F /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 390AA6282C7AA37700A8130F /* Main.strings */; };
+		390AA62E2C7AA38000A8130F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 390AA62C2C7AA38000A8130F /* Localizable.strings */; };
+		390AA64C2C7AA6F900A8130F /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 390AA6482C7AA6F900A8130F /* LaunchScreen.strings */; };
+		390AA64D2C7AA6F900A8130F /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 390AA64A2C7AA6F900A8130F /* Main.strings */; };
+		390AA6502C7AA70600A8130F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 390AA64E2C7AA70600A8130F /* Localizable.strings */; };
 		3915CA182C75744D009CFB85 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915CA162C75744D009CFB85 /* DetailPageViewController.swift */; };
 		3915CA192C75744D009CFB85 /* DetailPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3915CA172C75744D009CFB85 /* DetailPageView.xib */; };
 		3915CA1B2C75812C009CFB85 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915CA1A2C75812C009CFB85 /* BaseViewController.swift */; };
@@ -65,6 +71,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		390AA6232C7AA33600A8130F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		390AA6242C7AA33700A8130F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		390AA6272C7AA37700A8130F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = LaunchScreen.strings; sourceTree = "<group>"; };
+		390AA6292C7AA37700A8130F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Main.strings; sourceTree = "<group>"; };
+		390AA62D2C7AA38000A8130F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
+		390AA6452C7AA6F100A8130F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		390AA6462C7AA6F100A8130F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		390AA6492C7AA6F900A8130F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = LaunchScreen.strings; sourceTree = "<group>"; };
+		390AA64B2C7AA6F900A8130F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = Main.strings; sourceTree = "<group>"; };
+		390AA64F2C7AA70600A8130F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = Localizable.strings; sourceTree = "<group>"; };
 		3915CA162C75744D009CFB85 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		3915CA172C75744D009CFB85 /* DetailPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPageView.xib; sourceTree = "<group>"; };
 		3915CA1A2C75812C009CFB85 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +151,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		390AA6252C7AA37700A8130F /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				390AA6262C7AA37700A8130F /* LaunchScreen.strings */,
+				390AA6282C7AA37700A8130F /* Main.strings */,
+				390AA62C2C7AA38000A8130F /* Localizable.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		390AA6472C7AA6F900A8130F /* tr.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				390AA6482C7AA6F900A8130F /* LaunchScreen.strings */,
+				390AA64A2C7AA6F900A8130F /* Main.strings */,
+				390AA64E2C7AA70600A8130F /* Localizable.strings */,
+			);
+			path = tr.lproj;
+			sourceTree = "<group>";
+		};
 		3915CA152C757435009CFB85 /* DetailPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +346,8 @@
 		39CD27D22C6EC1D400F7D8A2 /* locationSaveApp */ = {
 			isa = PBXGroup;
 			children = (
+				390AA6472C7AA6F900A8130F /* tr.lproj */,
+				390AA6252C7AA37700A8130F /* en.lproj */,
 				3960895D2C78E9B600CABE89 /* InfoPage */,
 				39FB4BE82C78D665006BBCD8 /* Constraint */,
 				3915CA152C757435009CFB85 /* DetailPage */,
@@ -432,8 +470,9 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
+				tr,
 			);
 			mainGroup = 39CD27C72C6EC1D400F7D8A2;
 			packageReferences = (
@@ -456,14 +495,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				39346D9D2C762FDC002282E4 /* DropdownTableViewCell.xib in Resources */,
+				390AA64D2C7AA6F900A8130F /* Main.strings in Resources */,
+				390AA6502C7AA70600A8130F /* Localizable.strings in Resources */,
 				39346D982C762F13002282E4 /* DropdownSelection.xib in Resources */,
 				39294A372C6EC7AF00BFFE12 /* HomePage.storyboard in Resources */,
 				396089612C78E9F200CABE89 /* InfoPageView.storyboard in Resources */,
+				390AA64C2C7AA6F900A8130F /* LaunchScreen.strings in Resources */,
 				39703F682C716A130000E038 /* MapView.storyboard in Resources */,
 				3979FFE32C716CAA008D0D3E /* StepTopView.xib in Resources */,
 				39CD27E32C6EC1D700F7D8A2 /* LaunchScreen.storyboard in Resources */,
 				39335A6B2C715AB50091C3B4 /* AddPlaceView.storyboard in Resources */,
 				39CA191C2C780532000F3069 /* FilterSelectionView.xib in Resources */,
+				390AA62B2C7AA37700A8130F /* Main.strings in Resources */,
+				390AA62E2C7AA38000A8130F /* Localizable.strings in Resources */,
+				390AA62A2C7AA37700A8130F /* LaunchScreen.strings in Resources */,
 				39CD27E02C6EC1D700F7D8A2 /* Assets.xcassets in Resources */,
 				392528D82C72083D0000DA4B /* InformationView.storyboard in Resources */,
 				39CA19202C780869000F3069 /* FilterCollectionViewCell.xib in Resources */,
@@ -522,10 +567,60 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		390AA6262C7AA37700A8130F /* LaunchScreen.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				390AA6272C7AA37700A8130F /* en */,
+			);
+			name = LaunchScreen.strings;
+			sourceTree = "<group>";
+		};
+		390AA6282C7AA37700A8130F /* Main.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				390AA6292C7AA37700A8130F /* en */,
+			);
+			name = Main.strings;
+			sourceTree = "<group>";
+		};
+		390AA62C2C7AA38000A8130F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				390AA62D2C7AA38000A8130F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		390AA6482C7AA6F900A8130F /* LaunchScreen.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				390AA6492C7AA6F900A8130F /* tr */,
+			);
+			name = LaunchScreen.strings;
+			sourceTree = "<group>";
+		};
+		390AA64A2C7AA6F900A8130F /* Main.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				390AA64B2C7AA6F900A8130F /* tr */,
+			);
+			name = Main.strings;
+			sourceTree = "<group>";
+		};
+		390AA64E2C7AA70600A8130F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				390AA64F2C7AA70600A8130F /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		39CD27D92C6EC1D400F7D8A2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				39CD27DA2C6EC1D400F7D8A2 /* Base */,
+				390AA6232C7AA33600A8130F /* en */,
+				390AA6452C7AA6F100A8130F /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -534,6 +629,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				39CD27E22C6EC1D700F7D8A2 /* Base */,
+				390AA6242C7AA33700A8130F /* en */,
+				390AA6462C7AA6F100A8130F /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -546,6 +643,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -609,6 +707,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -671,6 +770,10 @@
 				DEVELOPMENT_TEAM = 3U26739GWN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = locationSaveApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos of your favorite locations.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to show you relevant information.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need access to your location even when the app is in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show you relevant information.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -702,6 +805,10 @@
 				DEVELOPMENT_TEAM = 3U26739GWN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = locationSaveApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos of your favorite locations.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to show you relevant information.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need access to your location even when the app is in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show you relevant information.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

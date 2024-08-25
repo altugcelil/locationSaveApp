@@ -1,0 +1,80 @@
+/* 
+  Localizable.strings
+  locationSaveApp
+
+  Created by Altug Celil Koc (Berkut Teknoloji) on 25.08.2024.
+  
+*/
+"saved_places" = "Kayıtlı Yerler";
+"search_on_save" = "Kayıtlı Yerlerde Ara";
+"no_place" = "Henüz bir yer eklemedin, yeni bir yer eklediğinde burada gözükecek :)";
+"no_place_filter" = "Seçtiğin filtrelere uygun bir yer bulunamadı, başka bir filtre seçerek veya tüm filtreleri kaldırarak yeniden deneyebilirsin :)";
+"map_info_text" = "Haritadan kaydetmek istediğin lokasyonu seçmelisin :)";
+"information_info_text" = "Kaydetmek istediğin yer için birkaç detaya ihtiyacımız var :)";
+"add_photo_info_text" = "Dilersen ileride bu yeri daha iyi hatırlamak için fotoğraf ekleyebilirsin :) (Opsiyonel)";
+"save" = "Kaydet";
+"location" = "Seçili Konum";
+"rating_header" = "Puan:";
+"category_header" = "Kategori:";
+"note_header" = "Not:";
+"category_label" = "Kategori";
+"title_placeholder" = "Bu yer için isim girin: ";
+"city_or_country_placeholder" = "Şehir veya ülke girin: ";
+"note_placeholder" = "Örn: Güzel kahveleri var, hızlı internet ve sakin bir ortam.";
+"title_invalid_placeholder" = "Lütfen geçerli bir isim girin.";
+"city_or_country_invalid_placeholder" = "Lütfen geçerli bir şehir/ülke girin.";
+"select_photo" = "Fotoğraf Seç";
+"take_photo" = "Fotoğraf Çek";
+"choose_from_gallery" = "Galeriden Seç";
+"cancel" = "Vazgeç";
+"camera_not_available" = "Kamera kullanılamıyor";
+"save_location_failed" = "Konum kaydetme başarısız oldu";
+"city_country_label" = "Şehir / Ülke:";
+"title_header_label" = "Başlık:";
+"note_header_label" = "Not:";
+"image_header" = "Fotoğraf:";
+"category_header_label" = "Kategori";
+"category_header_text" = "Kategori Seç";
+"category_placeholder_text" = "Kaydetmek istediğiniz yer için kategori seçiniz.";
+"category_selection_text" = "Kaydetmek istediğiniz yer için kategori seçiniz.";
+"get_directions_button_title" = "Yol Tarifi Al";
+"note_header_text" = "Notunuzu Girin: (Opsiyonel)";
+"rating_header_text" = "Yeri Puanlayın: (Opsiyonel)";
+"restaurant_category" = "Restoran";
+"cafe_category" = "Kafe";
+"supermarket_category" = "Süpermarket";
+"shopping_mall_category" = "Alışveriş Merkezi";
+"hotel_category" = "Otel";
+"park_category" = "Park";
+"gym_category" = "Spor Salonu";
+"pharmacy_category" = "Eczane";
+"cinema_category" = "Sinema";
+"gas_station_category" = "Benzin İstasyonu";
+"hospital_category" = "Hastane";
+"library_category" = "Kütüphane";
+"museum_category" = "Müze";
+"beach_category" = "Plaj";
+"bar_category" = "Bar";
+"theater_category" = "Tiyatro";
+"stadium_category" = "Stadyum";
+"school_category" = "Okul";
+"university_category" = "Üniversite";
+"airport_category" = "Havalimanı";
+"bus_stop_category" = "Otobüs Durağı";
+"train_station_category" = "Tren İstasyonu";
+"mosque_category" = "Cami";
+"church_category" = "Kilise";
+"synagogue_category" = "Sinagog";
+"zoo_category" = "Hayvanat Bahçesi";
+"aquarium_category" = "Akvaryum";
+"amusement_park_category" = "Lunapark";
+"nightclub_category" = "Gece Kulübü";
+"other_category" = "Diğer";
+"info_label_text" = "Uygulama internet olmadığı zaman da kısmen çalışabildiği ve üyelik de gerekmediği için silip yeniden kurduğunda kayıtlı yerlerin gideceğini unutma :)";
+"send_mail_label_text" = "Öneri Bildir";
+"linkedin_label_text" = "Geliştirici Hakkında";
+"reset_button_title" = "Sıfırla";
+"apply_button_title" = "Uygula";
+"saved_places_tab_title" = "Kayıtlı Yerler";
+"add_place_tab_title" = "Yer Ekle";
+"info_tab_title" = "Bilgi";

@@ -22,8 +22,8 @@
                                 <rect key="frame" x="156.66666666666666" y="129" width="80" height="78.666666666666686"/>
                                 <color key="tintColor" red="0.80152517560000003" green="0.23992234470000001" blue="0.24311080569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="eyU-y5-SsU"/>
-                                    <constraint firstAttribute="width" constant="80" id="hx4-tn-Y0k"/>
+                                    <constraint firstAttribute="height" constant="80" id="eyU-y5-SsU" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
+                                    <constraint firstAttribute="width" constant="80" id="hx4-tn-Y0k" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfR-XX-cu1">
@@ -40,8 +40,8 @@
                                         <rect key="frame" x="8" y="15.333333333333297" width="27" height="20.000000000000004"/>
                                         <color key="tintColor" name="AccentColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="19" id="dZx-qS-T3W"/>
-                                            <constraint firstAttribute="width" constant="27" id="wgK-En-83N"/>
+                                            <constraint firstAttribute="height" constant="19" id="dZx-qS-T3W" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
+                                            <constraint firstAttribute="width" constant="27" id="wgK-En-83N" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Öneri Bildir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEg-I7-kGe">
@@ -68,7 +68,7 @@
                                     <constraint firstItem="hTu-ja-pOb" firstAttribute="leading" secondItem="jnZ-ON-UYX" secondAttribute="leading" constant="8" id="K9K-G4-BJG"/>
                                     <constraint firstAttribute="trailing" secondItem="AEk-pH-NGh" secondAttribute="trailing" constant="8" id="V2W-5y-3NU"/>
                                     <constraint firstItem="AEk-pH-NGh" firstAttribute="centerY" secondItem="fEg-I7-kGe" secondAttribute="centerY" id="Wim-Gk-9b9"/>
-                                    <constraint firstAttribute="height" constant="50" id="Z1R-it-nfY"/>
+                                    <constraint firstAttribute="height" constant="50" id="Z1R-it-nfY" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                     <constraint firstItem="hTu-ja-pOb" firstAttribute="centerY" secondItem="jnZ-ON-UYX" secondAttribute="centerY" id="keD-gx-Mwq"/>
                                 </constraints>
                                 <connections>
@@ -82,8 +82,8 @@
                                         <rect key="frame" x="7.9999999999999982" y="15.333333333333297" width="28.333333333333329" height="20.000000000000004"/>
                                         <color key="tintColor" name="AccentColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="19" id="ZTG-6v-Mj6"/>
-                                            <constraint firstAttribute="width" constant="27" id="dLo-de-taG"/>
+                                            <constraint firstAttribute="height" constant="19" id="ZTG-6v-Mj6" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
+                                            <constraint firstAttribute="width" constant="27" id="dLo-de-taG" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geliştirici Hakkında" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80k-UW-XvV">
@@ -110,13 +110,55 @@
                                     <constraint firstItem="63X-x0-UBv" firstAttribute="centerY" secondItem="HkM-7g-tWw" secondAttribute="centerY" id="Mkc-YO-QWv"/>
                                     <constraint firstItem="80k-UW-XvV" firstAttribute="centerY" secondItem="63X-x0-UBv" secondAttribute="centerY" id="dfm-0U-Dvx"/>
                                     <constraint firstItem="ZyV-gf-6wc" firstAttribute="centerY" secondItem="80k-UW-XvV" secondAttribute="centerY" id="evW-wm-5cu"/>
-                                    <constraint firstAttribute="height" constant="50" id="hHj-Dl-7wo"/>
+                                    <constraint firstAttribute="height" constant="50" id="hHj-Dl-7wo" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                     <constraint firstItem="63X-x0-UBv" firstAttribute="leading" secondItem="HkM-7g-tWw" secondAttribute="leading" constant="8" id="l5h-cZ-iI7"/>
                                     <constraint firstAttribute="trailing" secondItem="ZyV-gf-6wc" secondAttribute="trailing" constant="8" id="tgD-YJ-RQH"/>
                                     <constraint firstItem="80k-UW-XvV" firstAttribute="leading" secondItem="63X-x0-UBv" secondAttribute="trailing" constant="16" id="xuh-LQ-Jxt"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="TM8-aT-B9U" appends="YES" id="aao-Vq-Kff"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZF-rg-Ddd">
+                                <rect key="frame" x="32" y="464.66666666666669" width="329" height="50.000000000000057"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iOb-xb-aqP">
+                                        <rect key="frame" x="8" y="12.666666666666627" width="27" height="25.666666666666664"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="27" id="CTq-2V-kcX" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
+                                            <constraint firstAttribute="height" constant="27" id="UPe-iG-gx7" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dil Seçimi / Select Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XZ-fo-5vT">
+                                        <rect key="frame" x="51.000000000000014" y="16.666666666666629" width="183.33333333333337" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gUs-Oq-qTR">
+                                        <rect key="frame" x="301" y="17" width="20" height="16.333333333333329"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="nhe-D8-0it"/>
+                                            <constraint firstAttribute="height" constant="20" id="wkq-7J-Tja"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="iOb-xb-aqP" firstAttribute="centerY" secondItem="oZF-rg-Ddd" secondAttribute="centerY" id="7rt-Et-1BZ"/>
+                                    <constraint firstItem="gUs-Oq-qTR" firstAttribute="centerY" secondItem="9XZ-fo-5vT" secondAttribute="centerY" id="JdD-Oi-7AM"/>
+                                    <constraint firstAttribute="trailing" secondItem="gUs-Oq-qTR" secondAttribute="trailing" constant="8" id="RHB-R9-3Rh"/>
+                                    <constraint firstItem="9XZ-fo-5vT" firstAttribute="leading" secondItem="iOb-xb-aqP" secondAttribute="trailing" constant="16" id="VGo-bm-qmA"/>
+                                    <constraint firstItem="9XZ-fo-5vT" firstAttribute="centerY" secondItem="iOb-xb-aqP" secondAttribute="centerY" id="WyY-aq-iHA"/>
+                                    <constraint firstItem="iOb-xb-aqP" firstAttribute="leading" secondItem="oZF-rg-Ddd" secondAttribute="leading" constant="8" id="ncS-aA-TPB"/>
+                                    <constraint firstAttribute="height" constant="50" id="tC7-wM-jDX" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Yrq-Hs-0ma" appends="YES" id="4vv-Iq-iP0"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -129,6 +171,9 @@
                             <constraint firstAttribute="trailing" secondItem="jnZ-ON-UYX" secondAttribute="trailing" constant="32" id="70o-A2-6k1"/>
                             <constraint firstItem="HkM-7g-tWw" firstAttribute="leading" secondItem="eMs-dd-4SP" secondAttribute="leading" constant="32" id="AQ6-MJ-cm4"/>
                             <constraint firstItem="jnZ-ON-UYX" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="32" id="F8W-4M-PxY"/>
+                            <constraint firstItem="oZF-rg-Ddd" firstAttribute="top" secondItem="HkM-7g-tWw" secondAttribute="bottom" constant="16" id="KtL-Rp-NEL"/>
+                            <constraint firstItem="oZF-rg-Ddd" firstAttribute="trailing" secondItem="HkM-7g-tWw" secondAttribute="trailing" id="LRa-uK-Jm4"/>
+                            <constraint firstItem="oZF-rg-Ddd" firstAttribute="leading" secondItem="HkM-7g-tWw" secondAttribute="leading" id="TcP-Hw-dg2"/>
                             <constraint firstItem="LqY-pH-9vY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ZjK-uI-Xln"/>
                             <constraint firstItem="HkM-7g-tWw" firstAttribute="top" secondItem="jnZ-ON-UYX" secondAttribute="bottom" constant="16" id="a9X-Ma-GSF"/>
                             <constraint firstItem="eMs-dd-4SP" firstAttribute="trailing" secondItem="HkM-7g-tWw" secondAttribute="trailing" constant="32" id="bM0-MI-JrG"/>
@@ -139,7 +184,10 @@
                     <navigationItem key="navigationItem" id="zd5-rK-THv"/>
                     <connections>
                         <outlet property="infoLabel" destination="mfR-XX-cu1" id="9oC-Is-gys"/>
+                        <outlet property="languageLabel" destination="9XZ-fo-5vT" id="R7y-mI-c1n"/>
+                        <outlet property="linkedinLabel" destination="80k-UW-XvV" id="eGT-Wa-s9f"/>
                         <outlet property="linkedinView" destination="HkM-7g-tWw" id="Q9S-vr-XSa"/>
+                        <outlet property="selectLanguageView" destination="oZF-rg-Ddd" id="xSi-5K-KFw"/>
                         <outlet property="sendMailLabel" destination="fEg-I7-kGe" id="VRc-cB-F9y"/>
                         <outlet property="sendMailView" destination="jnZ-ON-UYX" id="djn-Hd-uXL"/>
                     </connections>
@@ -153,6 +201,11 @@
                 <tapGestureRecognizer id="TM8-aT-B9U">
                     <connections>
                         <action selector="goToLinkedin:" destination="Y6W-OH-hqX" id="cAv-Rh-rYz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Yrq-Hs-0ma">
+                    <connections>
+                        <action selector="selectLanguageClicked:" destination="Y6W-OH-hqX" id="Ynk-an-bYZ"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -179,13 +232,14 @@
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="envelope.open" catalog="system" width="128" height="112"/>
+        <image name="globe" catalog="system" width="128" height="123"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="link.badge.plus" catalog="system" width="128" height="120"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

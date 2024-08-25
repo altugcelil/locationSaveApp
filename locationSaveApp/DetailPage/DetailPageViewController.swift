@@ -16,6 +16,13 @@ class DetailPageViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var ratingView: RatingView!
+    @IBOutlet weak var openMapButton: UIButton!
+    @IBOutlet weak var cityCountryHeaderLabel: UILabel!
+    @IBOutlet weak var titleHeaderLabel: UILabel!
+    @IBOutlet weak var noteHeaderLabel: UILabel!
+    @IBOutlet weak var ratingHeaderLabel: UILabel!
+    @IBOutlet weak var photoImageLabel: UILabel!
+
     @IBOutlet weak var placeImage: UIImageView!
 
     var place: Place?
@@ -26,6 +33,8 @@ class DetailPageViewController: UIViewController {
     }
     
     private func setupUI() {
+        setupTexts()
+        
         nameLabel.text = place?.title
         noteLabel.text = place?.note
         cityOrCountryLabel.text = place?.cityOrCountry
@@ -39,6 +48,16 @@ class DetailPageViewController: UIViewController {
             placeImage.image = UIImage(named: "photo")
         }
         pinAndZoomOnLocation(latitude: place?.latitude ?? 0.0, longitude: place?.longitude ?? 0.0)
+    }
+    
+    private func setupTexts() {
+        openMapButton.setTitle(NSLocalizedString("get_directions_button_title", comment: ""), for: .normal)
+        cityCountryHeaderLabel.text = NSLocalizedString("city_country_label", comment: "")
+        titleHeaderLabel.text = NSLocalizedString("title_header_label", comment: "")
+        noteHeaderLabel.text = NSLocalizedString("note_header_label", comment: "")
+        ratingHeaderLabel.text = NSLocalizedString("rating_header", comment: "")
+        photoImageLabel.text = NSLocalizedString("image_header", comment: "")
+
     }
     
     @IBAction func openMapClicked(_ sender: UIButton) {

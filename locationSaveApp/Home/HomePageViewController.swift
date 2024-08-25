@@ -45,7 +45,7 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
     }
     
     private func setupTexts() {
-        headerLabel.text = NSLocalizedString("search_on_save", comment: "")
+        headerLabel.text = NSLocalizedString("saved_places", comment: "")
     }
     
     private func setupFontSize() {
@@ -54,7 +54,7 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
     
     private func setupSearchBarUI() {
         searchBar.delegate = self
-        searchBar.placeholder = "Kayıtlı Yerlerde Ara"
+        searchBar.placeholder = NSLocalizedString("search_on_save", comment: "")
     }
     
     func didApplyFilters(selectedCategories: Set<String>, selectedCities: Set<String>) {
@@ -127,13 +127,13 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
     
     private func updateUIForPlaces(isFilter: Bool) {
         if isFilter {
-            warningText.text = "Seçtiğin filtrelere uygun bir yer bulunamadı, başka bir filtre seçerek veya tüm filtreleri kaldırarak yeniden deneyebilirsin :)"
+            warningText.text = NSLocalizedString("no_place_filter", comment: "")
             warningView.isHidden = false
             filterButton.isHidden = false
             searchBar.isHidden = false
             placesTableView.isHidden = true
         }else {
-            warningText.text = "Henüz bir yer eklemedin, yeni bir yer eklediğinde burada gözükecek :)"
+            warningText.text = NSLocalizedString("no_place", comment: "")
             warningView.isHidden = false
             filterButton.isHidden = true
             searchBar.isHidden = true
@@ -157,15 +157,6 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
         filterPageViewController.modalTransitionStyle = .coverVertical
         present(filterPageViewController, animated: true, completion: nil)
     }
-    
-    func changeLanguage(to language: String) {
-        UserDefaults.standard.set(language, forKey: "selectedLanguage")
-        UserDefaults.standard.synchronize()
-        
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            appDelegate.setLanguage()
-        }
-    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -182,16 +173,8 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        let place = isSearching ? filteredPlaces[indexPath.row] : places[indexPath.row]
-        //        presentPlaceDetailPage(place: place)
-        let alertController = UIAlertController(title: "Select Language", message: nil, preferredStyle: .actionSheet)
-        alertController.addAction(UIAlertAction(title: "English", style: .default, handler: { _ in
-            self.changeLanguage(to: "en")
-        }))
-        alertController.addAction(UIAlertAction(title: "Türkçe", style: .default, handler: { _ in
-            self.changeLanguage(to: "tr")
-        }))
-        self.present(alertController, animated: true, completion: nil)
+        let place = isSearching ? filteredPlaces[indexPath.row] : places[indexPath.row]
+        presentPlaceDetailPage(place: place)
     }
 }
 
@@ -207,7 +190,8 @@ extension HomePageViewController: UISearchBarDelegate {
                 let searchTextLowercased = searchText.lowercased()
                 return (place.title?.lowercased().contains(searchTextLowercased) ?? false) ||
                 (place.note?.lowercased().contains(searchTextLowercased) ?? false) ||
-                (place.cityOrCountry?.lowercased().contains(searchTextLowercased) ?? false)
+                (place.cityOrCountry?.lowercased().contains(searchTextLowercased) ?? false) ||
+                (place.categoryName?.lowercased().contains(searchTextLowercased) ?? false)
             }
         }
         placesTableView.reloadData()

@@ -36,6 +36,7 @@ class FilterSelectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTexts()
         setupFontSize()
         fetchLocations()
         setupCollectionViews()
@@ -50,6 +51,15 @@ class FilterSelectionViewController: UIViewController {
         categoryCollectionViewHeight.constant = heightCategory
         self.view.layoutIfNeeded()
     }
+    
+    private func setupTexts() {
+        backButton.setTitle(NSLocalizedString("reset_button_title", comment: ""), for: .normal)
+        applyButton.setTitle(NSLocalizedString("apply_button_title", comment: ""), for: .normal)
+
+        cityCountryLabel.text = NSLocalizedString("city_country_label", comment: "")
+        categoryHeaderLabel.text = NSLocalizedString("category_header_label", comment: "")
+    }
+
     
     private func setupFontSize() {
         cityCountryLabel.font = BaseFont.adjustFontSize(of: cityCountryLabel.font, to: 24)

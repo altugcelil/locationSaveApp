@@ -40,8 +40,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GMSServices.provideAPIKey("AIzaSyBKeJxea0-ramsRN9mxuVfpASCeXSml_XA")
         GMSPlacesClient.provideAPIKey("AIzaSyDt_UIM9JrEr0vX_l_NUjGquIEZC5WW_Uo")
+        setLanguage()
+
         return true
     }
+    
+    func setLanguage() {
+        let selectedLanguage = UserDefaults.standard.string(forKey: "selectedLanguage") ?? "tr"
+        Bundle.setLanguage(selectedLanguage)
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
+        windowScene.windows.first?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+    }
+
 
     // MARK: UISceneSession Lifecycle
 
@@ -57,4 +67,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 }
+extension Bundle {
+    private static var bundle: Bundle!
 
+    public static func setLanguage(_ language: String) {
+        objc_setAssociatedObject(Bundle.main, &bundle, language, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        
+        let isLanguageRTL = Locale.characterDirection(forLanguage: language) == .rightToLeft
+        UIView.appearance().semanticContentAttribute = isLanguageRTL ? .forceRightToLeft : .forceLeftToRight
+        
+        object_setClass(Bundle.main, BundleEx.self)
+    }
+    
+    @objc class BundleEx: Bundle {
+        override func localizedString(forKey key: String, value: String?, table tableName: String?) -> String {
+            guard let bundleIdentifier = objc_getAssociatedObject(self, &Bundle.BundleEx.bundle) as? String,
+                  let bundlePath = Bundle.main.path(forResource: bundleIdentifier, ofType: "lproj"),
+                  let bundle = Bundle(path: bundlePath) else {
+                print("Hata: Belirtilen dil dosyası bulunamadı - \(bundleIdentifier)")
+                return super.localizedString(forKey: key, value: value, table: tableName)
+            }
+            return bundle.localizedString(forKey: key, value: value, table: tableName)
+        }
+    }
+}

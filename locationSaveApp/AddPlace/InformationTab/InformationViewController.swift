@@ -15,7 +15,7 @@ class InformationViewController: UIViewController, RatingViewDelegate {
     @IBOutlet weak var ratingHeader: UILabel!
     @IBOutlet weak var categoryHeader: UILabel!
     @IBOutlet weak var noteHeader: UILabel!
-
+    
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var cityOrCountryField: CustomTextField!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -24,8 +24,8 @@ class InformationViewController: UIViewController, RatingViewDelegate {
     @IBOutlet weak var textViewHeight: NSLayoutConstraint!
     @IBOutlet weak var noteTextView: UITextView!
     @IBOutlet weak var titleTextField: CustomTextField!
-    let placeHolderText = "Örn: Güzel kahveleri var, hızlı internet ve sakin bir ortam."
-
+    let placeHolderText = NSLocalizedString("note_placeholder", comment: "")
+    
     weak var delegate: InformationViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -39,8 +39,9 @@ class InformationViewController: UIViewController, RatingViewDelegate {
         setupUI()
         let isTitleValid = titleTextField.text?.count ?? 0 > 1
         let isCityOrCountryValid = cityOrCountryField.text?.count ?? 0 > 1
-        
-        let isFormValid = isTitleValid && isCityOrCountryValid
+        let isCategoryValid = categoryLabel.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "Kategori"
+
+        let isFormValid = isTitleValid && isCityOrCountryValid && isCategoryValid
         notifyValidationState(isValid: isFormValid)
     }
     
@@ -55,7 +56,7 @@ class InformationViewController: UIViewController, RatingViewDelegate {
         ratingHeader.font = BaseFont.adjustFontSize(of: ratingHeader.font, to: 12)
         noteHeader.font = BaseFont.adjustFontSize(of: noteHeader.font, to: 12)
         categoryHeader.font = BaseFont.adjustFontSize(of: categoryHeader.font, to: 12)
-
+        
         categoryLabel.font = BaseFont.adjustFontSize(of: categoryLabel.font, to: 12)
         ratingLabel.font = BaseFont.adjustFontSize(of: categoryLabel.font, to: 12)
     }
@@ -65,16 +66,22 @@ class InformationViewController: UIViewController, RatingViewDelegate {
         noteTextView.textColor = UIColor.lightGray
         noteTextView.delegate = self
         noteTextView.font = BaseFont.adjustFontSize(of: categoryHeader.font, to: 14)
-        titleTextField.staticPlaceholderText = "Bu yer için isim girin: "
-        titleTextField.placeholder = "Örn: Butik Kafe (Acıbadem) "
+        titleTextField.staticPlaceholderText = NSLocalizedString("title_placeholder", comment: "")
+        titleTextField.placeholder = NSLocalizedString("title_placeholder", comment: "")
         titleTextField.textColor = .black
         titleTextField.delegate = self
         titleTextField.staticPlaceholderFont = BaseFont.adjustFontSize(of: categoryHeader.font, to: 12)
         
-        cityOrCountryField.staticPlaceholderText = "Şehir veya ülke girin: "
-        cityOrCountryField.placeholder = "Örn: İstanbul "
+        cityOrCountryField.staticPlaceholderText = NSLocalizedString("city_or_country_placeholder", comment: "")
+        cityOrCountryField.placeholder = NSLocalizedString("city_or_country_placeholder", comment: "")
         cityOrCountryField.delegate = self
         cityOrCountryField.staticPlaceholderFont = BaseFont.adjustFontSize(of: categoryHeader.font, to: 12)
+        
+        ratingLabel.text = NSLocalizedString("rating_header", comment: "")
+        categoryHeader.text = NSLocalizedString("category_header_text", comment: "")
+        noteHeader.text = NSLocalizedString("note_header_text", comment: "")
+        ratingHeader.text = NSLocalizedString("rating_header_text", comment: "")
+        
     }
     
     @IBAction func categoryViewClicked(_ sender: UITapGestureRecognizer) {
@@ -91,9 +98,9 @@ class InformationViewController: UIViewController, RatingViewDelegate {
     }
     
     func ratingView(_ ratingView: RatingView, didUpdateRating rating: Float) {
-        ratingLabel.text = "Puan: \(rating)"
+        ratingLabel.text = "\(NSLocalizedString("rating_header", comment: " ")) \(rating)"
         PlaceInfoModel.instance.rating = rating
-      }
+    }
     
     private func notifyValidationState(isValid: Bool) {
         delegate?.validationStateDidChange(isValid: isValid)
@@ -126,17 +133,17 @@ class InformationViewController: UIViewController, RatingViewDelegate {
     }
 }
 extension InformationViewController: UITextFieldDelegate {
-
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let currentText = textField.text as NSString? else { return false }
         let newText = currentText.replacingCharacters(in: range, with: string)
         let isValid = newText.count > 1
         
         if textField == titleTextField {
-            updatePlaceholder(for: titleTextField, isValid: isValid, validPlaceholder: "Bu yer için isim girin: ", invalidPlaceholder: "Lütfen geçerli bir isim girin.")
+            updatePlaceholder(for: titleTextField, isValid: isValid, validPlaceholder: NSLocalizedString("title_placeholder", comment: ""), invalidPlaceholder: NSLocalizedString("title_invalid_placeholder", comment: ""))
             PlaceInfoModel.instance.title = newText
         } else if textField == cityOrCountryField {
-            updatePlaceholder(for: cityOrCountryField, isValid: isValid, validPlaceholder: "Şehir veya ülke girin: ", invalidPlaceholder: "Lütfen geçerli bir şehir/ülke girin.")
+            updatePlaceholder(for: cityOrCountryField, isValid: isValid, validPlaceholder: NSLocalizedString("city_or_country_placeholder", comment: ""), invalidPlaceholder: NSLocalizedString("city_or_country_invalid_placeholder", comment: ""))
             PlaceInfoModel.instance.cityOrCountry = newText
         }
         validateForm()

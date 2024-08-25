@@ -91,7 +91,7 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         let position = location.coordinate
-        self.addMarkerAndZoomToPosition(position: position, title: "My Location")
+        self.addMarkerAndZoomToPosition(position: position, title: NSLocalizedString("location", comment: ""))
         locationManager.stopUpdatingLocation()
     }
 
@@ -116,6 +116,6 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        self.addMarkerAndZoomToPosition(position: coordinate, title: "Seçili Konum")
+        self.addMarkerAndZoomToPosition(position: coordinate, title: NSLocalizedString("location", comment: ""))
     }
 }

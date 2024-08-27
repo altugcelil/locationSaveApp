@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="width" constant="80" id="hx4-tn-Y0k" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfR-XX-cu1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfR-XX-cu1">
                                 <rect key="frame" x="32" y="223.99999999999997" width="329" height="76.666666666666657"/>
                                 <string key="text">Uygulama internet olmadığı zaman da kısmen çalışabildiği ve üyelik de gerekmediği için silip yeniden kurduğunda kayıtlı yerlerin gideceğini unutma :)</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
@@ -239,7 +239,7 @@
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

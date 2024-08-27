@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="contentView" destination="k8G-TR-xuL" id="bvu-28-rdm"/>
                 <outlet property="leftIcon" destination="9P5-cD-2ha" id="APe-ml-Ych"/>
+                <outlet property="progressBar" destination="hVc-dY-dKI" id="dgo-Ah-Bwc"/>
                 <outlet property="rightIcon" destination="NKz-Ed-aIx" id="UVU-bq-mvm"/>
                 <outlet property="titleLabel" destination="zZL-Ls-s40" id="lAh-U4-etC"/>
             </connections>
@@ -39,21 +40,30 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZL-Ls-s40">
-                    <rect key="frame" x="171.33333333333334" y="52.333333333333336" width="32.333333333333343" height="20.333333333333336"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="170.66666666666666" y="52.333333333333336" width="34" height="20.333333333333336"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hVc-dY-dKI">
+                    <rect key="frame" x="8" y="88" width="359" height="4"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="a3c-t8-7va"/>
+                    </constraints>
+                </progressView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="kbG-1g-FHh"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="kbG-1g-FHh" firstAttribute="trailing" secondItem="NKz-Ed-aIx" secondAttribute="trailing" constant="8" id="31I-WE-t2u"/>
+                <constraint firstItem="hVc-dY-dKI" firstAttribute="leading" secondItem="9P5-cD-2ha" secondAttribute="leading" id="5xi-c6-tKA"/>
                 <constraint firstItem="zZL-Ls-s40" firstAttribute="centerX" secondItem="kbG-1g-FHh" secondAttribute="centerX" id="6MW-bE-ylk"/>
                 <constraint firstItem="NKz-Ed-aIx" firstAttribute="centerY" secondItem="kbG-1g-FHh" secondAttribute="centerY" id="7fI-3L-7Wh"/>
+                <constraint firstItem="hVc-dY-dKI" firstAttribute="trailing" secondItem="NKz-Ed-aIx" secondAttribute="trailing" id="9U0-B9-EBY"/>
                 <constraint firstItem="9P5-cD-2ha" firstAttribute="centerY" secondItem="NKz-Ed-aIx" secondAttribute="centerY" id="BWd-uF-eR0"/>
                 <constraint firstItem="9P5-cD-2ha" firstAttribute="leading" secondItem="kbG-1g-FHh" secondAttribute="leading" constant="8" id="HVe-rK-5N0"/>
                 <constraint firstItem="zZL-Ls-s40" firstAttribute="centerY" secondItem="kbG-1g-FHh" secondAttribute="centerY" id="I8h-V4-CcH"/>
+                <constraint firstItem="hVc-dY-dKI" firstAttribute="top" secondItem="9P5-cD-2ha" secondAttribute="bottom" constant="8" symbolic="YES" id="ImO-8Y-07U"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-243.51145038167937" y="149.29577464788733"/>

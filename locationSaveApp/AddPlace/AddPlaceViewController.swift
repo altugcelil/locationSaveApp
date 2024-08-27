@@ -102,6 +102,8 @@ class AddPlaceViewController: UIViewController, UIPageViewControllerDataSource, 
         let page = pageModel[index]
         infoLabel.text = page.info
         stepTopView.titleLabel.text = page.title
+        let progress = Float(index + 1) / Float(pageContent.count)
+        stepTopView.progressBar.setProgress(progress, animated: true)
         
         if index == pageContent.count - 1 {
             stepTopView.rightIcon.setImage(UIImage(), for: .normal) //

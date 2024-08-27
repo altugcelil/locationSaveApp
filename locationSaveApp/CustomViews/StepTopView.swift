@@ -17,6 +17,7 @@ protocol StepTopViewRightButtonDelegate: AnyObject {
 
 class StepTopView: UIView {
 
+    @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var rightIcon: UIButton!
@@ -56,6 +57,7 @@ class StepTopView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [ .flexibleHeight, .flexibleWidth]
+        progressBar.progressTintColor = .blue
     }
     
     private func setupFonts() {

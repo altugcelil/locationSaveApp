@@ -5,8 +5,8 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,14 +46,14 @@
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iOd-P1-PHi">
                                         <rect key="frame" x="156.66666666666666" y="64.999999999999972" width="80" height="78.666666666666657"/>
-                                        <color key="tintColor" red="0.80152517560000003" green="0.23992234470000001" blue="0.24311080569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" name="DarkModeRed"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="1vT-ss-bKK" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                             <constraint firstAttribute="height" constant="80" id="Hn5-hl-PAS" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="DarkModeWhite"/>
                                 <constraints>
                                     <constraint firstItem="kMi-RY-t0G" firstAttribute="leading" secondItem="14l-eK-2dM" secondAttribute="leading" constant="32" id="RaL-LF-rHO"/>
                                     <constraint firstAttribute="trailing" secondItem="kMi-RY-t0G" secondAttribute="trailing" constant="32" id="SWz-5w-tLs"/>
@@ -64,7 +64,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rW2-ks-tOa">
                                 <rect key="frame" x="16" y="176.66666666666669" width="361" height="659.33333333333326"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="DarkModeWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="6gp-Qd-Okm"/>
@@ -79,9 +79,12 @@
                             </label>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LBs-5Y-BsD">
                                 <rect key="frame" x="16" y="104.66666666666669" width="321" height="56"/>
+                                <color key="backgroundColor" name="DarkModeWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="0bE-6i-X7Q" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                 </constraints>
+                                <color key="tintColor" name="DarkModeWhite"/>
+                                <color key="barTintColor" name="DarkModeWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="Uy0-g2-1QR"/>
@@ -93,7 +96,7 @@
                                     <constraint firstAttribute="height" constant="55" id="bdl-lb-n0v" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                     <constraint firstAttribute="width" constant="40" id="yf5-rj-ueq" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                 </constraints>
-                                <color key="tintColor" red="0.015686274510000001" green="0.1176470588" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" name="DarkModeBlack"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <imageReference key="image" image="line.3.horizontal.decrease" catalog="system" symbolScale="large"/>
@@ -104,7 +107,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DarkModeWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="14l-eK-2dM" secondAttribute="bottom" id="1CA-px-q9w"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rW2-ks-tOa" secondAttribute="trailing" constant="16" id="6Dz-hG-aaM"/>
@@ -142,8 +145,14 @@
     <resources>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="line.3.horizontal.decrease" catalog="system" width="128" height="73"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="DarkModeBlack">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <namedColor name="DarkModeRed">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkModeWhite">
+            <color red="0.99607843160629272" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

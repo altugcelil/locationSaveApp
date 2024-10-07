@@ -63,12 +63,11 @@ class InformationViewController: UIViewController, RatingViewDelegate {
     
     private func setupTextFields() {
         noteTextView.text = placeHolderText
-        noteTextView.textColor = UIColor.lightGray
+        noteTextView.textColor = UIColor(named: "DarkModeBlack")
         noteTextView.delegate = self
         noteTextView.font = BaseFont.adjustFontSize(of: categoryHeader.font, to: 14)
         titleTextField.staticPlaceholderText = NSLocalizedString("title_placeholder", comment: "")
         titleTextField.placeholder = NSLocalizedString("title_placeholder", comment: "")
-        titleTextField.textColor = .black
         titleTextField.delegate = self
         titleTextField.staticPlaceholderFont = BaseFont.adjustFontSize(of: categoryHeader.font, to: 12)
         
@@ -175,7 +174,7 @@ extension InformationViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == placeHolderText {
             textView.text = ""
-            textView.textColor = UIColor.black
+            textView.textColor = UIColor(named: "DarkModeBlack")
         }
     }
     

@@ -16,6 +16,16 @@
 		3915CA182C75744D009CFB85 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915CA162C75744D009CFB85 /* DetailPageViewController.swift */; };
 		3915CA192C75744D009CFB85 /* DetailPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3915CA172C75744D009CFB85 /* DetailPageView.xib */; };
 		3915CA1B2C75812C009CFB85 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915CA1A2C75812C009CFB85 /* BaseViewController.swift */; };
+		3921FCF42C7E46C1005D2823 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3921FCF32C7E46C1005D2823 /* FirebaseAnalytics */; };
+		3921FCF62C7E46C1005D2823 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 3921FCF52C7E46C1005D2823 /* FirebaseAppCheck */; };
+		3921FCF82C7E46C1005D2823 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3921FCF72C7E46C1005D2823 /* FirebaseCrashlytics */; };
+		3921FCFA2C7E46C1005D2823 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3921FCF92C7E46C1005D2823 /* FirebaseDatabase */; };
+		3921FCFC2C7E46C1005D2823 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3921FCFB2C7E46C1005D2823 /* FirebaseFirestore */; };
+		3921FCFE2C7E46C1005D2823 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3921FCFD2C7E46C1005D2823 /* FirebaseMessaging */; };
+		3921FD002C7E46C1005D2823 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3921FCFF2C7E46C1005D2823 /* FirebaseRemoteConfig */; };
+		3921FD022C7E46C1005D2823 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3921FD012C7E46C1005D2823 /* FirebaseStorage */; };
+		3921FD042C7E5150005D2823 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3921FD032C7E5150005D2823 /* GoogleService-Info.plist */; };
+		3921FD072C7E828B005D2823 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3921FD062C7E828B005D2823 /* NetworkMonitor.swift */; };
 		392528D62C7207F30000DA4B /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392528D52C7207F30000DA4B /* InformationViewController.swift */; };
 		392528D82C72083D0000DA4B /* InformationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392528D72C72083D0000DA4B /* InformationView.storyboard */; };
 		392528DB2C720A0C0000DA4B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392528DA2C720A0C0000DA4B /* CustomTextField.swift */; };
@@ -84,6 +94,8 @@
 		3915CA162C75744D009CFB85 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		3915CA172C75744D009CFB85 /* DetailPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPageView.xib; sourceTree = "<group>"; };
 		3915CA1A2C75812C009CFB85 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3921FD032C7E5150005D2823 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3921FD062C7E828B005D2823 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		392528D52C7207F30000DA4B /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		392528D72C72083D0000DA4B /* InformationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InformationView.storyboard; sourceTree = "<group>"; };
 		392528DA2C720A0C0000DA4B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -141,9 +153,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3921FD002C7E46C1005D2823 /* FirebaseRemoteConfig in Frameworks */,
 				39335A632C7097AC0091C3B4 /* GoogleMaps in Frameworks */,
 				39335A662C709A6A0091C3B4 /* GooglePlaces in Frameworks */,
+				3921FCFE2C7E46C1005D2823 /* FirebaseMessaging in Frameworks */,
 				397EC99D2C7564B800B2F64E /* TOCropViewController in Frameworks */,
+				3921FD022C7E46C1005D2823 /* FirebaseStorage in Frameworks */,
+				3921FCF82C7E46C1005D2823 /* FirebaseCrashlytics in Frameworks */,
+				3921FCF42C7E46C1005D2823 /* FirebaseAnalytics in Frameworks */,
+				3921FCFC2C7E46C1005D2823 /* FirebaseFirestore in Frameworks */,
+				3921FCF62C7E46C1005D2823 /* FirebaseAppCheck in Frameworks */,
+				3921FCFA2C7E46C1005D2823 /* FirebaseDatabase in Frameworks */,
 				397EC99B2C7564B800B2F64E /* CropViewController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +198,14 @@
 				3915CA172C75744D009CFB85 /* DetailPageView.xib */,
 			);
 			path = DetailPage;
+			sourceTree = "<group>";
+		};
+		3921FD052C7E827C005D2823 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3921FD062C7E828B005D2823 /* NetworkMonitor.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		392528D42C7207D80000DA4B /* InformationTab */ = {
@@ -346,6 +374,8 @@
 		39CD27D22C6EC1D400F7D8A2 /* locationSaveApp */ = {
 			isa = PBXGroup;
 			children = (
+				3921FD052C7E827C005D2823 /* Network */,
+				3921FD032C7E5150005D2823 /* GoogleService-Info.plist */,
 				390AA6472C7AA6F900A8130F /* tr.lproj */,
 				390AA6252C7AA37700A8130F /* en.lproj */,
 				3960895D2C78E9B600CABE89 /* InfoPage */,
@@ -445,6 +475,14 @@
 				39335A652C709A6A0091C3B4 /* GooglePlaces */,
 				397EC99A2C7564B800B2F64E /* CropViewController */,
 				397EC99C2C7564B800B2F64E /* TOCropViewController */,
+				3921FCF32C7E46C1005D2823 /* FirebaseAnalytics */,
+				3921FCF52C7E46C1005D2823 /* FirebaseAppCheck */,
+				3921FCF72C7E46C1005D2823 /* FirebaseCrashlytics */,
+				3921FCF92C7E46C1005D2823 /* FirebaseDatabase */,
+				3921FCFB2C7E46C1005D2823 /* FirebaseFirestore */,
+				3921FCFD2C7E46C1005D2823 /* FirebaseMessaging */,
+				3921FCFF2C7E46C1005D2823 /* FirebaseRemoteConfig */,
+				3921FD012C7E46C1005D2823 /* FirebaseStorage */,
 			);
 			productName = locationSaveApp;
 			productReference = 39CD27D02C6EC1D400F7D8A2 /* locationSaveApp.app */;
@@ -479,6 +517,7 @@
 				39335A612C7097AC0091C3B4 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
 				39335A642C709A6A0091C3B4 /* XCRemoteSwiftPackageReference "ios-places-sdk" */,
 				397EC9992C7564B800B2F64E /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+				3921FCF22C7E46C1005D2823 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 39CD27D12C6EC1D400F7D8A2 /* Products */;
 			projectDirPath = "";
@@ -496,6 +535,7 @@
 			files = (
 				39346D9D2C762FDC002282E4 /* DropdownTableViewCell.xib in Resources */,
 				390AA64D2C7AA6F900A8130F /* Main.strings in Resources */,
+				3921FD042C7E5150005D2823 /* GoogleService-Info.plist in Resources */,
 				390AA6502C7AA70600A8130F /* Localizable.strings in Resources */,
 				39346D982C762F13002282E4 /* DropdownSelection.xib in Resources */,
 				39294A372C6EC7AF00BFFE12 /* HomePage.storyboard in Resources */,
@@ -554,6 +594,7 @@
 				39B74C412C75506500CDF62D /* PlacesTableViewCell.swift in Sources */,
 				39FB4BEE2C78D6AB006BBCD8 /* Device.swift in Sources */,
 				3962566A2C7222A300153672 /* ExpandingTextView.swift in Sources */,
+				3921FD072C7E828B005D2823 /* NetworkMonitor.swift in Sources */,
 				39B4B1CC2C720EDD0059227B /* UIViewControllerExtension.swift in Sources */,
 				39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */,
 				39FB4BED2C78D6AB006BBCD8 /* Dimesion.swift in Sources */,
@@ -774,20 +815,22 @@
 				INFOPLIST_FILE = locationSaveApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mapmento;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos of your favorite locations.";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to show you relevant information.";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need access to your location even when the app is in the background.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show you relevant information.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires location permission to help you view nearby places and add your location to the selected favorite place.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires location permission to help you view nearby places and add your location to the selected favorite place.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "This app requires location permission to help you view nearby places and add your location to the selected favorite place.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires location permission to help you view nearby places and add your location to the selected favorite place.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = altugcelil.locationSaveApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -813,20 +856,22 @@
 				INFOPLIST_FILE = locationSaveApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mapmento;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos of your favorite locations.";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to show you relevant information.";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need access to your location even when the app is in the background.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show you relevant information.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires location permission to help you view nearby places and add your location to the selected favorite place.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires location permission to help you view nearby places and add your location to the selected favorite place.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "This app requires location permission to help you view nearby places and add your location to the selected favorite place.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires location permission to help you view nearby places and add your location to the selected favorite place.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = altugcelil.locationSaveApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -861,6 +906,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3921FCF22C7E46C1005D2823 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
 		39335A612C7097AC0091C3B4 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
@@ -888,6 +941,46 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3921FCF32C7E46C1005D2823 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3921FCF22C7E46C1005D2823 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3921FCF52C7E46C1005D2823 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3921FCF22C7E46C1005D2823 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		3921FCF72C7E46C1005D2823 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3921FCF22C7E46C1005D2823 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		3921FCF92C7E46C1005D2823 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3921FCF22C7E46C1005D2823 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		3921FCFB2C7E46C1005D2823 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3921FCF22C7E46C1005D2823 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3921FCFD2C7E46C1005D2823 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3921FCF22C7E46C1005D2823 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		3921FCFF2C7E46C1005D2823 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3921FCF22C7E46C1005D2823 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		3921FD012C7E46C1005D2823 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3921FCF22C7E46C1005D2823 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		39335A622C7097AC0091C3B4 /* GoogleMaps */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 39335A612C7097AC0091C3B4 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;

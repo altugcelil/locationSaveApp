@@ -55,8 +55,16 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
         
+        // iPad için popoverPresentationController ayarı
+        if let popoverController = alert.popoverPresentationController {
+            popoverController.sourceView = self.view // Popover'ın hangi view'dan gösterileceğini belirtin
+            popoverController.sourceRect = CGRect(x: sender.location(in: self.view).x, y: sender.location(in: self.view).y, width: 1, height: 1) // Popover'ın gösterileceği nokta
+            popoverController.permittedArrowDirections = .any
+        }
+        
         self.present(alert, animated: true, completion: nil)
     }
+
     
     func savePhoto(image: UIImage) {
         if let imageData = image.jpegData(compressionQuality: 1.0) {

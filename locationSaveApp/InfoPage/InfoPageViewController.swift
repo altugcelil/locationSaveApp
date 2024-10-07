@@ -28,9 +28,9 @@ class InfoPageViewController: UIViewController {
     private func setupUI() {
         setupTexts()
         
-        addBorder(to: linkedinView, color: .black, width: 0.7)
-        addBorder(to: sendMailView, color: .black, width: 0.7)
-        addBorder(to: selectLanguageView, color: .black, width: 0.7)
+        addBorder(to: linkedinView, color: UIColor(named: "DarkModeBlack")!, width: 0.7)
+        addBorder(to: sendMailView, color: UIColor(named: "DarkModeBlack")!, width: 0.7)
+        addBorder(to: selectLanguageView, color: UIColor(named: "DarkModeBlack")!, width: 0.7)
     }
     
     private func setupFontSize() {
@@ -61,6 +61,13 @@ class InfoPageViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "English", style: .default, handler: { _ in
             self.setLanguage("en")
         }))
+        
+        if let popoverController = alertController.popoverPresentationController {
+               popoverController.sourceView = self.view // Popover'ın hangi view'dan gösterileceğini belirtin
+               popoverController.sourceRect = CGRect(x: sender.location(in: self.view).x, y: sender.location(in: self.view).y, width: 1, height: 1) // Popover'ın gösterileceği nokta
+               popoverController.permittedArrowDirections = .any
+           }
+        
         present(alertController, animated: true, completion: nil)
     }
     

@@ -23,5 +23,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Bu uygulama, fotoğraf çekebilmeniz ve kayıtlı yerlere ekleyebilmeniz için kamera erişimine ihtiyaç duyar.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Bu uygulama, yakınınızdaki ilginç yerleri bulmanız için konumunuzu kullanacaktır.</string>
 </dict>
 </plist>

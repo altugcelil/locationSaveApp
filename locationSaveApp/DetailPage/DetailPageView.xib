@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,7 +108,7 @@
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQm-EP-AkH" customClass="RatingView" customModule="locationSaveApp" customModuleProvider="target">
                                     <rect key="frame" x="16" y="629" width="361" height="50"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" name="DarkModeWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="cji-pL-UsW"/>
                                     </constraints>
@@ -164,7 +165,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" name="DarkModeWhite"/>
                             <constraints>
                                 <constraint firstItem="NK3-Va-CsW" firstAttribute="leading" secondItem="buc-lb-CTf" secondAttribute="leading" id="9rl-nf-eFh"/>
                                 <constraint firstItem="BKl-ZU-IoR" firstAttribute="leading" secondItem="2Rz-ui-NiY" secondAttribute="leading" id="BKG-fP-4KJ"/>
@@ -211,6 +212,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" name="DarkModeWhite"/>
                     <constraints>
                         <constraint firstItem="3Hx-x6-l72" firstAttribute="top" secondItem="Pz4-Oe-99B" secondAttribute="top" id="8XA-ss-VYR"/>
                         <constraint firstItem="3Hx-x6-l72" firstAttribute="leading" secondItem="Pz4-Oe-99B" secondAttribute="leading" id="FVh-09-FbH"/>
@@ -219,7 +221,7 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="DarkModeWhite"/>
             <constraints>
                 <constraint firstItem="Pz4-Oe-99B" firstAttribute="trailing" secondItem="6IL-fj-EbJ" secondAttribute="trailing" id="4Uk-Yc-4Da"/>
                 <constraint firstItem="Pz4-Oe-99B" firstAttribute="top" secondItem="6IL-fj-EbJ" secondAttribute="top" id="VMB-ET-OFQ"/>
@@ -232,9 +234,9 @@
     </objects>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="DarkModeWhite">
+            <color red="0.99607843160629272" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

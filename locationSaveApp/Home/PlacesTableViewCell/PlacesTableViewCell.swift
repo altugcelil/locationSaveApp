@@ -29,7 +29,7 @@ class PlacesTableViewCell: UITableViewCell {
         selectionStyle = .none
         contentView.layer.cornerRadius = 8
         contentView.layer.borderWidth = 0.65
-        contentView.layer.borderColor = UIColor.black.cgColor
+        contentView.layer.borderColor = UIColor(named: "DarkModeBlack")?.cgColor
     }
     
     private func setupFontSize() {
@@ -41,10 +41,12 @@ class PlacesTableViewCell: UITableViewCell {
         if let imageData = imageData, let image = UIImage(data: imageData) {
             placeImage.image = image
             placeImage.isHidden = false
+            noteLabel.text = note ?? "Bu yer için kayıtlı bir not bulunamadı."
+            titleLabel.text = title
         }else {
-            placeImage.image = UIImage(named: "photo")
+            placeImage.image = UIImage(systemName: "xmark.rectangle")
+            noteLabel.text = note ?? "Bu yer için kayıtlı bir not ve fotoğraf bulunamadı."
+            titleLabel.text = title
         }
-        titleLabel.text = title
-        noteLabel.text = note
     }
 }

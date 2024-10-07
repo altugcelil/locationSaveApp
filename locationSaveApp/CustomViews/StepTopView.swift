@@ -49,7 +49,6 @@ class StepTopView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
-        setupFonts()
     }
     
     private func setupView() {
@@ -59,11 +58,7 @@ class StepTopView: UIView {
         contentView.autoresizingMask = [ .flexibleHeight, .flexibleWidth]
         progressBar.progressTintColor = .blue
     }
-    
-    private func setupFonts() {
-        titleLabel.textColor = .black
-    }
-    
+        
     func setView(title: String) {
         titleLabel.text = title
     }

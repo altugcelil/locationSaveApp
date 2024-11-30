@@ -44,10 +44,15 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
         mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
         self.view.addSubview(mapView)
-        
+        self.view.backgroundColor = UIColor(named: "DarkModeWhite")
+        mapView.backgroundColor = UIColor(named: "DarkModeWhite")
+        mapView.tintColor = UIColor(named: "DarkModeWhite")
         searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: adapted(dimensionSize: 50, to: .height)))
         searchBar.delegate = self
         self.view.addSubview(searchBar)
+        searchBar.backgroundColor = UIColor(named: "DarkModeWhite")
+        searchBar.barTintColor = UIColor(named: "DarkModeWhite")
+        searchBar.tintColor = UIColor(named: "DarkModeWhite")
     }
 
     private func notifyValidationState(isValid: Bool) {

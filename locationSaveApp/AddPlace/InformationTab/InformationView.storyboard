@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,7 +39,7 @@
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Test" translatesAutoresizingMaskIntoConstraints="NO" id="8In-5W-iUD">
                                                 <rect key="frame" x="8" y="303" width="377" height="40"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="DarkModeWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="On6-1A-Wep" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                                 </constraints>
@@ -56,7 +57,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaN-h7-gsg" customClass="RatingView" customModule="locationSaveApp" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="412.33333333333331" width="377" height="50"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="DarkModeWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Bhk-lY-pog" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                                 </constraints>
@@ -97,7 +98,7 @@
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="DarkModeWhite"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="eUL-sk-Xd2" firstAttribute="centerY" secondItem="UoX-IG-cy3" secondAttribute="centerY" id="6VA-6H-rxo"/>
@@ -125,7 +126,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="DarkModeWhite"/>
                                         <constraints>
                                             <constraint firstItem="LVy-rH-Oe8" firstAttribute="leading" secondItem="35N-MG-sCi" secondAttribute="leading" id="02B-JK-FqO"/>
                                             <constraint firstItem="gaN-h7-gsg" firstAttribute="leading" secondItem="hUv-Xk-bQl" secondAttribute="leading" constant="8" id="59F-59-r2l"/>
@@ -165,6 +166,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="DarkModeWhite"/>
                                 <constraints>
                                     <constraint firstItem="hUv-Xk-bQl" firstAttribute="leading" secondItem="HDG-qe-cXE" secondAttribute="leading" id="EXh-K0-Ghb"/>
                                     <constraint firstItem="hUv-Xk-bQl" firstAttribute="top" secondItem="HDG-qe-cXE" secondAttribute="top" id="KV7-Cm-3df"/>
@@ -174,7 +176,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aag-UT-LUD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DarkModeWhite"/>
                         <constraints>
                             <constraint firstItem="HDG-qe-cXE" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="CnV-RR-gvk"/>
                             <constraint firstAttribute="trailing" secondItem="HDG-qe-cXE" secondAttribute="trailing" id="Q8W-P1-63d"/>
@@ -217,11 +219,11 @@
     </designables>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <namedColor name="DarkModeWhite">
+            <color red="0.99607843160629272" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

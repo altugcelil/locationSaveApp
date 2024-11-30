@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +19,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIW-ZZ-dqa" customClass="StepTopView" customModule="locationSaveApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="32" width="393" height="95"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="DarkModeWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="4UA-YL-bQ3" customClass="AdaptedConstraint" customModule="locationSaveApp" customModuleProvider="target"/>
                                 </constraints>
@@ -32,10 +32,11 @@
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHR-TC-ghk">
                                 <rect key="frame" x="0.0" y="212" width="393" height="640"/>
+                                <color key="backgroundColor" name="DarkModeWhite"/>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hK9-SI-Gn8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DarkModeWhite"/>
                         <constraints>
                             <constraint firstItem="HHR-TC-ghk" firstAttribute="top" secondItem="jYI-nD-u4o" secondAttribute="bottom" constant="16" id="EHK-Ux-dWi"/>
                             <constraint firstItem="MIW-ZZ-dqa" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="KtR-g1-ggw"/>
@@ -82,8 +83,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="DarkModeWhite">
+            <color red="0.99607843160629272" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

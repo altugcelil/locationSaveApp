@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,13 +45,14 @@
                     </label>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hG-B0-XcO">
                         <rect key="frame" x="338" y="146" width="16" height="23"/>
-                        <color key="tintColor" red="0.043592981990000002" green="0.1134760752" blue="0.25099414590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" name="DarkModeBlack"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal">
                             <imageReference key="image" image="chevron.right" catalog="system" symbolScale="large"/>
                         </state>
                     </button>
                 </subviews>
+                <color key="backgroundColor" name="DarkModeWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="9hG-B0-XcO" secondAttribute="trailing" constant="16" id="9m6-El-0dO"/>
                     <constraint firstItem="Klm-Gi-XFf" firstAttribute="leading" secondItem="psH-nu-VIG" secondAttribute="trailing" constant="8" id="IJb-hL-J6k"/>
@@ -67,6 +69,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="DarkModeWhite"/>
             <connections>
                 <outlet property="noteLabel" destination="Bi4-O7-KnE" id="CWh-LH-D9N"/>
                 <outlet property="placeImage" destination="psH-nu-VIG" id="RfH-oG-qjb"/>
@@ -78,5 +81,11 @@
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <namedColor name="DarkModeBlack">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <namedColor name="DarkModeWhite">
+            <color red="0.99607843160629272" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -22,14 +22,15 @@ class DetailPageViewController: UIViewController {
     @IBOutlet weak var noteHeaderLabel: UILabel!
     @IBOutlet weak var ratingHeaderLabel: UILabel!
     @IBOutlet weak var photoImageLabel: UILabel!
-
     @IBOutlet weak var placeImage: UIImageView!
+    @IBOutlet weak var shareButton: UIButton!
 
     var place: Place?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupShareButton()
     }
     
     private func setupUI() {
@@ -58,6 +59,50 @@ class DetailPageViewController: UIViewController {
         ratingHeaderLabel.text = NSLocalizedString("rating_header", comment: "")
         photoImageLabel.text = NSLocalizedString("image_header", comment: "")
 
+    }
+    
+    private func setupShareButton() {
+        shareButton.setTitle(NSLocalizedString("share_button", comment: ""), for: .normal)
+        shareButton.addTarget(self, action: #selector(shareButtonTapped), for: .touchUpInside)
+    }
+
+    @objc private func shareButtonTapped() {
+        guard let place = place else { return }
+        
+        // Paylaşılacak metin oluşturma
+        var shareText = NSLocalizedString("share_message_prefix", comment: "") + "\n\n"
+        shareText += place.title ?? ""
+        shareText += "\n" + (place.cityOrCountry ?? "")
+        
+        if place.rating > 0 {
+            shareText += "\n" + NSLocalizedString("share_rating_prefix", comment: "") + " \(place.rating)"
+        }
+        
+        if let note = place.note, !note.isEmpty {
+            shareText += "\n" + NSLocalizedString("share_note_prefix", comment: "") + " \(note)"
+        }
+        
+        shareText += "\n\n" + NSLocalizedString("share_location_prefix", comment: "") + " https://maps.apple.com/?ll=\(place.latitude),\(place.longitude)"
+        
+        // Paylaşılacak öğeleri oluşturma
+        var shareItems: [Any] = [shareText]
+        
+        // Eğer fotoğraf varsa ekle
+        if let imageData = place.imageData, let image = UIImage(data: imageData) {
+            shareItems.append(image)
+        }
+        
+        // Paylaşım sayfasını göster
+        let activityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+        activityViewController.title = NSLocalizedString("share_place_title", comment: "")
+        
+        // iPad için popover presentation
+        if let popoverController = activityViewController.popoverPresentationController {
+            popoverController.sourceView = shareButton
+            popoverController.sourceRect = shareButton.bounds
+        }
+        
+        present(activityViewController, animated: true)
     }
     
     @IBAction func openMapClicked(_ sender: UIButton) {

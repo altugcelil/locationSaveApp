@@ -42,7 +42,7 @@ class TabBarViewController: UITabBarController {
             selectedImage: UIImage(systemName: "info.circle.fill")
         )
         thirdVc.tabBarItem.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        
+//        mainPageTabBar.backgroundColor = UIColor(named: "DarkModeGrey")
         viewControllers = [homePage, secondVc, thirdVc]
     }
 }

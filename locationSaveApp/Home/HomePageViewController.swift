@@ -19,12 +19,18 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
     private var filteredPlaces: [Place] = []
     private var isSearching = false
     private var isFiltered = false
+    private lazy var context: NSManagedObjectContext = {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("AppDelegate bulunamadı")
+        }
+        return appDelegate.persistentContainer.viewContext
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setupFontSize()
-        setupSearchBarUI()
+        fetchLocations()
+        setupNotifications()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,26 +72,20 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
     }
     
     func fetchLocations() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Place> = Place.fetchRequest()
+        
         do {
-            let locations = try context.fetch(fetchRequest)
-            places = locations
+            places = try context.fetch(fetchRequest)
+            placesTableView.reloadData()
             if places.isEmpty {
                 updateUIForPlaces(isFilter: false)
-            }else {
-                warningView.isHidden = true
-                filterButton.isHidden = false
-                searchBar.isHidden = false
-                placesTableView.isHidden = false
-                placesTableView.reloadData()
-            }            } catch {
-                print("Failed to fetch locations: \(error)")
             }
+        } catch {
+            print("Veri çekme hatası: \(error)")
+        }
     }
     
     func fetchLocationsForFilter(categories: Set<String> = [], cities: Set<String> = []) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Place> = Place.fetchRequest()
         
         var predicates: [NSPredicate] = []
@@ -157,6 +157,39 @@ class HomePageViewController: UIViewController, FilterSelectionDelegate {
         filterPageViewController.modalTransitionStyle = .coverVertical
         present(filterPageViewController, animated: true, completion: nil)
     }
+    
+    private func setupNotifications() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(placeDeleted),
+            name: NSNotification.Name("PlaceDeleted"),
+            object: nil
+        )
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(placeEdited),
+            name: NSNotification.Name("PlaceEdited"),
+            object: nil
+        )
+    }
+    
+    @objc private func placeDeleted() {
+        fetchLocations()
+    }
+    
+    @objc private func placeEdited() {
+        fetchLocations()
+    }
+    
+    
+    func presentEditPage(place: Place) {
+        let editViewController = EditPlaceViewController()
+        editViewController.place = place
+        editViewController.modalPresentationStyle = .overFullScreen
+        editViewController.modalTransitionStyle = .coverVertical
+        present(editViewController, animated: true)
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -168,13 +201,92 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let place = isSearching ? filteredPlaces[indexPath.row] : places[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "placesTableViewCell") as! PlacesTableViewCell
-        cell.configure(imageData: place.imageData, title: place.title, note: place.note, rating: 8.5)
+        cell.configure(imageData: place.imageData, title: place.title, note: place.note, rating: place.rating)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let place = isSearching ? filteredPlaces[indexPath.row] : places[indexPath.row]
         presentPlaceDetailPage(place: place)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        // Delete Action
+        let deleteAction = UIContextualAction(style: .normal, title: nil) { [weak self] (action, view, completion) in
+            guard let self = self else { return }
+            
+            let alert = UIAlertController(
+                title: NSLocalizedString("delete_alert_title", comment: ""),
+                message: NSLocalizedString("delete_alert_message", comment: ""),
+                preferredStyle: .alert
+            )
+            
+            alert.addAction(UIAlertAction(title: NSLocalizedString("cancel_button", comment: ""), style: .cancel) { _ in
+                completion(false)
+            })
+            
+            alert.addAction(UIAlertAction(title: NSLocalizedString("delete_button", comment: ""), style: .destructive) { [weak self] _ in
+                guard let self = self else { return }
+                
+                let place = self.places[indexPath.row]
+                self.context.delete(place)
+                
+                do {
+                    try self.context.save()
+                    self.places.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .fade)
+                    completion(true)
+                    fetchLocations()
+                } catch {
+                    print("Silme işlemi başarısız: \(error)")
+                    completion(false)
+                }
+            })
+            
+            self.present(alert, animated: true)
+        }
+        
+        // Edit Action
+        let editAction = UIContextualAction(style: .normal, title: nil) { [weak self] (action, view, completion) in
+            guard let self = self else { return }
+            let place = self.isSearching ? self.filteredPlaces[indexPath.row] : self.places[indexPath.row]
+            self.presentEditPage(place: place)
+            completion(true)
+        }
+        
+        // Action görünümlerini özelleştir
+        deleteAction.backgroundColor = .darkModeWhite
+        editAction.backgroundColor = .darkModeWhite
+        
+        // Custom view'ları oluştur
+        let deleteTitle = NSLocalizedString("delete_button", comment: "")
+        let editTitle = NSLocalizedString("edit_button", comment: "")
+        
+        deleteAction.image = createActionImage(title: deleteTitle, textColor: .red)
+        editAction.image = createActionImage(title: editTitle, textColor: .systemBlue)
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+    }
+}
+
+private func createActionImage(title: String, textColor: UIColor) -> UIImage? {
+    let size = CGSize(width: 100, height: 50)
+    let renderer = UIGraphicsImageRenderer(size: size)
+    
+    return renderer.image { context in
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 17),
+            .foregroundColor: textColor
+        ]
+        
+        let text = NSString(string: title)
+        let textSize = text.size(withAttributes: attributes)
+        let point = CGPoint(
+            x: (size.width - textSize.width) / 2,
+            y: (size.height - textSize.height) / 2
+        )
+        
+        text.draw(at: point, withAttributes: attributes)
     }
 }
 
@@ -203,4 +315,5 @@ extension HomePageViewController: UISearchBarDelegate {
         placesTableView.reloadData()
     }
 }
+
 

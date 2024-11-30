@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,6 +32,7 @@
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" name="DarkModeWhite"/>
                 <constraints>
                     <constraint firstItem="Ra7-O5-3RB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CTI-AB-tqA"/>
                     <constraint firstItem="xCm-aX-eqq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="64" id="I9U-ce-JIN"/>
@@ -40,6 +42,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="DarkModeWhite"/>
             <connections>
                 <outlet property="itemImage" destination="Ra7-O5-3RB" id="B8Z-Ya-mgt"/>
                 <outlet property="itemLabel" destination="xCm-aX-eqq" id="s5s-KG-xxb"/>
@@ -47,4 +50,9 @@
             <point key="canvasLocation" x="-64.122137404580144" y="-3.5211267605633805"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="DarkModeWhite">
+            <color red="0.99607843160629272" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

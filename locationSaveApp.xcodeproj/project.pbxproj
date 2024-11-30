@@ -51,6 +51,9 @@
 		397EC99B2C7564B800B2F64E /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 397EC99A2C7564B800B2F64E /* CropViewController */; };
 		397EC99D2C7564B800B2F64E /* TOCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 397EC99C2C7564B800B2F64E /* TOCropViewController */; };
 		39AE7F762CFA8CF800FBC15E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39AE7F752CFA8CF800FBC15E /* GoogleService-Info.plist */; };
+		39AE7F7A2CFA9A9600FBC15E /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AE7F792CFA9A8D00FBC15E /* UITableViewCellExtension.swift */; };
+		39AE7F7C2CFAA16400FBC15E /* EditPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AE7F7B2CFAA16400FBC15E /* EditPlaceViewController.swift */; };
+		39AE7F7E2CFAAD2700FBC15E /* PlaceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AE7F7D2CFAAD2700FBC15E /* PlaceCategory.swift */; };
 		39B4B1CC2C720EDD0059227B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */; };
 		39B5A6322C72CA6E00103065 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B5A6312C72CA6D00103065 /* PageModel.swift */; };
 		39B74C412C75506500CDF62D /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B74C3F2C75506500CDF62D /* PlacesTableViewCell.swift */; };
@@ -117,6 +120,9 @@
 		39703F6A2C716BBC0000E038 /* StepTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTopView.swift; sourceTree = "<group>"; };
 		3979FFE22C716CAA008D0D3E /* StepTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepTopView.xib; sourceTree = "<group>"; };
 		39AE7F752CFA8CF800FBC15E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		39AE7F792CFA9A8D00FBC15E /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		39AE7F7B2CFAA16400FBC15E /* EditPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlaceViewController.swift; sourceTree = "<group>"; };
+		39AE7F7D2CFAAD2700FBC15E /* PlaceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategory.swift; sourceTree = "<group>"; };
 		39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		39B5A6312C72CA6D00103065 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
 		39B74C3F2C75506500CDF62D /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
@@ -194,6 +200,7 @@
 		3915CA152C757435009CFB85 /* DetailPage */ = {
 			isa = PBXGroup;
 			children = (
+				39AE7F7B2CFAA16400FBC15E /* EditPlaceViewController.swift */,
 				3915CA162C75744D009CFB85 /* DetailPageViewController.swift */,
 				3915CA172C75744D009CFB85 /* DetailPageView.xib */,
 			);
@@ -260,6 +267,7 @@
 		39346D902C762B83002282E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				39AE7F7D2CFAAD2700FBC15E /* PlaceCategory.swift */,
 				39FC6D322C72D4B2003CEB5B /* PlaceModel.xcdatamodeld */,
 				39B5A6312C72CA6D00103065 /* PageModel.swift */,
 				39FC6D352C72D5E1003CEB5B /* PlaceInfoModel.swift */,
@@ -330,6 +338,7 @@
 		39B4B1CA2C720ECD0059227B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				39AE7F792CFA9A8D00FBC15E /* UITableViewCellExtension.swift */,
 				39B4B1CB2C720EDD0059227B /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
@@ -579,6 +588,7 @@
 				39346D9C2C762FDC002282E4 /* DropdownTableViewCell.swift in Sources */,
 				39FB4BEF2C78D6AB006BBCD8 /* Font.swift in Sources */,
 				3915CA1B2C75812C009CFB85 /* BaseViewController.swift in Sources */,
+				39AE7F7C2CFAA16400FBC15E /* EditPlaceViewController.swift in Sources */,
 				39CD27DE2C6EC1D400F7D8A2 /* locationSaveApp.xcdatamodeld in Sources */,
 				3960895F2C78E9E500CABE89 /* InfoPageViewController.swift in Sources */,
 				39703F6B2C716BBC0000E038 /* StepTopView.swift in Sources */,
@@ -597,11 +607,13 @@
 				3921FD072C7E828B005D2823 /* NetworkMonitor.swift in Sources */,
 				39B4B1CC2C720EDD0059227B /* UIViewControllerExtension.swift in Sources */,
 				39CD27D62C6EC1D400F7D8A2 /* SceneDelegate.swift in Sources */,
+				39AE7F7A2CFA9A9600FBC15E /* UITableViewCellExtension.swift in Sources */,
 				39FB4BED2C78D6AB006BBCD8 /* Dimesion.swift in Sources */,
 				39703F662C7169900000E038 /* MapViewController.swift in Sources */,
 				392528D62C7207F30000DA4B /* InformationViewController.swift in Sources */,
 				39CA191F2C780869000F3069 /* FilterCollectionViewCell.swift in Sources */,
 				39346D942C762BCB002282E4 /* DropdownSelectionViewController.swift in Sources */,
+				39AE7F7E2CFAAD2700FBC15E /* PlaceCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,11 +818,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7Q2YHU3449;
+				DEVELOPMENT_TEAM = 7Q2YHU3449;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = locationSaveApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mapmento;
@@ -834,7 +844,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = altugcelil.locationSaveApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "LocationSaver Dev";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -847,11 +856,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7Q2YHU3449;
+				DEVELOPMENT_TEAM = 7Q2YHU3449;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = locationSaveApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mapmento;
@@ -875,7 +882,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = altugcelil.locationSaveApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "LocationSaver Dev";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
